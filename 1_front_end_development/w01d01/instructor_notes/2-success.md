@@ -12,15 +12,14 @@
 ## Emotional Framing
 
 - Things will not go as you plan<br>
-![plan vs reality](img/plan_vs_reality.png)
+
 
 - Deal with chaos in your head. Being confused/lost is NORMAL. No one pays you because you know all the answers. The job is about jumping into confusion and being able to find a solution.  Make a friend with discomfort
 
 - The maximum point of learning is right at the edge of learning and panic.<br>
-![learning zone](img/learning-zone.jpeg)
+
 
 - This experience is a rollercoaster.<br>
-![informed optimism?](img/informed-optimism.jpeg)
 
 <hr>
 
