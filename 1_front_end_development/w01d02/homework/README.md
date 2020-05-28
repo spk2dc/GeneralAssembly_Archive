@@ -183,8 +183,8 @@ Inside of tonight's `homework` folder:
 ## Submission Guidelines
 
 - You should have been adding and committing along the way, but please type `git status` one last time to make sure that everything is commited. If it's not, please add, commit, and push it so we can see all your work!
-- Remember to submit this to the [class repo](hhttps://git.generalassemb.ly/seir-5-26/student-resources) in the [pull requests section](https://git.generalassemb.ly/seir-5-26/student-resources/pulls).
-- When you try to submit a pull request, there will be a form that looks like shown below, please fill it out before you create the issue so that we can see how you're doing/feeling so far!
+- Remember to submit this to the [class repo](hhttps://git.generalassemb.ly/seir-5-26/student-resources) in the [issues section](https://git.generalassemb.ly/seir-5-26/student-resources/issues).
+- When you try to submit an issue, there will be a form that looks like shown below, please fill it out before you create the issue so that we can see how you're doing/feeling so far!
 
 ![](https://i.imgur.com/39jmFEX.png)
 ---
