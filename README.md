@@ -18,5 +18,3 @@
 | w01d2 | [Setting Up for Success](./1_front_end_development/w01d02/morning_exercise) | [Git and GitHub (Morning), CSS Lesson (Afternoon)](./1_front_end_development/w01d02/instructor_notes) | [Git/GitHub, Booleans and Loops](./1_front_end_development/w01d02/student_labs/booleans_and_loops.md) | [Fake Resume and GitHub Practice](./1_front_end_development/w01d02/homework/)|
 | w01d3 | [Git Pull Upstream Master](./1_front_end_development/w01d03/morning_exercise) | [Intro to Conditionals and Loops (Morning), Arrays and Iteration (Afternoon)](./1_front_end_development/w01d03/instructor_notes) | [Loops and Conditionals, Arrays and Conditionals](./1_front_end_development/w01d03/student_labs/) | [JS Conditionals Loops Arrays](./1_front_end_development/w01d03/homework/) |
 | w01d4 | [HTML Mockup pt.1](./1_front_end_development/w01d04/morning_exercise) | [Functions (Morning), Scope (Afternoon)](./1_front_end_development/w01d04/instructor_notes) | Problem Solving | JS Functions Scope Problem Solving |
-
-
