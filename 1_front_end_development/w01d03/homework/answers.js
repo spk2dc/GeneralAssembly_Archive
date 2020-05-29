@@ -76,14 +76,22 @@ console.log(halfArr);
 const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 ["Lucinda", "Jacc", "Neff", "Snoop"],
 ["Petunia", ["Baked Goods", "Waldo"]]];
-console.log(whereIsWaldo.splice(whereIsWaldo.indexOf('Eggbert'),1));
-console.log(whereIsWaldo[1].splice(whereIsWaldo[1].indexOf('Neff'),1,'No One'));
+console.log(whereIsWaldo.splice(whereIsWaldo.indexOf('Eggbert'), 1));
+console.log(whereIsWaldo[1].splice(whereIsWaldo[1].indexOf('Neff'), 1, 'No One'));
 console.log(whereIsWaldo[2][1].find(element => element == 'Waldo'));
 
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+let catArr = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
+for (let index = 0; index < 20; index++) {
+    if (index % 2 == 1) {
+        console.log("Love me, pet me! HSSSSSS!");
+    } else {
+        console.log(catArr[Math.round(Math.random() * 2)]);
+    }
 
+}
 
 ////////////////////////////////
 //  Find the Median
