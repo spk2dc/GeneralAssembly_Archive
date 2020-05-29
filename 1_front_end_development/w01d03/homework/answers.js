@@ -27,7 +27,7 @@ for (let index = 1; index <= 100; index++) {
         console.log("fizz");
     } else if (index % 5 == 0) {
         console.log("buzz");
-    } else{
+    } else {
         console.log(index);
     }
 }
@@ -37,14 +37,14 @@ for (let index = 1; index <= 100; index++) {
 ////////////////////////////////
 const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
 const sharky = ["Sharky", "shark", 20, "Left Coast"]
-const plantee = ["Plantee", "plant",  5000 , "Mordor"]
+const plantee = ["Plantee", "plant", 5000, "Mordor"]
 const porgee = ["Porgee", "Porg", 186, "Ahch-To"]
-const dart = ["D'Art" , "Demogorgan Dog", 2, "Upside Down"]
+const dart = ["D'Art", "Demogorgan Dog", 2, "Upside Down"]
 
 plantee[2] += 1;
 wolfy[3] = "Gotham City";
 dart.push("Hawkins");
-wolfy.splice(0,1, "Gameboy");
+wolfy.splice(0, 1, "Gameboy");
 
 ////////////////////////////////
 // Yell at the Ninja Turtles
@@ -67,13 +67,18 @@ console.log(favMovies.reverse());
 console.log(favMovies.shift());
 console.log(favMovies.unshift());
 console.log(favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar'));
-let halfArr = favMovies.slice(favMovies.length/2);
+let halfArr = favMovies.slice(favMovies.length / 2);
 console.log(halfArr);
 
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
-
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+["Lucinda", "Jacc", "Neff", "Snoop"],
+["Petunia", ["Baked Goods", "Waldo"]]];
+console.log(whereIsWaldo.splice(whereIsWaldo.indexOf('Eggbert'),1));
+console.log(whereIsWaldo[1].splice(whereIsWaldo[1].indexOf('Neff'),1,'No One'));
+console.log(whereIsWaldo[2][1].find(element => element == 'Waldo'));
 
 ////////////////////////////////
 //  Excited Kitten
