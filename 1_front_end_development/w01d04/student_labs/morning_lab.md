@@ -133,9 +133,3 @@ console.log(letterReverse("Aren't you a little short for a storm trooper"));
 <br>
 <hr>
 <hr>
-
-
-## Hungry for More?
-Get started on the afternoon lab!
-
-
