@@ -32,7 +32,26 @@ let sumArray = (array) => {
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 //PRIME NUMBERS
+let checkPrime = (num) => {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0) {
+            return false;
+        }
 
+    }
+    return true;
+}
+console.log(checkPrime(17));
+console.log(checkPrime(21));
 
+let printPrime = (num) => {
+    for (let i = 2; i <= num; i++) {
+        if (checkPrime(i)) {
+            console.log(i);
+        }
+
+    }
+}
+printPrime(15);
 
 //ROCK PAPER SCISSORS
