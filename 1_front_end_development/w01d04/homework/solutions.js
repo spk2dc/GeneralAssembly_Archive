@@ -4,3 +4,20 @@ VERBAL QUESTIONS
 2. console log prints to the terminal, but return sends a value back to whatever called the function.
 
 */
+
+//PALINDROME
+
+let checkPalindrome = (str) => {
+    let strLow = str.toLowerCase();
+    for (let i = 0; i < strLow.length / 2; i++) {
+        if (strLow.charAt(i) != strLow.charAt(strLow.length - 1 - i)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(checkPalindrome("Radar"));
+console.log(checkPalindrome("Borscht"));
+
+//SUM ARRAY
