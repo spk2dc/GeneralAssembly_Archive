@@ -55,3 +55,19 @@ let printPrime = (num) => {
 printPrime(15);
 
 //ROCK PAPER SCISSORS
+let randomMove = () => {
+    return Math.round(Math.random()*2);
+}
+
+let rockPaperScissors = (comp, user) => {
+    let moves = ['rock','paper','scissors'];
+    console.log(`computer chose ${moves[comp]}` + `\nuser chose ${moves[user]}`);
+    if (comp > user || (comp == 0 && user == 2)) {
+        console.log(`${moves[comp]} beats ${moves[user]}, computer wins`);
+    } else if(comp == user){
+        console.log(`tie, ${moves[comp]} is the same as ${moves[user]}`);
+    } else{
+        console.log(`${moves[user]} beats ${moves[comp]}, user wins`);
+    }
+}
+rockPaperScissors(randomMove(), randomMove());
