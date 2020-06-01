@@ -16,7 +16,7 @@
 ### Week 2
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w02d01 | [HTML Mockup Pt.2](./1_front_end_development/w02d01/morning_exercise) | Program Design (Morning), Objects (Afternoon) | Waffles Pseudocode, Objects | Landscaper and Oscar Mockup  |
+| w02d01 | [HTML Mockup Pt.2](./1_front_end_development/w02d01/morning_exercise) | [Program Design (Morning), Objects (Afternoon)](./1_front_end_development/w02d01/instructor_notes) | [Waffles Pseudocode, Objects](./1_front_end_development/w02d01/student_labs/) | Landscaper and Oscar Mockup |
 | w02d02 | Beginner's Guide to UX/UI | Object-ception (Morning), Combining Datatypes (Afternoon) | Object-ception, Avengers Assemble! | Data Structure Drills |
 | w02d03 | Intro To Flexbox | Callbacks (Morning), Array Methods w/ Callbacks (Afternoon) | Callbacks & Array Methods | Datatype and Callback Drills |
 | w02d04 | VSSL Mockup Pt.1 | OOP Objects Methods (Morning), OOP Classes (Afternoon) | Westword, Classes | Classes and Donut Adventure |
