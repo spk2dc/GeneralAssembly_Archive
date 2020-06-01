@@ -33,8 +33,8 @@
 
 Pseudo code is the process of taking a larger solution and breaking it down into the programmable steps without actually writing any code.
 
-1. Think about the larger solution as a whole, but as a series of steps that you would write out for a petulant child to follow
-1. Write out the solution in plain English, breaking it down into as many tiny steps as possible.  Remember, this child doesn't want to do the task.  If there's any ambiguity, you're sunk
+1. Think about the larger solution as a whole, but as a series of steps that you would write out for a child to follow
+1. Write out the solution in plain English, breaking it down into as many tiny steps as possible.  Remember, this child might not know all of the components of the task.  If there's any ambiguity, you're sunk
 1. Create a flow chart
 1. Try to separate each phrase/independent clause onto a different line
 1. Identify the following:
