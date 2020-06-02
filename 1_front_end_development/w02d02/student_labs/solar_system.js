@@ -200,6 +200,7 @@ console.log(system.Jupiter.satellites + system.Saturn.satellites + system.Uranus
 if (typeof (system.Mercury.radiusp) == 'string') {
     console.log(system.Mercury.radiusp = system.Mercury.radiuse);
 }
+console.log("Momentum: ");
 console.log(system.Jupiter.mass * system.Jupiter.velocity - system.Pluto.mass * system.Pluto.velocity);
 let planetX = {
     radiusp: 'same',
@@ -218,7 +219,7 @@ let planetX = {
     inclination: 0
 }
 system.planetX = planetX;
-console.log(system);
+//console.log(system);
 
 //Hungry for more sorting
 const movies = [
@@ -227,7 +228,7 @@ const movies = [
     { title: "Dayereh", director: "Jafar Panahi", year: 2000 }
 ]
 console.log("\nUnsorted Movies");
-console.log(movies);
+//console.log(movies);
 
 movies.sort(function (a, b) {
     var nameA = a.title.toUpperCase(); // ignore upper and lowercase
@@ -244,4 +245,4 @@ movies.sort(function (a, b) {
 });
 
 console.log("\nSorted Movies");
-console.log(movies);
+//console.log(movies);
