@@ -17,7 +17,7 @@
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w02d01 | [HTML Mockup Pt.2](./1_front_end_development/w02d01/morning_exercise) | [Program Design (Morning), Objects (Afternoon)](./1_front_end_development/w02d01/instructor_notes) | [Waffles Pseudocode, Objects](./1_front_end_development/w02d01/student_labs/) | Complete Morning and Afternoon Labs |
-| w02d02 | Beginner's Guide to UX/UI | [Object-ception (Morning), Combining Datatypes (Afternoon)](./1_front_end_development/w02d02/instructor_notes) | [Object-ception, Avengers Assemble!](./1_front_end_development/w02d02/student_labs/) | Data Structure Drills |
+| w02d02 | Beginner's Guide to UX/UI | [Object-ception (Morning), Combining Datatypes (Afternoon)](./1_front_end_development/w02d02/instructor_notes) | [Object-ception, Avengers Assemble!](./1_front_end_development/w02d02/student_labs/) | [Data Structure Drills](./1_front_end_development/w02d02/homework/) |
 | w02d03 | Intro To Flexbox | Callbacks (Morning), Array Methods w/ Callbacks (Afternoon) | Callbacks & Array Methods | Datatype and Callback Drills |
 | w02d04 | VSSL Mockup Pt.1 | OOP Objects Methods (Morning), OOP Classes (Afternoon) | Westword, Classes | Classes and Donut Adventure |
 | w02d05 | VSSL Mockup Pt.2 | Spacebattle | Spacebattle (cont.) | Spacebattle  |
