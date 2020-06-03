@@ -26,3 +26,28 @@ A list of student names from our class, each with a location and each with a lis
 => data structure example: let x = [{name, location, [show1, show2]},{name2, location2, [show1, show2]}]; 
 
 */
+
+
+//TAKE IT EASY
+let rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+console.log(rainbow[4]);
+
+let senthil = {
+    food: 'pizza',
+    hobby: 'hiking',
+    town: 'Toronto',
+    datatype: 'string',
+};
+console.log(senthil.hobby);
+
+//CRAZY OBJECT
+
+
+
+
+//OBJECT-CEPTION
+
+
+
+//BOND FILMS
+
