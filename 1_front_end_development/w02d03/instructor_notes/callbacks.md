@@ -3,7 +3,7 @@
 ## Lesson Objectives
 
 - Explain what is a higher order function
-- Explain what is the purpose of a higher oder function
+- Explain what is the purpose of a higher order function
 - Explain what is a callback
 - Explain what is the purpose of a call back function
 - Write a higher order function with a callback
