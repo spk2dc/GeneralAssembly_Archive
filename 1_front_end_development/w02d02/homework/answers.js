@@ -81,8 +81,24 @@ console.log(crazyObject.larry.quotes[4]);
 
 
 //OBJECT-CEPTION
-
-
+const inception = {
+    reality: {
+        dreamLayer1: {
+            dreamLayer2: {
+                dreamLayer3: {
+                    dreamLayer4: {
+                        dreamLayer5: {
+                            dreamLayer6: {
+                                limbo: "Joseph Gordon Levitt"
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+ console.log(inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null);
 
 //BOND FILMS
 
