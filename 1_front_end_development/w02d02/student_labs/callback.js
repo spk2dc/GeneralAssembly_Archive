@@ -94,3 +94,14 @@ let repMaster = (str, func) => {
 console.log(wordReverse("Never give your heart to a blockhead"));
 repMaster("Never give your heart to a blockhead", wordReverse);
 repMaster("I finished this practice", toUpperCase);
+
+
+
+//AFTERNOON LAB
+const classArray = ['Javascript', 'HTML', 'CSS', 'Data Analysis', 'Marketing', 'Database Design', 'Visual Design'];
+
+const numberArray = [31, 203, 30, 84, 5, 62, 770, 8, 99, 10, 0];
+let findVal = numberArray.find((element) => {
+    return element == 5;
+});
+console.log(findVal);
