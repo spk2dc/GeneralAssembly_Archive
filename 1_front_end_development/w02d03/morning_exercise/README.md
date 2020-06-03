@@ -81,6 +81,5 @@ CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 Flexplorer: http://bennettfeely.com/flexplorer/
 
 #### Hungry for More (choose any):
-- Read the three articles in this README.md
-- Continue to experiment with Flexbox properties and update the cards to something that suits your taste
+- Read the articles in this README.md
 - Check out Flexbox's other great solves like sticky footer: https://philipwalton.github.io/solved-by-flexbox/
