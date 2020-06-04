@@ -37,3 +37,64 @@ let powerButton = () => {
 }
 powerButton()();
 
+let vending = {
+    snacks: [{
+        name: 'chips',
+        price: '$1'
+    },
+    {
+        name: 'cookies',
+        price: '$1'
+    },
+    {
+        name: 'soda',
+        price: '$1'
+    },
+    ],
+    vend: (num) => {
+        return vending.snacks[num];
+    }
+}
+console.log(vending.vend(1));
+
+let add = (x, y) => {
+    return x + y;
+}
+let subtract = (x, y) => {
+    return x - y;
+}
+let multiply = (x, y) => {
+    return x * y;
+}
+let divide = (x, y) => {
+    return x / y;
+}
+let calculate = (num1, num2, operate) => {
+    return operate(num1, num2);
+}
+console.log(calculate(2, 3, add));
+console.log(calculate(2,3,subtract));
+console.log(calculate(2,3,multiply));
+console.log(calculate(6,3,divide));
+
+
+
+
+const bar = () => {
+    console.log('bar here');
+}
+const foo = () => {
+    console.log('foo here');
+}
+bar();
+foo();
+
+/*
+foo();
+
+const foo ()=>{
+    console.log('hi');
+}
+
+//Error produced is foo has already been declared, can't redefine a const
+*/
