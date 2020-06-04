@@ -16,5 +16,24 @@ let receipt = [{ name: 'store', price: '$1' }, { name: 'store2', price: '$2' }];
 console.log(receipt[0].name);
 
 
-let apartment = [['sam','sally']];
+let apartment = [['sam', 'sally']];
 console.log(apartment[0][1]);
+
+let knit = () => {
+    return { item: 'scarf', size: '6ft' };
+}
+console.log(knit().item);
+
+let crayonSelect = () => {
+    return crayonBox;
+}
+console.log(crayonSelect().crayons[2]);
+
+let powerButton = () => {
+    let options = () => {
+        console.log('select a song');
+    }
+    return options;
+}
+powerButton()();
+
