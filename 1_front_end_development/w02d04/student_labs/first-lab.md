@@ -68,7 +68,7 @@ class BasicHost {
 Make it so the `BasicHost` function will spit out a host object.
 
 ```javascript
-var host1 = new BasicHost("Roget", "creator of Roget's Thesaurus"); 
+let host1 = new BasicHost("Roget", "creator of Roget's Thesaurus"); 
 ```
 
 ```javascript
