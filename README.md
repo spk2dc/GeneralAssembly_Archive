@@ -4,10 +4,10 @@
 | Morning Exercise | 45 - 60 minutes |
 | Short Break | 10 - 15 min |
 | Morning Lesson | 1h:15min - 2:00 hours |
-| Morning Lab | 30 min to 100 min |
+| First Lab | 30 min to 100 min |
 | Lunch | 60 min |
 | Afternoon Lesson | 1h:15min - 2:00 hours |
-| Afternoon Lab | 30 min to 100 min |
+| Second Lab | 30 min to 100 min |
 
 **Outcomes Meetings are Wednesdays from 2pm EST/1pm CST to 3:30/2:30**
 
@@ -17,10 +17,9 @@
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w02d01 | [HTML Mockup Pt.2](./1_front_end_development/w02d01/morning_exercise) | [Program Design (Morning), Objects (Afternoon)](./1_front_end_development/w02d01/instructor_notes) | [Waffles Pseudocode, Objects](./1_front_end_development/w02d01/student_labs/) | Complete Morning and Afternoon Labs |
-| w02d02 | Beginner's Guide to UX/UI | [Object-ception (Morning), Combining Datatypes (Afternoon)](./1_front_end_development/w02d02/instructor_notes) | [Object-ception, Avengers Assemble!](./1_front_end_development/w02d02/student_labs/) | [Data Structure Drills](./1_front_end_development/w02d02/homework/) |
-| w02d03 | Intro To Flexbox | [Callbacks (Morning), Array Methods w/ Callbacks (Afternoon)](./1_front_end_development/w02d03/instructor_notes) | [Callbacks & Array Methods](./1_front_end_development/w02d03/student_labs/) | [Datatype and Callback Drills](./1_front_end_development/w02d03/homework/README.md) |
-| w02d04 | VSSL Mockup Pt.1 | OOP Objects Methods (Morning), OOP Classes (Afternoon) | Westword, Classes | Classes and Donut Adventure |
-| w02d05 | VSSL Mockup Pt.2 | Spacebattle | Spacebattle (cont.) | Spacebattle  |
+| w02d02 | [Beginner's Guide to UX/UI](./1_front_end_development/w02d02/morning_exercise/README.md) | [Object-ception (Morning), Combining Datatypes (Afternoon)](./1_front_end_development/w02d02/instructor_notes) | [Object-ception, Avengers Assemble!](./1_front_end_development/w02d02/student_labs/) | [Data Structure Drills](./1_front_end_development/w02d02/homework/) |
+| w02d03 | [Intro To Flexbox](./1_front_end_development/w02d03/morning_exercise/README.md) | [Callbacks (Morning), Array Methods w/ Callbacks (Afternoon)](./1_front_end_development/w02d03/instructor_notes) | [Callbacks & Array Methods](./1_front_end_development/w02d03/student_labs/) | [Datatype and Callback Drills](./1_front_end_development/w02d03/homework/README.md) |
+| w02d04 | [VSSL Mockup Pt.1](./1_front_end_development/w02d04/morning_exercise/README.md) | OOP Objects Methods (Morning), OOP Classes (Afternoon) | Westword, Classes | Classes and Donut Adventure |
 
 ### Week 1
 | Day | Morning Exercise | Lectures | Labs | Homework |
