@@ -60,3 +60,22 @@ class Person {
         this.bankAccount -= hamster.getPrice();
     }
 }
+
+let timmy = new Person('Timmy');
+timmy.age = 5;
+for (let i = 0; i < 5; i++) {
+    timmy.eat();
+}
+for (let i = 0; i < 5; i++) {
+    timmy.exercise();
+}
+timmy.age = 9;
+let gus = new Hamster('Gus');
+gus.owner = 'timmy';
+timmy.buyHamster(gus);
+timmy.age = 15;
+for (let i = 0; i < 2; i++) {
+    timmy.eat();
+    timmy.exercise();
+}
+
