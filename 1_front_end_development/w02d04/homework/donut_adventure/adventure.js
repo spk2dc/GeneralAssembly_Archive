@@ -18,8 +18,11 @@ class Hero {
         console.log(this.health);
     }
 
-    battle() {
+    battle(opponent) {
         console.log('i\'m ready to rumble');
+        opponent.health -= this.objects.sprinkleSpray;
+        console.log(opponent.name + ' got hit by sprinkleSpray ' + this.objects.sprinkleSpray + '! Health is: ' + opponent.health);
+
     }
 }
 
@@ -45,7 +48,22 @@ class Enemy {
         console.log(this.health);
     }
 
-    battle() {
+    battle(opponent) {
         console.log('i\'m gonna flatten you like a slice of pepperoni!');
+        opponent.health -= this.objects.pepperoniStars;
+        console.log(opponent.name + ' got hit by pepperoniStars ' + this.objects.pepperoniStars + '! Health is: ' + opponent.health);
+
     }
 }
+
+let rat = new Enemy('Pizza Rat');
+
+dougie.talkSass();
+rat.talkSmack();
+dougie.announceHealth();
+rat.announceHealth();
+rat.battle(dougie);
+dougie.battle(rat);
+
+dougie.announceHealth();
+rat.announceHealth();
