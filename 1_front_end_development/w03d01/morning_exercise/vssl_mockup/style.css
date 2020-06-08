@@ -1,0 +1,23 @@
+#page-title {
+    background-image: url("./img/sailboat.jpg");
+    background-size: cover;
+    height: 758;
+    flex-direction: column;
+}
+
+#page-title {
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 100px;
+}
+
+
+
+.img-column {
+    max-width: 30%;
+    height:auto;
+}
+
