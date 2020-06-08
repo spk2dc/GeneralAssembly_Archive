@@ -41,38 +41,46 @@ class Ship {
     }
 }
 
-let uss = new Ship('USS Schwarz', 20, 5, 0.7);
-let alienShips = [];
+function startGame() {
+    let uss = new Ship('USS Schwarz', 20, 5, 0.7);
+    let alienShips = [];
 
-for (let i = 0; i < 10; i++) {
-    let hp = Math.floor(Math.random() * 3 + 4);
-    let fp = Math.floor(Math.random() * 2 + 3);
-    let acc = Math.random() * 0.2 + 0.6;
-    alienShips[i] = new Ship('alien ' + i, hp, fp, acc);
-}
+    for (let i = 0; i < 10; i++) {
+        let hp = Math.floor(Math.random() * 3 + 4);
+        let fp = Math.floor(Math.random() * 2 + 3);
+        let acc = Math.random() * 0.2 + 0.6;
+        alienShips[i] = new Ship('alien ' + i, hp, fp, acc);
+    }
 
-//uss.attack(alienShips[0])
+    //uss.attack(alienShips[0])
 
-for (const i in alienShips) {
-    let itr = alienShips[i];
+    for (const i in alienShips) {
+        let itr = alienShips[i];
 
-    while (itr.checkHull() && uss.checkHull()) {
-        uss.attack(itr);
+        while (itr.checkHull() && uss.checkHull()) {
+            uss.attack(itr);
+
+            if (itr.checkHull()) {
+                itr.attack(uss);
+            }
+        }
 
         if (itr.checkHull()) {
-            itr.attack(uss);
+            console.log('LOST THE GAME! ' + itr.name + ' has beat you.');
+            console.log('Remaining aliens: ' + (alienShips.length - i));
+
+            alert('LOST THE GAME! ' + itr.name + ' has beat you.');
+            alert('Remaining aliens: ' + (alienShips.length - i));
+            break;
         }
+
     }
 
-    if (itr.checkHull()) {
-        console.log('LOST THE GAME! ' + itr.name + ' has beat you.');
-        console.log('Remaining aliens: ' + (alienShips.length - i));
-        break;
+    if (uss.checkHull()) {
+        console.log('WINNER! You have beat ' + alienShips.length + ' aliens');
+
+        alert('WINNER! You have beat ' + alienShips.length + ' aliens');
     }
-
 }
 
-if (uss.checkHull()) {
-    console.log('WINNER! You have beat ' + alienShips.length + ' aliens');
-}
 
