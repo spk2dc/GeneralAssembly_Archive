@@ -45,8 +45,8 @@ let uss = new Ship('USS Schwarz', 20, 5, 0.7);
 let alienShips = [];
 
 for (let i = 0; i < 10; i++) {
-    let hp = Math.floor(Math.random() * 3 + 3);
-    let fp = Math.floor(Math.random() * 2 + 2);
+    let hp = Math.floor(Math.random() * 3 + 4);
+    let fp = Math.floor(Math.random() * 2 + 3);
     let acc = Math.random() * 0.2 + 0.6;
     alienShips[i] = new Ship('alien ' + i, hp, fp, acc);
 }
@@ -64,12 +64,15 @@ for (const i in alienShips) {
         }
     }
 
-    if(itr.checkHull()){
+    if (itr.checkHull()) {
         console.log('LOST THE GAME! ' + itr.name + ' has beat you.');
         console.log('Remaining aliens: ' + (alienShips.length - i));
         break;
-    } else{
-        console.log('WINNER! You have beat ' + alienShips.length + ' aliens');
     }
 
 }
+
+if (uss.checkHull()) {
+    console.log('WINNER! You have beat ' + alienShips.length + ' aliens');
+}
+
