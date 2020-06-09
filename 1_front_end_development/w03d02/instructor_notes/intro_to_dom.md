@@ -7,7 +7,7 @@ Topics: Intro to the DOM, Intro to 'Vanilla' JS<br>
 - Define the DOM
 - Explain what role the DOM plays in a web page
 - Relate HTML elements as Parents, Children and Siblings
-- Identify common DOM manpipulation patterns:
+- Identify common DOM manipulation patterns:
  	- query for an element
  	- edit an element
  	- add an element
