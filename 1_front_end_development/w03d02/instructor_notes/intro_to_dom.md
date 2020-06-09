@@ -32,7 +32,7 @@ Topics: Intro to the DOM, Intro to 'Vanilla' JS<br>
  
 **`index.html`**
 
-1. `html tab` - to insert html boilder plate
+1. `! tab` - to insert html boilder plate
 1. set title to `Hawkins` inside the head
  
  
@@ -115,7 +115,7 @@ We can see that the children of the body are an h1, element, a div with a a clas
 
 ![children of body in chrome console](https://i.imgur.com/HqTQq4X.png)
 
-We can keep going deeper and deeper...
+We can keep traversing downward..
 
 ![all the way to the text Featuring](https://i.imgur.com/q8jWVc6.png)
 
@@ -217,7 +217,6 @@ We can create a new element
 Let's create a new image
 
 const eggos = document.createElement('img')
-
 
 
 Where is it?
