@@ -20,11 +20,11 @@ This morning, we're going to work on styling it with CSS to make it look more li
 
 ## Setup
 
-1. You already created the HTML for this mockup last morning exercise. You should have it in your `w02d03/morning_exercise/vssl_mockup` folder. We called it `index.html`.
+1. You already created the HTML for this mockup last morning exercise. You should have it in your `w02d04/morning_exercise/vssl_mockup` folder. We called it `index.html`.
 1. Let's copy your work into your student_examples folder for today.
 1. In terminal:
-    - navigate to your `/w02d04/morning_exercise/vssl_mockup` folder
-    - from there type `cp ../../../w02d03/morning_exercise/vssl_mockup/*.html .`
+    - navigate to your `/w03d01/morning_exercise/vssl_mockup` folder
+    - from there type `cp ../../../w02d04/morning_exercise/vssl_mockup/*.html .`
         - The cp command will copy all html files from last morning exercise's folder into today's morning_exercise/vssl_mockup folder
         - _NOTE:_ if you have created your files elsewhere, you will need to adjust the path
         - _NOTE:_ if you created more files than this (like a CSS file), you will also need to copy those files

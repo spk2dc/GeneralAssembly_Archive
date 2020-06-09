@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+#page-title {
+    background-image: url('./img/sailboat.jpg');
+    background-position: bottom;
+    background-size: cover;
+    height: 758px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h1 {
+    font-size: 600%;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+nav {
+    background-color: #1d1d1d;
+}
+
+ul {
+    color: #c2c2c2;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6em;
+}
+
+li {
+    display: inline-block;
+}
+
+
+
+#columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#columns section {
+    width: 30%;
+}
+
+.img-column {
+    width: 100%;
+}
