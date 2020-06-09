@@ -1,0 +1,28 @@
+body{
+    
+    /* background-color: red; */
+}
+
+#boots{
+    max-width: 100%;
+}
+
+#main{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#mid{
+    max-width: 30%;
+    flex-flow: row wrap;
+}
+
+#logo{
+    max-width: 90%;
+}
+
+#right{
+    display: flex;
+}
