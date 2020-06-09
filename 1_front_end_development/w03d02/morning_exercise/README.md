@@ -13,12 +13,13 @@ Prerequisites: CSS, HTML <br>
 ![](mockup.png)
 
 ## Setup
-1. Inside your morning exercise folder, create a folder called `supply`<br>
-2. Inside your new `supply` folder, create an `index.html` file.<br>
-2. Inside your `supply` folder, create a `style.css` file.<br>
-3. Add the boilerplate to your html file.<br>
-4. Connect your CSS file to your HTML file and make sure that it is attached (hint: give the body a background color temporarily)<br>
-5. NOTE: All images you'll need to recreate the mockup are provided for you in the `img` folder
+1. `git pull upstream master` to get this morning's starter code.<br>
+2. Inside of todays morning_exercise folder, create a folder called `supply`<br>
+3. Inside your new `supply` folder, create an `index.html` file.<br>
+4. Inside your `supply` folder, create a `style.css` file.<br>
+5. Add the boilerplate to your html file.<br>
+6. Connect your CSS file to your HTML file and make sure that it is attached (hint: give the body a background color temporarily)<br>
+7. NOTE: All images you'll need to recreate the mockup are provided for you in the `img` folder
 
 Before diving in: Review what wireframing is and how to use it for building a layout with HTML and CSS.
 
@@ -30,4 +31,3 @@ Before diving in: Review what wireframing is and how to use it for building a la
 ## Flexbox Resources:
 [A Complete Guide to Flexbox (CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)) <br>
 [Equidistance Spacing- examples of failed attempts and wins](https://css-tricks.com/equidistant-objects-with-css/)
-
