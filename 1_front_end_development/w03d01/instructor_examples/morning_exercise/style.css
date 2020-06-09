@@ -24,6 +24,7 @@ h1, h2 {
 
 nav {
     background-color: #1d1d1d;
+    padding: 44px 72px;
 }
 
 ul {
@@ -32,23 +33,88 @@ ul {
     display: flex;
     justify-content: space-around;
     font-size: 1.6em;
+    padding: 0 0 12px 0;
+}
+
+ul.no-pad {
+    padding-bottom: 0;
 }
 
 li {
     display: inline-block;
 }
 
+li.bold {
+    color: white;
+}
 
+main {
+    margin: 0 3%;
+}
+
+#jumbotron {
+    font-size: 3.6em;
+    padding: 140px 140px 41px;
+    line-height: 1.9em;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #e6e6e6;
+    width: 100%;
+}
 
 #columns {
     display: flex;
     justify-content: space-between;
 }
 
+#columns h3 {
+    font-size: 2.6em;
+    font-weight: normal;
+    margin: 64px 0 48px;
+}
+
 #columns section {
-    width: 30%;
+    width: 31%;
 }
 
 .img-column {
     width: 100%;
+}
+
+#columns p {
+    line-height: 1.5em;
+    padding-top: 12px;
+}
+
+#banner {
+    padding: 300px 0 150px;
+}
+
+footer {
+    height: 121px;
+    border-bottom: 137px solid #1d1d1d;
+    border-top: 2px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 240px;
+}
+
+.alt-font {
+    color: #777777;
+    font-family: serif;
+    font-size: 1.8em;
+}
+
+.bold {
+    color: black;
+}
+
+.italics {
+    font-style: italic;
 }
