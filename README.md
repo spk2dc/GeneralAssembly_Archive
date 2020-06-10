@@ -18,7 +18,7 @@
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w03d01 | [VSSL Mockup Pt.2](./1_front_end_development/w03d01/morning_exercise) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle - extra markdown with more info](./1_front_end_development/w03d01/homework/) |
 | w03d02 | [Supply Mockup Walkthrough](./1_front_end_development/w03d02/morning_exercise) | [DOM Intro, jQuery](./1_front_end_development/w03d02/instructor_notes) | [Hometown, Trois Colours Lumpy Space Princess](./1_front_end_development/w03d02/student_labs) | [jQuery Magic](./1_front_end_development/w03d02/homework/README.md) |
-| w03d03 | DOM Manipulation | [DOM Manipulation with Functions and Loops, Populating Dom from Data, DOM Events (listeners and handlers)](./1_front_end_development/w03d03/instructor_notes) | [Grids and Pyramids, Random Imager](./1_front_end_development/w03d03/student_labs) | [LOTR](./1_front_end_development/w03d02/homework/) |
+| w03d03 | DOM Manipulation | [DOM Manipulation with Functions and Loops, Populating Dom from Data, DOM Events (listeners and handlers)](./1_front_end_development/w03d03/instructor_notes) | [Grids and Pyramids, Random Imager](./1_front_end_development/w03d03/student_labs) | [LOTR](./1_front_end_development/w03d03/homework/) |
 | w03d04 | Intro to Media Queries | Event Bubbling, DOM capturing input, iteration, targets | Calculator, To Do List | jQuery To Do List - hw and lab |
 | w03d05 | Modal | AJAX, Code Organization | AJAX Lab| AJAX Lab Continued |
 
