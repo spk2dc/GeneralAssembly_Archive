@@ -6,11 +6,12 @@
 $(() => {
     const $container = $('#container')
     console.log($container);
+    //$('body').css('background-color','white')
 
     const $h1 = $('<h1>').text('Hogwarts')
     console.log($h1);
     $container.append($h1)
-    let $body = $('body').css('text-align', 'center')
+    $container.css('text-align', 'center')
 
     //year2
     let $h2 = $('<h2>').text('Senthil')
@@ -27,7 +28,7 @@ $(() => {
 
     //year3
     let $ul = $('<ul>').attr('storage', 'trunk')
-        
+
     $ul.append($('<li>').text('butter beer'))
     $ul.append($('<li>').text('invisibility cloak').addClass('secret'))
     $ul.append($('<li>').text('magic map').addClass('secret'))
@@ -35,6 +36,49 @@ $(() => {
     $ul.append($('<li>').text('leash').addClass('owl'))
     $ul.append($('<li>').text('jelly beans'))
     $container.append($ul)
-    $('.secret').attr('opacity','0.5')
-    $ul.attr('list-style-type','none')
+    $('.secret').css('opacity', '0.5')
+    $ul.css('list-style', 'none')
+
+    //year4
+    $container.append($('<h5>').text('Spring 2017'))
+    let $table = $('<table>')
+    $container.append($table)
+
+    $table.append($('<thead>'))
+    let $tr = $('<tr>')
+    $tr.append($('<th>').text('day'))
+    $tr.append($('<th>').text('classes'))
+    $('thead').append($tr)
+
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Monday'))
+    $tr.append($('<td>').text('Herbology'))
+    $table.append($tr)
+
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Tuesday'))
+    $tr.append($('<td>').text('History of Magic'))
+    $table.append($tr)
+
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Wednesday'))
+    $tr.append($('<td>').text('Divination'))
+    $table.append($tr)
+
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Thursday'))
+    $tr.append($('<td>').text('Charms'))
+    $table.append($tr)
+
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Friday'))
+    $tr.append($('<td>').text('Potions'))
+    $table.append($tr)
+
+    $table.css('border','1px solid gray')
+    $('th').css('border','1px solid gray')
+    $('td').css('border','1px solid gray')
+    $table.css('margin','0 auto')
+
+
 });
