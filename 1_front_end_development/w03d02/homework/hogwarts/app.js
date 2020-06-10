@@ -75,16 +75,16 @@ $(() => {
     $tr.append($('<td>').text('Potions'))
     $table.append($tr)
 
-    $table.css('border','1px solid gray')
-    $('th').css('border','1px solid gray')
-    $('td').css('border','1px solid gray')
-    $table.css('margin','0 auto')
+    $table.css('border', '1px solid gray')
+    $('th').css('border', '1px solid gray')
+    $('td').css('border', '1px solid gray')
+    $table.css('margin', '0 auto')
 
     //year5
     $('h4').eq(1).remove()
     $('li').eq(0).remove()
-    $('.owl').after('<h4>new wand</h4>')
-    $('h4').eq(1).css('color','red')
+    $('h4.owl').after('<h4>new wand</h4>')
+    $('h4').eq(1).css('color', 'red')
 
     $('h4.owl').remove()
     $tr = $('<tr>')
@@ -102,10 +102,16 @@ $(() => {
     $('.secret').show('slow')
 
     $('li.owl').addClass('cabbage')
-    $('.cabbage').css('color','CHARTREUSE')
+    $('.cabbage').css('color', 'CHARTREUSE')
     $('.cabbage').removeClass('cabbage')
-    
 
-    
+    //year7
+    $('h5').text('Fall 2018')
+    $('ul').prepend($('<li>').text('butterbeer'))
+    $('ul').attr('storage', 'chest')
+
+
+
+
 
 });
