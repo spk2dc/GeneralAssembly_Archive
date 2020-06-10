@@ -93,6 +93,19 @@ $(() => {
     $('tr').eq(1).after($tr)
     $('tr').eq(2).remove()
     $('h3').after('<h4>Original Snowfire</h4>')
+    $('h4').eq(0).addClass('owl')
 
+
+    //year6
+    $('.secret').hide('slow').delay(2000)
+    // $('.secret').delay(2000)
+    $('.secret').show('slow')
+
+    $('li.owl').addClass('cabbage')
+    $('.cabbage').css('color','CHARTREUSE')
+    $('.cabbage').removeClass('cabbage')
+    
+
+    
 
 });
