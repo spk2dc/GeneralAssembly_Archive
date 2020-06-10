@@ -59,7 +59,7 @@ Commit your work after each function is complete and working properly
 
 ## Need a jQuery Reminder?
 
-If you need help remember all of the jQuery DOM commands, check out the [jQuery cheatsheet](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Stan-Lee/wiki/jQuery-Cheatsheet).
+If you need help remember all of the jQuery DOM commands, check out the [jQuery cheatsheet](https://git.generalassemb.ly/seir-5-26/student-resources/wiki/jQuery-Cheatsheet).
 
 ## Did I Do It Right? 
 
