@@ -80,5 +80,19 @@ $(() => {
     $('td').css('border','1px solid gray')
     $table.css('margin','0 auto')
 
+    //year5
+    $('h4').eq(1).remove()
+    $('li').eq(0).remove()
+    $('.owl').after('<h4>new wand</h4>')
+    $('h4').eq(1).css('color','red')
+
+    $('h4.owl').remove()
+    $tr = $('<tr>')
+    $tr.append($('<td>').text('Pet'))
+    $tr.append($('<td>').text('New Snowfire'))
+    $('tr').eq(1).after($tr)
+    $('tr').eq(2).remove()
+    $('h3').after('<h4>Original Snowfire</h4>')
+
 
 });
