@@ -2,10 +2,11 @@ let input = (event) => {
     let $input = $('#input-box')
     let $li = $('<h4>').text($input.val()).addClass('to-do-item')
 
-    let $done = $('<button>').text('COMPLETED')
-    $done.on('click', done)
+    let $button = $('<button>').text('COMPLETED')
+    $button.addClass('to-do-item')
+    $button.on('click', done)
 
-    $li.append($done)
+    $li.append($button)
     $('#to-do-list').append($li)
 
 }
@@ -16,6 +17,9 @@ let done = (event) => {
 
     if ($button.text() === "COMPLETED") {
         $button.text('REMOVE')
+        $button.removeClass('to-do-item')
+        $button.addClass('done-item')
+
         $li.css('background-color', '#ED6495')
         $('#completed').append($li)
     } else if ($button.text() === "REMOVE") {
