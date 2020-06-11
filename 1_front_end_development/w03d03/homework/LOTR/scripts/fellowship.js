@@ -146,12 +146,19 @@ const makeBuddies = () => {
   console.log('making buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
+  let $aside = $('<aside>')
+  $('#Mordor').append($aside)
 
   // 2. display an unordered list of buddies in the aside
-
+  let $ul = $('<ul>')
+  for (let i = 0; i < buddies.length; i++) {
+    $ul.append($('<li>').text(buddies[i]).addClass('buddy'))
+    
+  }
   // 3. give each of the buddies a class of "buddy"
 
   // 4. don't forget to append them to the aside
+  $aside.append($ul)
 
 };
 
