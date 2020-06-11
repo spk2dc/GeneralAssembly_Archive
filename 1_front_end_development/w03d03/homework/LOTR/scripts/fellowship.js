@@ -124,11 +124,15 @@ const makeBaddies = () => {
   console.log('making baddies');
 
   // 1. display an unordered list of baddies in Mordor
-
+  let $ul = $('<ul>')
+  for (let i = 0; i < baddies.length; i++) {
+    $ul.append($('<li>').addClass('baddy').text(baddies[i]))
+    
+  }
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append the ul to Mordor
-
+  $('#Mordor').append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -162,7 +166,6 @@ const leaveTheShire = () => {
   makeBuddies()
   console.log('leave shire');
 
-  )
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
