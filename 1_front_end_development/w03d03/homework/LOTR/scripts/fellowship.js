@@ -255,7 +255,7 @@ const hornOfGondor = () => {
   alert('Horn of Gondor blown')
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-  $('.buddy').eq(4).css('text-decoration','line-through')
+  $('.buddy').eq(4).css('text-decoration', 'line-through')
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
   $('.baddy').eq(2).remove()
@@ -273,8 +273,13 @@ const itsDangerousToGoAlone = () => {
   console.log('dangerous alone');
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
+  $('#Mordor').append($('.hobbit').eq(0))
+  $('#Mordor').append($('.hobbit').eq(1))
+
 
   // 2. add a div with an id of 'mount-doom' to Mordor
+  $('#Mordor').append($('<div>').attr('id','mount-doom'))
+
 
 };
 
