@@ -103,7 +103,7 @@ const keepItSecretKeepItSafe = () => {
   console.log('keep it secret and safe');
 
   // 1. create an empty div with an id of 'the-ring'
-  let $div = $('<div>').attr('id','the-ring')
+  let $div = $('<div>').attr('id', 'the-ring')
 
   // 2. add the ring as a child of Frodo
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
@@ -127,7 +127,7 @@ const makeBaddies = () => {
   let $ul = $('<ul>')
   for (let i = 0; i < baddies.length; i++) {
     $ul.append($('<li>').addClass('baddy').text(baddies[i]))
-    
+
   }
   // 2. give each of the baddies a class of "baddy"
 
@@ -153,7 +153,7 @@ const makeBuddies = () => {
   let $ul = $('<ul>')
   for (let i = 0; i < buddies.length; i++) {
     $ul.append($('<li>').text(buddies[i]).addClass('buddy'))
-    
+
   }
   // 3. give each of the buddies a class of "buddy"
 
@@ -206,7 +206,7 @@ const forgeTheFellowShip = () => {
   console.log('forge fellowship');
 
   // 1. create a new div with an id 'the-fellowship'
-  let $div = $('<div>').attr('id','the-fellowship')
+  let $div = $('<div>').attr('id', 'the-fellowship')
   // 2. add an h1 with the text 'The Fellowship' to this new div
   $div.append($('<h1>').text('The Fellowship'))
   // 3. append the fellowship to middle-earth
@@ -228,10 +228,16 @@ const theBalrog = () => {
   console.log('balrog');
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
+  let $gand = $('#the-fellowship').children('ul').eq(1).children('li').eq(0)
+  // let $gand = $('#buddy').eq(0)
+  $gand.text('Gandalf the White')
 
   // 2. add a class "the-white" to this element
+  $gand.addClass('the-white')
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+  $('.the-white').css('background-color', 'white')
+  $('.the-white').css('border', '1px solid grey')
 
 };
 
