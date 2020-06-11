@@ -71,19 +71,25 @@ const makeMiddleEarth = () => {
 // Chapter 2
 // ============
 const makeHobbits = () => {
+  makeMiddleEarth()
+  console.log('making hobbits');
 
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
   // 1. create a 'ul'
+  let $ul = $('<ul>')
 
   // 2. make each hobbit an li element and append it to the 'ul' you just created
   // hint: use the given 'hobbits' array and use a for loop
+  for (let i = 0; i < hobbits.length; i++) {
+    $ul.append($('<li>').text(hobbits[i]).addClass('hobbit'))
+  }
 
   // 3. also, give each hobbit (`li`) a class of "hobbit"
 
   // 4. append the ul to the shire
   // hint: get 'The-Shire' by using its id
-
+  $('#The-Shire').append($ul)
 };
 
 // COMMIT YOUR WORK
@@ -93,6 +99,8 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
+
+  console.log('keep it secret and safe');
 
   // 1. create an empty div with an id of 'the-ring'
 
@@ -111,6 +119,8 @@ const keepItSecretKeepItSafe = () => {
 // ============
 const makeBaddies = () => {
 
+  console.log('making baddies');
+
   // 1. display an unordered list of baddies in Mordor
 
   // 2. give each of the baddies a class of "baddy"
@@ -126,6 +136,8 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
+
+  console.log('making buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
