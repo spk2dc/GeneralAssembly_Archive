@@ -1,0 +1,68 @@
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.A, B, C {
+  /* flex-basis: 50px; */
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 1px black;
+  border: 1px solid gray;
+}
+
+.A {
+  height: 150px;
+  max-width: 100%;
+  min-width: 100%;
+  margin: auto;
+  background-color: rgb(241, 28, 28);
+}
+
+.B {
+  height: 300px;
+  max-width: 100%;
+  min-width: 100%;
+  margin: 2% auto 0 0;
+  background-color: rgb(17, 30, 211);
+}
+
+.C {
+  height: 150px;
+  max-width: 100%;
+  min-width: 100%;
+  margin: 2% 0 0 auto;
+  background-color: rgb(9, 139, 59);
+}
+
+/* styles for desktop when the browser is 800px or above */
+@media (min-width: 780px) {
+  .A {
+    height: 150px;
+    max-width: 100%;
+    min-width: 100%;
+    margin: auto;
+    background-color: rgb(241, 28, 28);
+  }
+  
+  .B {
+    height: 300px;
+    max-width: 100%;
+    min-width: 79%;
+    margin: 2% auto 0 0;
+    background-color: rgb(17, 30, 211);
+  }
+  
+  .C {
+    height: 300px;
+    max-width: 100%;
+    min-width: 19%;
+    margin: 2% 0 0 auto;
+    background-color: rgb(9, 139, 59);
+  }
+}
+
