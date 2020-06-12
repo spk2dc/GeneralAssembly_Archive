@@ -1,0 +1,20 @@
+.square {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: ivory;
+    width: 30%;
+    height: 30%;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+#container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
