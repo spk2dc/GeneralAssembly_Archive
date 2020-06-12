@@ -72,9 +72,13 @@ let winFunc = (event) => {
     console.log(winner.length);
 
     if (winner.length > 0) {
+        $('#endtext').text(`Player ${winner} wins!`)
+        openModal()
         console.log(`Player ${winner} wins!`);
         $('div.square').addClass('end')
     } else if (allDivsFilled) {
+        $('#endtext').text(`Tie. No one wins.`)
+        openModal()
         console.log(`Tie. No one wins.`);
         $('div.square').addClass('end')
     } else {
@@ -82,15 +86,24 @@ let winFunc = (event) => {
     }
 }
 
-let endGame = (event) => {
+const openModal = () => {
+    $('#modal').css('display', 'block')
+}
 
+const closeModal = () => {
+    $('#modal').css('display', 'none')
+}
+
+const stopBubble = (event) => {
+    event.stopPropagation();
 }
 
 $(() => {
 
     board()
-
-
+    $('#close').on('click', closeModal)
+    $('#modal').on('click', closeModal)
+    $('#modal-textbox').on('click', stopBubble)
 
 });
 
