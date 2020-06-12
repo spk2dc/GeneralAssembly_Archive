@@ -5,6 +5,8 @@
     height: 20px;
     border: 1px solid black;
 }
-.pink {
-    background: pink;
+
+#container {
+    width: 50vw;
+    height: 50vw;
 }
