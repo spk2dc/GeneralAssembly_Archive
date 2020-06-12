@@ -9,7 +9,7 @@
     border: 1px solid black;
 }
 
-#color-palette{
+#color-palette, #my-palette{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
