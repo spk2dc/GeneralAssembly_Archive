@@ -1,7 +1,9 @@
+let globIsX = true;
+
 let board = () => {
     for (let i = 0; i < 9; i++) {
         let $div = $('<div>');
-        $div.addClass('square');
+        $div.addClass('square ' + 's' + i);
         $div.on('click', clickFunc)
         $('#container').append($div);
     }
@@ -9,23 +11,25 @@ let board = () => {
 
 let clickFunc = (event) => {
     let $div = $(event.currentTarget)
-    $div.text('X')
+    let divClass = $div.attr('class')
+    console.log(divClass);
+
+    if (divClass.includes('X') || divClass.includes('O')) {
+        return;
+    } else if (globIsX) {
+        globIsX = false;
+        $div.text('X').toggleClass('X')
+    } else {
+        globIsX = true;
+        $div.text('O').toggleClass('O')
+    }
+
 }
 
 $(() => {
 
     board()
 
-    let $box = $('#inputBox')
-    let $button = $('#inputButton')
-
-    $button.on('click', numDivs)
-    $box.on('keypress', (event) => {
-        if (event.which == 13) {
-            console.log('enter')
-            numDivs()
-        }
-    })
 
 
 });
