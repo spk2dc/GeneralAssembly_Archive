@@ -12,7 +12,7 @@ body {
     background: ivory;
     width: 32%;
     height: 32%;
-    border: 1px solid black;
+    border: 2px solid black;
     justify-content: center;
     align-items: center;
     font-size: 70px;
@@ -46,7 +46,8 @@ body {
 	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
 	overflow: auto;
 	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
-	display: none;
+    display: none;
+    flex-direction: column;
 }
 
 #modal-textbox {
@@ -72,9 +73,10 @@ body {
     justify-self: flex-end;
 }
 
-h1 {
+#endtext {
     display: flex;
     text-align: right;
     align-self: flex-start;
     justify-self: center;
+    font-size: 30px;
 }

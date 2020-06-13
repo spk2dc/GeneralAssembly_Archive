@@ -102,7 +102,7 @@ let winFunc = (event) => {
 }
 
 const openModal = () => {
-    $('#modal').css('display', 'block')
+    $('#modal').css('display', 'flex')
 }
 
 const closeModal = () => {
