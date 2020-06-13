@@ -1,28 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .square {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background: ivory;
-    width: 30%;
-    height: 30%;
+    width: 32%;
+    height: 32%;
     border: 1px solid black;
     justify-content: center;
     align-items: center;
     font-size: 70px;
 }
 
-#xo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background: ivory;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-}
 
 #container {
     width: 300px;
@@ -30,6 +25,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    background: ivory;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    margin: 50px auto;
+    padding: 20px;
+    /* overflow: scroll; */
 }
 
 #modal {
@@ -47,17 +50,31 @@
 }
 
 #modal-textbox {
+    display: flex;
 	background-color: white;
-	height: 350px;
-	width: 550px;
+	height: 150px;
+	width: 250px;
 	border-radius: 2px;
 	margin: 150px auto;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 	padding: 2%;
 	line-height: 120%;
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 10px;
 }
 
 #modal-footer {
-	text-align: right;
+    display: flex;
+    text-align: right;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+h1 {
+    display: flex;
+    text-align: right;
+    align-self: flex-start;
+    justify-self: center;
 }

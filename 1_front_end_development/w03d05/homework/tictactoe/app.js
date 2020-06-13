@@ -37,39 +37,54 @@ let winFunc = (event) => {
     for (let i = 0; i < $div.length; i++) {
         divText[i] = $div.eq(i).text()
 
-        //if text is empty cannot win
+        //if text is not empty check if winner
         if (divText[i].length > 0) {
             //check rows to see if winner
             if (i == 2 || i == 5 || i == 8) {
+
                 if (divText[i] == divText[i - 1] && divText[i] == divText[i - 2]) {
+
                     winner = divText[i]
+                    console.log(`row ${divText[i]},${divText[i - 1]},${divText[i - 2]}`);
 
                 }
             }
             //check columns to see if winner
             if (i >= 6) {
+
                 if (divText[i] == divText[i - 3] && divText[i] == divText[i - 6]) {
+
                     winner = divText[i]
+                    console.log(`column ${divText[i]},${divText[i - 3]},${divText[i - 6]}`);
 
                 }
             }
-            //check diagonals to see if winner
-            if (i == 8) {
-                if (divText[i] == divText[i - 4] && divText[i] == divText[i - 8]) {
-                    winner = divText[i]
-                }
+            //check diagonal to see if winner
+            if (i == 8 && divText[i] == divText[i - 4] && divText[i] == divText[i - 8]) {
 
-                if (divText[i - 2] == divText[i - 4] && divText[i - 2] == divText[i - 6]) {
-                    winner = divText[i]
-                }
+                winner = divText[i]
+                console.log(`diagonal ${divText[i]},${divText[i - 4]},${divText[i - 8]}`);
+
             }
+            //check reverse diagonal to see if winner
+            if (i == 6 && divText[i] == divText[i - 2] && divText[i - 2] == divText[i - 4]) {
+
+                winner = divText[i]
+                console.log(`diagonal reverse ${divText[i]},${divText[i - 2]},${divText[i - 4]}`);
+
+            }
+
         } else {
+            //if any box is empty set false to keep playing or check if tie game
             allDivsFilled = false;
         }
+
     }
 
-    console.log(allDivsFilled);
-    console.log(winner.length);
+    console.log('all squares filled: ' + allDivsFilled);
+    console.log('winner length: ' + winner.length);
+    console.log('all squares array: ' + divText);
+
 
     if (winner.length > 0) {
         $('#endtext').text(`Player ${winner} wins!`)
