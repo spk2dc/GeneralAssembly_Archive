@@ -1,16 +1,3 @@
-<hr>
-
-Title: Flying Newspaper<br>
-Type: Morning Exercise <br>
-Duration: "0:45"<br>
-Creator: Matt Huntington<br>
-Adapted by: Karolin Rafalski<br>
-Course: WDIr Hopper<br>
-Competencies: CSS Animations<br>
-Prerequisites: CSS, HTML <br>
-<hr>
-
-
 ## Make a newspaper (a `<div>` element) fly!
 
 [Original Inspiration](https://www.youtube.com/watch?v=GaiZIulY4EU)
