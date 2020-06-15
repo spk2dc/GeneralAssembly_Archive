@@ -16,11 +16,13 @@
 ### Week 3
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w03d01 | [VSSL Mockup Pt.2](./1_front_end_development/w03d01/morning_exercise) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle - extra markdown with more info](./1_front_end_development/w03d01/homework/) |
-| w03d02 | [Supply Mockup Walkthrough](./1_front_end_development/w03d02/morning_exercise) | [DOM Intro, jQuery](./1_front_end_development/w03d02/instructor_notes) | [Hometown, Trois Colours Lumpy Space Princess](./1_front_end_development/w03d02/student_labs) | [jQuery Magic](./1_front_end_development/w03d02/homework/README.md) |
-| w03d03 | DOM Manipulation | [DOM Manipulation with Functions and Loops, Populating Dom from Data, DOM Events (listeners and handlers)](./1_front_end_development/w03d03/instructor_notes) | [Grids and Pyramids, Random Imager](./1_front_end_development/w03d03/student_labs) | [LOTR](./1_front_end_development/w03d03/homework/LOTR) |
-| w03d04 | [Intro to Media Queries](./1_front_end_development/w03d04/morning_exercise/README.md) | [Event Bubbling, DOM capturing input, iteration, targets](./1_front_end_development/w03d04/instructor_notes) | [Calculator, To Do List](./1_front_end_development/w03d04/student_labs) | jQuery To Do List - hw and lab |
-| w03d05 | [Modal](./1_front_end_development/w03d05/morning_exercise/README.md) | [DOM Events in a Loop](./1_front_end_development/w03d05/instructor_notes) | [Shape Clicker, Tic Tac Toe](./1_front_end_development/w03d05/student_labs) | [Tic-Tac-Toe](./1_front_end_development/w03d05/homework/) |
+| w04d01 | [Flying Newspaper (CSS Transitions)](./1_front_end_development/w04d01/morning_exercise) | AJAX, Code organization | Donut vs Pizza Rat Pt. 2  | Project 1 |
+| w04d02 | Deploy to Github Pages | Project 1 | Project 1 | Project 1 |
+| w04d03 | Project 1 | Project 1 | Project 1 | Project 1 |
+| w04d04 | Project 1 | Project 1 | Project 1 | Project 1 |
+| w04d05 | Project 1 | Project 1 | Project 1 | Project 1 |
+
+
 
 ### Week 1
 | Day | Morning Exercise | Lectures | Labs | Homework |
@@ -37,3 +39,12 @@
 | w02d02 | [Beginner's Guide to UX/UI](./1_front_end_development/w02d02/morning_exercise/README.md) | [Object-ception (Morning), Combining Datatypes (Afternoon)](./1_front_end_development/w02d02/instructor_notes) | [Object-ception, Avengers Assemble!](./1_front_end_development/w02d02/student_labs/) | [Data Structure Drills](./1_front_end_development/w02d02/homework/) |
 | w02d03 | [Intro To Flexbox](./1_front_end_development/w02d03/morning_exercise/README.md) | [Callbacks (Morning), Array Methods w/ Callbacks (Afternoon)](./1_front_end_development/w02d03/instructor_notes) | [Callbacks & Array Methods](./1_front_end_development/w02d03/student_labs/) | [Datatype and Callback Drills](./1_front_end_development/w02d03/homework/README.md) |
 | w02d04 | [VSSL Mockup Pt.1](./1_front_end_development/w02d04/morning_exercise/README.md) | [OOP Objects Methods (Morning), OOP Classes (Afternoon)](./1_front_end_development/w02d04/instructor_notes) | [Westword, Classes](./1_front_end_development/w02d04/student_labs/) | [Classes and Donut Adventure](./1_front_end_development/w02d04/homework/README.md) |
+
+### Week 3
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w03d01 | [VSSL Mockup Pt.2](./1_front_end_development/w03d01/morning_exercise) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle](./1_front_end_development/w03d01/instructor_notes) | [Spacebattle - extra markdown with more info](./1_front_end_development/w03d01/homework/) |
+| w03d02 | [Supply Mockup Walkthrough](./1_front_end_development/w03d02/morning_exercise) | [DOM Intro, jQuery](./1_front_end_development/w03d02/instructor_notes) | [Hometown, Trois Colours Lumpy Space Princess](./1_front_end_development/w03d02/student_labs) | [jQuery Magic](./1_front_end_development/w03d02/homework/README.md) |
+| w03d03 | DOM Manipulation | [DOM Manipulation with Functions and Loops, Populating Dom from Data, DOM Events (listeners and handlers)](./1_front_end_development/w03d03/instructor_notes) | [Grids and Pyramids, Random Imager](./1_front_end_development/w03d03/student_labs) | [LOTR](./1_front_end_development/w03d03/homework/LOTR) |
+| w03d04 | [Intro to Media Queries](./1_front_end_development/w03d04/morning_exercise/README.md) | [Event Bubbling, DOM capturing input, iteration, targets](./1_front_end_development/w03d04/instructor_notes) | [Calculator, To Do List](./1_front_end_development/w03d04/student_labs) | jQuery To Do List - hw and lab |
+| w03d05 | [Modal](./1_front_end_development/w03d05/morning_exercise/README.md) | [DOM Events in a Loop](./1_front_end_development/w03d05/instructor_notes) | [Shape Clicker, Tic Tac Toe](./1_front_end_development/w03d05/student_labs) | [Tic-Tac-Toe](./1_front_end_development/w03d05/homework/) |
