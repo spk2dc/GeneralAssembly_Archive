@@ -9,7 +9,7 @@ We also will **still have some attendance checks** during project week, as follo
 
   - **Tuesday, June 16**: You're required to meet up with your instructor at whatever time you schedule to approve your project idea. You're also required to show up to Outcomes at 2:00 PM EST on Wednesday
   - **Daily**: Fill out your attendance on a daily basis and check in with instructors regarding your progress. 
-  - **Monday, June 23**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
+  - **Tuesday, June 23**: Project presentation day! You're required to be in the class zoom starting at 10:00 AM EST
 
 _Failure to make an attendance check will result in an unexcused absence for both morning and afternoon for that day_.
 
