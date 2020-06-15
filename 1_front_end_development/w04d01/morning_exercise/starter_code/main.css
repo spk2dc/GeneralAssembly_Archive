@@ -83,6 +83,11 @@ p:first-child:first-letter {
   box-shadow: 2px 2px 4px black, -2px -2px 4px black;
 }
 
+/* .scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+} */
+
 .size-in {
   transform: scale(1);
   animation: size-in 3s 1;
@@ -95,3 +100,7 @@ p:first-child:first-letter {
 /********************************** 
 Add animations here
 *********************************/
+@keyframes box-step {
+  0% { transform: rotate(0deg) scale(.1); }
+  100% { transform: rotate(1800deg) scale(1); }
+}
