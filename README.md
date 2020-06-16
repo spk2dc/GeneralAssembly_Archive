@@ -16,7 +16,7 @@
 ### Week 4
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w04d01 | [Flying Newspaper (CSS Transitions)](./1_front_end_development/w04d01/morning_exercise) | [AJAX, Code organization](./1_front_end_development/w04d01/instructor_notes) | [Donut vs Pizza Rat Pt. 2](./1_front_end_development/w04d01/student_labs/)  | Project 1 |
+| w04d01 | [Flying Newspaper (CSS Transitions)](./1_front_end_development/w04d01/morning_exercise) | [AJAX, Code organization](./1_front_end_development/w04d01/instructor_notes) | [Donut vs Pizza Rat Pt. 2](./1_front_end_development/w04d01/student_labs/)  | [Project 1](./7_project_files/project_1/README.md) |
 | w04d02 | Deploy to Github Pages | Project 1 | Project 1 | Project 1 |
 | w04d03 | Project 1 | Project 1 | Project 1 | Project 1 |
 | w04d04 | Project 1 | Project 1 | Project 1 | Project 1 |
