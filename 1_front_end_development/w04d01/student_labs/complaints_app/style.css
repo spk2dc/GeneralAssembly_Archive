@@ -17,6 +17,14 @@ body {
     align-items: center;
     margin: 50px auto;
     padding: 20px;
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
+table {
+    width: 100%;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+    padding: 5px;
+}

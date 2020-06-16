@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>NYPD Complaints</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
@@ -11,16 +11,27 @@
 
 <body>
     <div id="container">
-        <h1>Where can we cause trouble today?</h1>
+        <h1>Recent NYPD Complaints</h1>
         <form>
             <input type="text" value="10">
+
+        </form>
+        <div id="allbuttons">
             <button id="brooklyn">BROOKLYN</button>
             <button id="manhattan">MANHATTAN</button>
             <button id="queens">QUEENS</button>
             <button id="bronx">BRONX</button>
             <button id="staten">STATEN ISLAND</button>
-        </form>
-
+        </div>
+        <div id="resultsDiv" style="width: 100%;">
+            <h3>Results:</h3>
+            <table id="results">
+                <tr>
+                    <th>ID#</th>
+                    <th>Borough</th>
+                    <th>Description</th>
+                </tr>
+        </div>
 
 
     </div>
