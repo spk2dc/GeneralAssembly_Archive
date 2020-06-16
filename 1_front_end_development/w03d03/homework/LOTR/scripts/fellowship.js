@@ -147,7 +147,7 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
   let $aside = $('<aside>')
-  $('#Mordor').append($aside)
+  $('#middle-earth').append($aside)
 
   // 2. display an unordered list of buddies in the aside
   let $ul = $('<ul>')
