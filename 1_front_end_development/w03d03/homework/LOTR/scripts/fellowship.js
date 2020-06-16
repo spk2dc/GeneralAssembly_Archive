@@ -71,7 +71,7 @@ const makeMiddleEarth = () => {
 // Chapter 2
 // ============
 const makeHobbits = () => {
-  makeMiddleEarth()
+  // makeMiddleEarth()
   console.log('making hobbits');
 
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
@@ -99,7 +99,7 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-  makeHobbits()
+  // makeHobbits()
   console.log('keep it secret and safe');
 
   // 1. create an empty div with an id of 'the-ring'
@@ -120,7 +120,7 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-  keepItSecretKeepItSafe()
+  // keepItSecretKeepItSafe()
   console.log('making baddies');
 
   // 1. display an unordered list of baddies in Mordor
@@ -142,7 +142,7 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-  makeBaddies()
+  // makeBaddies()
   console.log('making buddies');
 
   // 1. create an aside tag and append it to middle-earth below mordor
@@ -170,7 +170,7 @@ const makeBuddies = () => {
 // ============
 
 const leaveTheShire = () => {
-  makeBuddies()
+  // makeBuddies()
   console.log('leave shire');
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
@@ -187,7 +187,7 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-  leaveTheShire()
+  // leaveTheShire()
   console.log('stranger');
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
@@ -202,7 +202,7 @@ const beautifulStranger = () => {
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-  beautifulStranger()
+  // beautifulStranger()
   console.log('forge fellowship');
 
   // 1. create a new div with an id 'the-fellowship'
@@ -224,7 +224,7 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-  forgeTheFellowShip()
+  // forgeTheFellowShip()
   console.log('balrog');
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
@@ -248,7 +248,7 @@ const theBalrog = () => {
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-  theBalrog()
+  // theBalrog()
   console.log('horn of gondor');
 
   // 1. create a pop-up alert that the horn of gondor has been blown
@@ -269,7 +269,7 @@ const hornOfGondor = () => {
 // Chapter 11
 // ============
 const itsDangerousToGoAlone = () => {
-  hornOfGondor()
+  // hornOfGondor()
   console.log('dangerous alone');
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
@@ -290,7 +290,7 @@ const itsDangerousToGoAlone = () => {
 // Chapter 12
 // ============
 const weWantsIt = () => {
-  itsDangerousToGoAlone()
+  // itsDangerousToGoAlone()
   console.log('we wants it');
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
@@ -310,7 +310,7 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
-  weWantsIt()
+  // weWantsIt()
   console.log('there and back again');
 
   // 1. remove Gollum and the Ring from the DOM
