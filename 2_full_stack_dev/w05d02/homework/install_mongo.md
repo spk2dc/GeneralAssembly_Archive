@@ -18,7 +18,7 @@ brew services start mongodb-community
 ```
 
 ## Set data location
-
+* If do not have OSX Catalina
 In terminal type `mongod` to run the mongo server.
 
 You will probably get an error saying
