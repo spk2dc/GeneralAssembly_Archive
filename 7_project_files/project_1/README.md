@@ -23,7 +23,7 @@ _Failure to make an attendance check will result in an unexcused absence for bot
   1. Built with HTML, CSS, JavaScript and jQuery
   2. Hosted on github pages<br>
   3. Commits to github every day<br>
-  4. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
+  4. A `README.md` file with explanations of the technologies used, the approach taken, a link to your live site, unsolved problems, etc.
 
 #### The app must:
 

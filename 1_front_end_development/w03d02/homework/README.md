@@ -1,10 +1,3 @@
-
-Title: jQuery Magic<br>
-Type: Homework<br>
-Creator: jQuery Magic:Karolin Rafalski<br>
-Competencies: create, append/remove elements in the DOM using jQuery, traverse the DOM, add/remove attributes, html tables <br>
-Prerequisites: JavaScript, HTML, CSS <br>
-
 # jQuery Magic
 ## Intro
 

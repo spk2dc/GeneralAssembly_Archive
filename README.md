@@ -11,18 +11,18 @@
 
 **Outcomes Meetings are Wednesdays from 2pm EST/1pm CST to 3:30/2:30**
 
-## Unit 1
+## Unit 2
 
-### Week 4
+### Week 5
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w04d01 | [Flying Newspaper (CSS Transitions)](./1_front_end_development/w04d01/morning_exercise) | [AJAX, Code organization](./1_front_end_development/w04d01/instructor_notes) | [Donut vs Pizza Rat Pt. 2](./1_front_end_development/w04d01/student_labs/)  | [Project 1](./7_project_files/project_1/README.md) |
-| w04d02 | Deploy to Github Pages | Project 1 | Project 1 | Project 1 |
-| w04d03 | Project 1 | Project 1 | Project 1 | Project 1 |
-| w04d04 | Project 1 | Project 1 | Project 1 | Project 1 |
-| w04d05 | Project 1 | Project 1 | Project 1 | Project 1 |
+| w05d01 | Project 1 | Project 1 | Project 1  | Project 1 |
+| w05d02 | Project 1 | Project 1 Presentations | Project 1 Presentations | [Mongo/Intro to Internet](./2_full_stack_dev/w05d02/homework/) |
+| w05d03 | Outcomes (No exercise) | [Intro to Express/Params and Routing](./2_full_stack_dev/w05d03/instructor_notes/) | TV Shows/Express Calculator | Magic 8 Ball |
+| w05d04 | Bootstrap | REST: Index, Show/MVC and EJS | Super Heroes | Poke Express |
+| w05d05 | Word Frequency | REST: New, Create/cURL and Static Assets | Biscoff Bakery/Express CLI App | Budgtr |
 
-
+## Unit 1
 
 ### Week 1
 | Day | Morning Exercise | Lectures | Labs | Homework |
@@ -48,3 +48,12 @@
 | w03d03 | DOM Manipulation | [DOM Manipulation with Functions and Loops, Populating Dom from Data, DOM Events (listeners and handlers)](./1_front_end_development/w03d03/instructor_notes) | [Grids and Pyramids, Random Imager](./1_front_end_development/w03d03/student_labs) | [LOTR](./1_front_end_development/w03d03/homework/LOTR) |
 | w03d04 | [Intro to Media Queries](./1_front_end_development/w03d04/morning_exercise/README.md) | [Event Bubbling, DOM capturing input, iteration, targets](./1_front_end_development/w03d04/instructor_notes) | [Calculator, To Do List](./1_front_end_development/w03d04/student_labs) | jQuery To Do List - hw and lab |
 | w03d05 | [Modal](./1_front_end_development/w03d05/morning_exercise/README.md) | [DOM Events in a Loop](./1_front_end_development/w03d05/instructor_notes) | [Shape Clicker, Tic Tac Toe](./1_front_end_development/w03d05/student_labs) | [Tic-Tac-Toe](./1_front_end_development/w03d05/homework/) |
+
+### Week 4
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w04d01 | [Flying Newspaper (CSS Transitions)](./1_front_end_development/w04d01/morning_exercise) | [AJAX, Code organization](./1_front_end_development/w04d01/instructor_notes) | [Donut vs Pizza Rat Pt. 2](./1_front_end_development/w04d01/student_labs/)  | [Project 1](./7_project_files/project_1/README.md) |
+| w04d02 | Deploy to Github Pages | Project 1 | Project 1 | Project 1 |
+| w04d03 | Project 1 | Project 1 | Project 1 | Project 1 |
+| w04d04 | Project 1 | Project 1 | Project 1 | Project 1 |
+| w04d05 | Project 1 | Project 1 | Project 1 | Project 1 |
