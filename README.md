@@ -18,7 +18,7 @@
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w05d01 | Project 1 | Project 1 | Project 1  | Project 1 |
 | w05d02 | Project 1 | Project 1 Presentations | Project 1 Presentations | [Mongo/Intro to Internet](./2_full_stack_dev/w05d02/homework/) |
-| w05d03 | Outcomes (No exercise) | Intro to Express/Params and Routing | TV Shows/Express Calculator | Magic 8 Ball |
+| w05d03 | Outcomes (No exercise) | [Intro to Express/Params and Routing](./2_full_stack_dev/w05d03/instructor_notes/) | TV Shows/Express Calculator | Magic 8 Ball |
 | w05d04 | Bootstrap | REST: Index, Show/MVC and EJS | Super Heroes | Poke Express |
 | w05d05 | Word Frequency | REST: New, Create/cURL and Static Assets | Biscoff Bakery/Express CLI App | Budgtr |
 
