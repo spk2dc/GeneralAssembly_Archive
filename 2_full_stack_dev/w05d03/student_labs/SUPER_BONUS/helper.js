@@ -23,7 +23,7 @@ for (let i = 0; i < sightingsData.length; i++) {
 
 app.listen(3000)
 app.get('/ufo', (req, res) => {
-    res.send('req');
     console.log(req);
+    res.send('req');
     
 })
