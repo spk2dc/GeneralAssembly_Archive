@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions</title>
+</head>
+
+<body>
+    <h1><%=mars[index].name%></h1>
+    <h3>
+        <a href="/index">
+            Back to Index
+        </a>
+    </h3>
+    <ul>
+        <% for (key in mars[index]) { %>
+            <% if (key === 'img') { %>
+                <li>
+                    <%=key%> is <%=mars[index][key]%>
+                </li>
+                <img src="<%=mars[index][key]%>" alt="<%=mars[index][key]%>">
+            <% } else { %>
+                <li>
+                    <%=key%> is <%=mars[index][key]%>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+</body>
+
+</html>
