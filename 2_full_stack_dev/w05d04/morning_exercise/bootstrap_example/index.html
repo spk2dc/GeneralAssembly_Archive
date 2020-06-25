@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <!-- START Style Sheets -->
-    <!-- Our personal style sheet -->
-    <link rel="stylesheet" href="style.css" charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <!-- Bootstrap CDN -->
+  <!-- START Style Sheets -->
+  <!-- Our personal style sheet -->
+  <link rel="stylesheet" href="style.css" charset="utf-8">
 
-    <!-- END Style Sheets -->
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- END Style Sheets -->
 
-    <title>Bootstrap Framework Example</title>
-  </head>
-  <nav>
-    <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">WORK</a></li>
-      <li><a href="#">CONTACT</a></li>
-    </ul>
-  </nav>
+  <title>Bootstrap Framework Example</title>
+</head>
+<nav>
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">WORK</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+  </ul>
+</nav>
 
-  <!-- START Image -->
+<!-- START Image -->
+<div class="text-center">
+  <img class="img-fluid" src="img/asset_holder.jpg" />
+</div>
+<!-- END Image -->
+
+<!-- START body wrapping -->
+<div class="container-fluid">
+
+  <!-- START Page Header -->
   <div>
-      <img src="img/asset_holder.jpg"/>
+    <h1>Example page header <small>Subtext for header</small></h1>
   </div>
-  <!-- END Image -->
+  <!-- END Page header -->
 
-  <!-- START body wrapping -->
-  <div>
-
-    <!-- START Page Header -->
-    <div>
-      <h1>Example page header <small>Subtext for header</small></h1>
+  <!-- START Three content sections -->
+  <div class="row">
+    <div class="col-sm">
+      <p class="col-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor. </p>
     </div>
-    <!-- END Page header -->
-
-    <!-- START Three content sections -->
-  <div>
-    <div>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. </p>
+    <div class="col-sm">
+      <p class="col-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </p>
     </div>
-    <div>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-    </div>
-    <div>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+    <div class="col-sm">
+      <p class="col-sm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </p>
     </div>
   </div>
   <!-- END Three content sections -->
 
-    <hr>
+  <hr>
   <!-- START Callout box -->
-  <div>
+  <div class="jumbotron">
     <h1>Hello, world!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in.</p>
 
     <!-- START Learn More link -->
-    <p><a href="#">Learn more</a></p>
+    <p><a href="#" class="btn btn-outline-primary">Learn more</a></p>
     <!-- END Learn More link -->
   </div>
   <!-- END Callout box -->
 
-    <hr>
+  <hr>
 
   <!-- START Information Table -->
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>Name</th>
@@ -92,10 +102,11 @@
       </tr>
     </tbody>
   </table>
-    <!-- END Information Table -->
+  <!-- END Information Table -->
 
 </div>
 <!-- END of Body wrapping -->
 
-  </body>
+</body>
+
 </html>
