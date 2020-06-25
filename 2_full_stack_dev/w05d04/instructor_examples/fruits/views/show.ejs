@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Fruit</title>
+</head>
+<body>
+    <h1>Show fruit page</h1>
+    <p><%= fruit.name %></p>
+    <p>
+        <% if (fruit.readyToEat) { %>
+            <span>Ready to eat!</span>
+        <% } else { %>
+            <span>Not ready to eat :(</span>
+        <% } %>
+    </p>
+</body>
+</html>
