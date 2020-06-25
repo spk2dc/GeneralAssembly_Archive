@@ -27,3 +27,23 @@ app.get('/magic/:question', (req, res) => {
     res.send(`Question: ${question}? <br>
     <h1>${oneResp}</h1>`)
 })
+
+///Hungry for more bonus problems
+app.get('/', (req, res) => {
+
+    res.send(`99 bottles of kombucha on the wall
+    <a href="/98">take one down and pass it around</a>`)
+})
+
+app.get('/0', (req, res) => {
+
+    res.send(`0 bottles of kombucha on the wall
+    <a href="/">start over</a>`)
+})
+
+app.get('/:num', (req, res) => {
+
+    res.send(`${req.params.num} bottles of kombucha on the wall
+    <a href="/${req.params.num-1}">take one down and pass it around</a>`)
+})
+
