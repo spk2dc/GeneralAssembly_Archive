@@ -19,7 +19,7 @@
         <% for(i in pokemon) { 
                 let capital = pokemon[i].name[0].toUpperCase() + pokemon[i].name.slice(1)
             %>
-                <li>Pokemon: <%= capital %></li>
+                <li><a href="/pokemon/<%= i %>">Pokemon: <%= capital %></a></li>
         <% } %>
     </ul>
 </body>
