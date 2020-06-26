@@ -18,18 +18,6 @@ Build an express app that let's you create, and read
 
 ---
 
-## Getting Started
-
-1. All steps for the exercise should go in this section.
-
-1. For example: Fork and clone this repository
-
-1. Include setup instructions such as, installing dependencies, or running a script like
-
-   ```bash
-   psql -f db/schema.sql
-   ```
-
 ## Deliverables
 
 You'll be creating an app that can let you
