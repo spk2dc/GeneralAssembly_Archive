@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baked Goods Index</title>
+</head>
+<body>
+    <h1>Baked Goods</h1>
+    <% for (let i = 0; i < bakedGoods.length; i++) { %>
+        <p>
+            <a href="/bakedgoods/<%= i %>">
+                <%= bakedGoods[i].name %>
+            </a>
+            - $<%= bakedGoods[i].price %>
+        </p>
+    <% } %>
+    <p><a href="/bakedgoods/new">New baked good</a></p>
+</body>
+</html>
