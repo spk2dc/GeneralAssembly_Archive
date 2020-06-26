@@ -15,6 +15,13 @@
 
 <body>
     <h1>See all the Pokemon!</h1>
+    <ul>
+        <% for(i in pokemon) { 
+                let capital = pokemon[i].name[0].toUpperCase() + pokemon[i].name.slice(1)
+            %>
+                <li>Pokemon: <%= capital %></li>
+        <% } %>
+    </ul>
 </body>
 
 </html>
