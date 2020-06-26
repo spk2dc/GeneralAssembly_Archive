@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Baked Goods</h1>
+    <h3><a href="/bakedgoods/new">Create New Item</a></h3>
+    <ul>
+        <% for(let i=0; i < bakedGoods.length; i++) { %>
+            <li><a href="/bakedgoods/<%= i %>"><%= bakedGoods[i].name %></a></li>
+        <% } %>
+    </ul>
+</body>
+</html>
