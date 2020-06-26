@@ -15,12 +15,25 @@ const bakedGoods = require('./models/bakedgoods.js');
 // =======================================
 // index route
 app.get('/bakedgoods', (req, res) => {
-  res.send(bakedGoods);
+  res.render('index.ejs', { bakedGoods: bakedGoods })
+});
+
+//new route
+app.get('/bakedgoods/new', (req, res) => {
+  res.render('new.ejs', { bakedGoods: bakedGoods, id: req.params.id })
 });
 
 // show route
 app.get('/bakedgoods/:id', (req, res) => {
-  res.send(bakedGoods[req.params.id]);
+  res.render('show.ejs', { bakedGoods: bakedGoods, id: req.params.id })
+});
+
+//POST
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.post('/bakedgoods', (req, res) => {
+  bakedGoods.push(req.body)
+  res.redirect('/bakedgoods')
 });
 
 // =======================================
