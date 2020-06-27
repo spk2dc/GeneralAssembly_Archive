@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Budgets</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><%= data[index].name %></h1>
+        <form action="/budgets"><button type="submit">Back</button></form>
+        <table>
+            <thead>
+                <th>Date</th>
+                <th>Name</th>
+                <th>From</th>
+                <th>Amount</th>
+                <th>Tags</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <% for(key in data[index]) { %>
+                    <td>
+                        <%= data[index][key] %>
+                    </td>
+                    <% } %>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
