@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Baked Good</title>
+</head>
+<body>
+    <h1>New Baked Good</h1>
+    <form action="/bakedgoods" method="POST">
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name"/>
+        </p>
+        <p>
+            <label>Price:</label>
+            <input type="number" name="price"/>
+        </p>
+        <p>
+            <label>Image:</label>
+            <input type="text" name="image"/>
+        </p>
+        <p>
+            <input type="submit" value="Create baked good"/>
+        </p>
+    </form>
+</body>
+</html>
