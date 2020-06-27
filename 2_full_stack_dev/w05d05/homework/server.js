@@ -12,13 +12,26 @@ app.use(express.urlencoded({ extended: true }))
 //tells express to try to match requests with files in the directory called 'public'
 app.use(express.static('public'));
 
+// const $ = require('jquery')
+
 // data
 const data = require('./models/budget.js')
+let bankAcct = 0
+
+for (const itr of data) {
+    bankAcct += itr.amount
+}
+
+if (bankAcct > 500) {
+    // $('account').css('color', 'green')
+} else {
+    // $('account').css('color', 'red')
+}
 
 // get route
 app.get('/budgets', (req, res) => {
     // res.send(data)
-    res.render('index.ejs', { data: data })
+    res.render('index.ejs', { data: data, bankAcct: bankAcct })
 })
 
 app.get('/budgets/new', (req, res) => {
@@ -34,7 +47,10 @@ app.get('/budgets/:index', (req, res) => {
 app.post('/budgets', (req, res) => {
     console.log('req.body is: ');
     console.log(req.body);
-    
+    let input = req.body
+    input.tags = input.tags.split(', ')
+    console.log(input);
+
     data.push(req.body)
     // console.log('all the data: ', data)
     res.redirect('/budgets')

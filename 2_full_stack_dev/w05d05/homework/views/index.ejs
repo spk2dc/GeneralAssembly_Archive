@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
     <title>Budgets</title>
@@ -12,7 +13,8 @@
 <body>
     <div class="container">
         <h1>Budgtr ALL</h1>
-        <h3><a href="/budgets/new">New Item</a></h3>
+        <h3 class="account">Bank Account: <%= bankAcct %></h3>
+        <h5><a href="/budgets/new">New Item</a></h3>
         <table>
             <thead>
                 <th>Date</th>
