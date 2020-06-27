@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Budgets</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>New Budget Item</h1>
+        <form action="/budgets">
+            <button type="submit">Back</button>
+        </form>
+
+        <form action="/budgets" method="post">
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date" value="June 26">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="new item">
+
+            <label for="from">From</label>
+            <input type="text" name="from" id="from" value="new institution">
+
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount" value="0">
+
+            <label for="tags">Tags</label>
+            <input type="text" name="tags" id="tags" value="travel, fees">
+            <br>
+            <input type="submit"></input>
+        </form>
+    </div>
+
+</body>
+
+</html>

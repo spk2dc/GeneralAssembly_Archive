@@ -1,6 +1,7 @@
 // dependencies
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 
 // port
 const port = 3000;
@@ -31,14 +32,12 @@ app.get('/budgets/:index', (req, res) => {
 
 // post route
 app.post('/budgets', (req, res) => {
-    console.log('req.body is: ', req.body);
-    if (!req.body.name) {
-        req.body.name = "NO DATA"
-    }
-    req.body.created_at = Date.now()
+    console.log('req.body is: ');
+    console.log(req.body);
+    
     data.push(req.body)
-    console.log('all the data data: ', data)
-    res.redirect('/data')
+    // console.log('all the data: ', data)
+    res.redirect('/budgets')
 })
 
 app.listen(port, () => console.log('Running on port: ', port));
