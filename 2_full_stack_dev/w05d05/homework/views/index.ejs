@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
     <title>Budgets</title>
@@ -13,34 +14,47 @@
 <body>
     <div class="container">
         <h1>Budgtr ALL</h1>
-        <h3 class="account">Bank Account: <%= bankAcct %></h3>
+        <h3 class="account">Bank Account: <span id="acctID"><%= bankAcct %></span></h3>
         <h5><a href="/budgets/new">New Item</a></h3>
-        <table>
-            <thead>
-                <th>Date</th>
-                <th>Name</th>
-                <th>From</th>
-                <th>Amount</th>
-                <th>Tags</th>
-            </thead>
-            <tbody>
-                <% for(let i=0; i < data.length; i++) { %>
-                <tr>
-                    <% for(key in data[i]) { %>
+            <table>
+                <thead>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>Amount</th>
+                    <th>Tags</th>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i < data.length; i++) { %>
+                    <tr>
+                        <% for(key in data[i]) { %>
                         <td>
                             <% if(key == 'name') { %>
-                                    <a href="/budgets/<%= i %>"><%= data[i][key] %></a>
+                            <a href="/budgets/<%= i %>"><%= data[i][key] %></a>
                             <% } else { %>
-                                    <%= data[i][key] %>
+                            <%= data[i][key] %>
                             <% } %>
                         </td>
-                    <% } %>
-                </tr>
+                        <% } %>
+                    </tr>
 
-                <% } %>
-            </tbody>
-        </table>
+                    <% } %>
+                </tbody>
+            </table>
     </div>
+    <script>
+        $(() => {
+            const bankAcct = <%= bankAcct %>
+            console.log(bankAcct);
+            
+            if (bankAcct > 500) {
+                $('.account').css('color', 'green')
+            } else {
+                $('.account').css('color', 'red')
+            }
+        })
+        
+    </script>
 
 </body>
 

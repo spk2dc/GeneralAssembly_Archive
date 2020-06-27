@@ -16,21 +16,20 @@ app.use(express.static('public'));
 
 // data
 const data = require('./models/budget.js')
-let bankAcct = 0
 
-for (const itr of data) {
-    bankAcct += itr.amount
-}
-
-if (bankAcct > 500) {
-    // $('account').css('color', 'green')
-} else {
-    // $('account').css('color', 'red')
-}
+// if (bankAcct > 500) {
+//     $('account').css('color', 'green')
+// } else {
+//     $('account').css('color', 'red')
+// }
 
 // get route
 app.get('/budgets', (req, res) => {
     // res.send(data)
+    let bankAcct = 0
+    for (let itr of data) {
+        bankAcct += parseInt(itr.amount)
+    }
     res.render('index.ejs', { data: data, bankAcct: bankAcct })
 })
 
