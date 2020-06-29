@@ -10,19 +10,17 @@
     <h3><a href="/new">Create New Scientist</a></h3>
     <br>
     <h3>Delete Scientist</h3>
-    <form action="/index/<%=id%>?_method=DELETE" method="post">
-        <label for="number">Delete Scientist Position Number</label>
-        <%// <input type="number" name="number" id="number"> %>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    
     <br>
     <ul>
-    <% for(let elem of data) { %>
+    <% for(let i = 0; i < data.length ; i++) { %>
         <li>
-        <% for(let key in elem) { %>
-            <%= key %>: <%= elem[key] %> <br>
+        <% for(let key in data[i]) { %>
+            <%= key %>: <%= data[i][key] %> <br>
         <% } %>
+        <form action="/index/<%= i %>?_method=DELETE" method="post">
+            <button type="submit">Delete</button>
+        </form>
         </li>
         <br>
     <% } %>

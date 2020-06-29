@@ -40,7 +40,7 @@ app.post('/index', (req, res) => {
 app.delete('/index/:id', (req, res) => {
     console.log('param: ', req.params);
     
-    data.splice(req.params.index, 1); //remove the item from the array
+    data.splice(req.params.id, 1); //remove the item from the array
 	res.redirect('/index');  //redirect back to index route
 });
 
