@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Scientist</h1>
+    <h3><a href="/index">Back</a></h3>
+    <form action="/index/<%= id %>?_method=PUT" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= data[id].name %>">
+
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" value="<%= data[id].description %>">
+
+        <label for="verified">Verified</label>
+        <input type="checkbox" name="verified" id="verified"
+            <% if(data[id].verified === 'on') { %>
+                    checked
+            <% } %>
+        >
+        <br>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>

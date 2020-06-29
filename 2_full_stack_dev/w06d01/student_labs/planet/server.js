@@ -38,11 +38,39 @@ app.post('/index', (req, res) => {
 
 //delete
 app.delete('/index/:id', (req, res) => {
-    console.log('param: ', req.params);
-    
-    data.splice(req.params.id, 1); //remove the item from the array
-	res.redirect('/index');  //redirect back to index route
+    // console.log('param: ', req.params);
+    if (!data[req.params.id].hasOwnProperty('verified')) {
+        data.splice(req.params.id, 1); //remove the item from the array
+    }
+    res.redirect('/index');  //redirect back to index route
 });
+
+app.delete('/index/delete/all', (req, res) => {
+    // console.log('param: ', req.params);
+
+    data.splice(0, data.length); //remove the item from the array
+    res.redirect('/index');  //redirect back to index route
+});
+
+//edit
+app.get('/index/:id/edit', (req, res) => {
+    console.log('edit data: ', data);
+    
+    res.render(
+        'edit.ejs', //render views/edit.ejs
+        { //pass in an object that contains
+            data: data,
+            id: req.params.id
+        }
+    )
+})
+
+//update
+app.put('/index/:id', (req, res) => {
+    console.log('update data: ', req.body);
+    data[req.params.id] = req.body
+    res.redirect('/index')
+})
 
 //listener
 app.listen(port, () => console.log('Running on port: ', port));
