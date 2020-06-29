@@ -50,6 +50,25 @@ app.delete('/fruits/:index', (req, res) => {
 	res.redirect('/fruits');  //redirect back to index route
 });
 
+// Edit
+app.get('/fruits/:index/edit', (req, res) => {
+  res.render('edit.ejs', {
+    index: req.params.index,
+    fruit: fruits[req.params.index],
+  })
+})
+
+// Update
+app.put('/fruits/:index', (req, res) => {
+  if (req.body.readyToEat === 'on') {
+    req.body.readyToEat = true;
+  } else {
+    req.body.readyToEat = false;
+  }
+  fruits[req.params.index] = req.body;
+  res.redirect('/fruits');
+})
+
 app.listen(PORT, () => {
   console.log('listening on port', PORT)
 })
