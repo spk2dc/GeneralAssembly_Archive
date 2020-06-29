@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
 
 const Pokemon = require('../models/pokemon.js');
-
+app.set('views', '/home/senthil/Documents/student-resources/2_full_stack_dev/w06d01/homework/pokedex/views');
 
 // INDEX
 app.get('/pokemon', (req, res) => {

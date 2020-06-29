@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            max-width: 300px;
+        }
+
+        img {
+            max-width: 150px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
     <title>Document</title>
 </head>
+
 <body>
     <h1>Pokemon Pokedex</h1>
     <br>
@@ -13,13 +27,15 @@
             <h3><%= data[i].name %></h3>
             <img src="<%= data[i].img %>" alt="">
             
-            <% for(elem of data[i].type) { %>
-                <li><%= elem %></li>
-            <% } %>
+            <ul>Type
+                <% for(elem of data[i].type) { %>
+                    <li><%= elem %></li>
+                <% } %>
+            </ul>
 
-            <p><%= data[i].stats.hp %></p>
-            <p><%= data[i].stats.attack %></p>
-            <p><%= data[i].stats.defense %></p>
+            <p>HP: <%= data[i].stats.hp %></p>
+            <p>Attack: <%= data[i].stats.attack %></p>
+            <p>Defense: <%= data[i].stats.defense %></p>
         </div>
 
     <% } %>
