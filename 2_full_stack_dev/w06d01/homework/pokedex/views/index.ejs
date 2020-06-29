@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pokemon Pokedex</h1>
+    <br>
+    <% for(let i=0; i < data.length; i++) { %>
+        <div>
+            <h3><%= data[i].name %></h3>
+            <img src="<%= data[i].img %>" alt="">
+            
+            <% for(elem of data[i].type) { %>
+                <li><%= elem %></li>
+            <% } %>
+
+            <p><%= data[i].stats.hp %></p>
+            <p><%= data[i].stats.attack %></p>
+            <p><%= data[i].stats.defense %></p>
+        </div>
+
+    <% } %>
+</body>
+</html>
