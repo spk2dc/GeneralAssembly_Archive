@@ -13,6 +13,14 @@
 
 ## Unit 2
 
+### Week 6
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w06d01 | [C.R.A.P](./2_full_stack_dev/w06d01/morning_exercise/) | REST: Delete/Edit, Update | Exobiology | Pokedex |
+| w06d02 | Forms| Mongo, Mongoose, & Schemas | Intergalactic Bounty Hunters, Mongoose Vampires | Hamburgers and Hotels |
+| w06d03 | Outcomes (No exercise) | Build an Express App | Captain's Log | Mongoose Store |
+| w06d04 | Loop the Loop | C.R.U.D App | Captain's Log (contd) | Mongoose Store (contd) |
+
 ### Week 5
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
