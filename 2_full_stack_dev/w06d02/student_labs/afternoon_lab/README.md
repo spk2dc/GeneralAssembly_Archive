@@ -35,9 +35,9 @@ Lets design a schema using mongoose and then use it to create some documents and
 Our vampire collection will look something like this:
 
 ``` javascript
-var vampire = {
+let vampire = {
   name: 'Chocula',
-  title: 'Count'
+  title: 'Count',
   hair_color: 'brown',
   eye_color: 'brown',
   dob: new Date(1971, 2, 13, 7, 47),
