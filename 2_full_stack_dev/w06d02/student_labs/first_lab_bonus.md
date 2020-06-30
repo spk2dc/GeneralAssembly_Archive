@@ -91,4 +91,4 @@
 		salary: 165}]);
 	```
 
-1. Find the [INTERMEDIATE_MONGO.md](../instructor_notes/2.%20INTERMEDIATE_MONGO.md) lecture notes in the instructor notes directory.  Follow through each of the explanations.  Follow the commands and perform appropriate finds after each update call to see the results
+1. Find the INTERMEDIATE_MONGO.md lecture notes in the [instructor notes](https://git.generalassemb.ly/seir-5-26/student-resources/tree/master/2_full_stack_dev/w06d02/instructor_notes/advanced-mongo) directory.  Follow through each of the explanations.  Follow the commands and perform appropriate finds after each update call to see the results
