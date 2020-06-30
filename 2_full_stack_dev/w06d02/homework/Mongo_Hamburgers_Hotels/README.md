@@ -24,8 +24,9 @@ A two part hw to practice Mongodb basics and mongoose basics
 
 ## Deliverables
 
-Tonight's homework is in two parts, first start with [Mongo Burgers](mongo_burgers/README.md) in the `mongo_burgers` folder<
+Tonight's homework is in two parts, first start with [Mongo Burgers](mongo_burgers/README.md) in the `mongo_burgers` folder
 
+**Stretch Goal**
 Then once you finish Mongo Burgers, move on to [Mongoose Hotels](hotels_app/README.md) in the `hotels_app` folder
 
 
