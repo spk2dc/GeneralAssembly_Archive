@@ -12,7 +12,6 @@ app.use(methodOverride('_method'));
 
 const Pokemon = require('../models/pokemon.js');
 
-
 // INDEX
 app.get('/pokemon', (req, res) => {
     res.render(require.resolve('../views/index.ejs'), { data: Pokemon })
@@ -20,7 +19,7 @@ app.get('/pokemon', (req, res) => {
 
 // SHOW
 app.get('/pokemon/:id', (req, res) => {
-    res.render('show.ejs', { data: Pokemon[req.params.id] })
+    res.render(require.resolve('../views/show.ejs'), { data: Pokemon[req.params.id], id: req.params.id })
 })
 
 // NEW
@@ -50,6 +49,6 @@ app.delete('/pokemon/:id', (req, res) => {
 
 
 // LISTENER
-app.listen(port,()=> {
+app.listen(port, () => {
     console.log('listening on ' + port)
 })

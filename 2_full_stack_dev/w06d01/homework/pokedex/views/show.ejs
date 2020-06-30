@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            max-width: 300px;
+        }
+
+        img {
+            max-width: 150px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><%= data.name %></h1>
+    <br>
+    <img src="<%= data.img %>" alt="">
+
+    <ul>Type
+        <% for(elem of data.type) { %>
+            <li><%= elem %></li>
+        <% } %>
+    </ul>
+
+    <p>HP: <%= data.stats.hp %></p>
+    <p>Attack: <%= data.stats.attack %></p>
+    <p>Defense: <%= data.stats.defense %></p>
+
+    <a href="/pokemon/<%= id %>/edit">Edit</a>
+
+    <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+
+</body>
+
+</html>
