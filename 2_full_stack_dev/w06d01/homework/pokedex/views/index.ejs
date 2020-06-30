@@ -9,6 +9,9 @@
     <style>
         div {
             max-width: 300px;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
         }
 
         img {
@@ -18,12 +21,27 @@
         p {
             margin: 0;
         }
+
+        a {
+            display: inline-block;
+            border: 1px solid rgb(0, 221, 0);
+            background-color: rgb(0, 221, 0);
+            padding: 5px;
+            margin: 5px 5px 5px 5px;
+            text-emphasis: bold;
+        }
+
+        form {
+            display: inline-block;
+            margin: auto 10px;
+        }
     </style>
     <title>Document</title>
 </head>
 
 <body>
     <h1>Pokemon Pokedex</h1>
+    <h3><a href="/pokemon/new">Create New</a></h3>
     <br>
     <% for(let i=0; i < data.length; i++) { %>
     <div>
@@ -51,14 +69,21 @@
 </body>
 
 <script>
+
+    //jQuery window on load method
     $(() => {
         $('div').on('click', (elem) => {
             console.log(elem);
+            //get the 6th child of the current div (the anchor tag)
             const linkElem = $(elem.currentTarget).children().get(6)
+            //get the href of the tag and split it into an array
             const linkTextArr = linkElem.href.split('/')
+            //remove the last element of the array
             linkTextArr.splice(linkTextArr.length-1, 1)
+            //join the array with '/' to get the show URL
             const showLink = linkTextArr.join('/')
-            console.log(showLink);
+            //redirect to show page URL
+            window.location.href = showLink
         })
 
     })
