@@ -49,3 +49,32 @@ h1 {
 }
 
 /* FORMS */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+legend {
+  padding: 0px 10px;
+  font-family: 'Oswald';
+  font-weight: 500;
+  color: var(--purple);
+}
+label {
+  font-family: 'Oswald';
+  font-weight: 200;
+  color: var(--bright-pink);
+  display: block;
+}
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--dusty-blue);
+}
+input:focus {
+  /* the outline property selects the default blue border that shows up on inputs. giving it a value of 0 gets rid of it */
+  outline: 0;
+  border: 1px solid var(--purple);
+}
