@@ -73,7 +73,10 @@ app.put('/pokemon/:id', (req, res) => {
 
 // DESTROY
 app.delete('/pokemon/:id', (req, res) => {
-    res.render('show.ejs', { data: Pokemon[req.params.id] })
+    Pokemon.splice(req.params.id, 1)
+
+    //only use resolve with file paths, don't use it with relative paths like in redirect links
+    res.redirect('/pokemon')
 })
 
 
