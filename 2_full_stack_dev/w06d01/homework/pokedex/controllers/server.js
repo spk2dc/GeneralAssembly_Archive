@@ -47,7 +47,7 @@ app.post('/pokemon', (req, res) => {
     let typeStr = req.body.type
     obj.type = typeStr.split(', ')
 
-    console.log('req', obj);
+    // console.log('req', obj);
     Pokemon.push(obj)
 
     //only use resolve with file paths, don't use it with relative paths like in redirect links
@@ -65,7 +65,7 @@ app.put('/pokemon/:id', (req, res) => {
 
     let typeStr = req.body.type
     Pokemon[req.params.id].type = typeStr.split(', ')
-    console.log('updated pokemon ', Pokemon[req.params.id]);
+    // console.log('updated pokemon ', Pokemon[req.params.id]);
 
     //only use resolve with file paths, don't use it with relative paths like in redirect links
     res.redirect('/pokemon')
