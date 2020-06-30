@@ -41,24 +41,28 @@
     <h1>Edit Pokemon</h1>
     <h3><a href="/pokemon">Back to Pokedex</a></h3>
     <br>
-    <img src="<%= data.img %>" alt="">
 
-    <ul>Type
-        <% for(elem of data.type) { %>
-            <li><%= elem %></li>
-        <% } %>
-    </ul>
+    <form action="/pokemon/<%=id%>?_method=PUT" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value=<%= data.name %>>
 
-    <p>HP: <%= data.stats.hp %></p>
-    <p>Attack: <%= data.stats.attack %></p>
-    <p>Defense: <%= data.stats.defense %></p>
+        <label for="type">Type</label>
+        <% let typeStr = data.type.join(', ') %>
+        <% console.log('typeStr ', typeStr) %>
+        <% console.log('allTypes ', allTypes) %>
+        <input type="text" name="type" id="type" value=<%= typeStr %>>
 
-    <a href="/pokemon/<%= id %>/edit">Edit</a>
+        <label for="hp">HP</label>
+        <input type="number" name="hp" id="hp" value=<%= data.stats.hp %>>
 
-    <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
-        <button type="submit">Delete</button>
+        <label for="attack">Attack</label>
+        <input type="number" name="attack" id="attack" value=<%= data.stats.attack %>>
+
+        <label for="defense">Defense</label>
+        <input type="number" name="defense" id="defense" value=<%= data.stats.defense %>>
+        
+        <button type="submit">Edit</button>
     </form>
-
 </body>
 
 </html>
