@@ -1,13 +1,6 @@
 ![](/ga_cog.png)
 
 ---
-Title: Forms<br>
-Type: Morning Exercise<br>
-Creator: Jerrica Bobadilla <br>
-Competencies: CSS, HTML
-
----
-
 # HTML/CSS Forms 
 
 When making CRUD apps, you'll be using plenty of forms but they can be a bit tricky to style. So let's get some practice and see what kind of styling you can do with them by coding along with me. 
