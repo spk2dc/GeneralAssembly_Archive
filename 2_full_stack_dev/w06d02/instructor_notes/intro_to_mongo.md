@@ -77,7 +77,7 @@ If you're coming from a background where you are used to thinking of data in ter
 
 [Thinking in Documents Part 1](https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs&_ga=2.202168721.1294830246.1530196908-30583944.1529350623)
 
-[Thinging in Documents Part 2](https://www.mongodb.com/blog/post/thinking-documents-part-2)
+[Thinking in Documents Part 2](https://www.mongodb.com/blog/post/thinking-documents-part-2)
 
 ## Install Mongo
 
