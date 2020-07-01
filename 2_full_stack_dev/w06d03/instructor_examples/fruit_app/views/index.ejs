@@ -6,5 +6,25 @@
     </head>
     <body>
         <h1>Fruits index page</h1>
+        <nav>
+          <a href="/fruits/new">Create a New Fruit</a>
+        </nav>
+        <ul>
+            <% for(let i = 0; i < fruits.length; i++){ %>
+              <li>
+                The
+                <a href="/fruits/<%=fruits[i].id %>">
+                    <%=fruits[i].name; %>
+                </a>
+                is  <%=fruits[i].color; %>.
+                
+                <% if(fruits[i].readyToEat === true){ %>
+                    It is ready to eat
+                <% } else { %>
+                    It is not ready to eat
+                <% } %>
+            </li>
+            <% } %>
+        </ul>
     </body>
 </html>

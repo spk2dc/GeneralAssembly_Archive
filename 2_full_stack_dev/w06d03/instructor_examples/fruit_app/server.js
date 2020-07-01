@@ -17,7 +17,11 @@ const Fruit = require('./models/fruits.js')
 // ROUTES
 // index
 app.get('/fruits', (req, res)=>{
-  res.render('index.ejs');
+  Fruit.find({}, (error, allFruits)=>{
+    res.render('index.ejs', {
+      fruits: allFruits
+      })
+  })
 })
 
 // new
@@ -33,9 +37,16 @@ app.post('/fruits/', (req, res)=>{
     req.body.readyToEat = false;
   }
   Fruit.create(req.body, (error, createdFruit)=>{
-    res.send(createdFruit);
-  });
-});
+    res.redirect('/fruits');
+  })
+})
+
+// show
+app.get('/fruits/:id', (req, res) =>{
+  Fruit.findById(req.params.id, (err, foundFruit)=>{
+    res.send(foundFruit);
+  }) 
+})
 
 // the app running the server
 app.listen(3000, () => {
