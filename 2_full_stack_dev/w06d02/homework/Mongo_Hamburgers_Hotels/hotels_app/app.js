@@ -25,10 +25,10 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 // Hotel.collection.drop()
 
-Hotel.create(hotelSeed, (err, data) => {
-  if (err) console.log(err.message)
-  console.log('added provided hotel data')
-})
+// Hotel.create(hotelSeed, (err, data) => {
+//     if (err) console.log(err.message)
+//     console.log('added provided hotel data')
+// })
 
 Hotel.countDocuments({}, (err, data) => {
     if (err) console.log(err.message)
@@ -189,3 +189,56 @@ let tempArr = [
 //     // you can also just use control-c
 //     db.close();
 // });
+
+// Hungry for more
+// update the prices of each of the rooms at Fawlty Towers
+// Hotel.find({ name: 'Fawlty Towers' }, (error, data) => {
+//     if (error) { // if there is an error console log it
+//         console.log(error);
+//     } else { // else show us the created data
+//         console.log(data);
+//     }
+//     for (const itr of data[0].rooms) {
+//         itr.price = 13
+//         console.log(itr);
+
+//     }
+//     db.close();
+// });
+// Hotel.find({ name: 'Fawlty Towers' }, (error, data) => {
+//     console.log(data);
+//     for (const itr of data[0].rooms) {
+//         console.log(itr);
+
+//     }
+//     db.close();
+// })
+
+// find the hotel with an indoor pool as a tag
+// Hotel.find({ tags: { $in: 'indoor pool' } }, (error, data) => {
+//     if (error) { // if there is an error console log it
+//         console.log(error);
+//     } else { // else show us the created data
+//         console.log(data);
+//     }
+
+//     db.close();
+// });
+
+// The PR firm for the Hyperion Hotel has demanded that 'crime' is taken off as a keyword, remove that keyword
+Hotel.updateOne({ tags: 'crime' }, { $pop: { tags: -1 } }, (error, data) => {
+    if (error) { // if there is an error console log it
+        console.log(error);
+    } else { // else show us the created data
+        console.log(data);
+    }
+});
+Hotel.find({ name: 'Hyperion Hotel' }, (error, data) => {
+    if (error) { // if there is an error console log it
+        console.log(error);
+    } else { // else show us the created data
+        console.log(data);
+    }
+
+    db.close();
+})
