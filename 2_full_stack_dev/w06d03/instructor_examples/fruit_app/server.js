@@ -1,8 +1,17 @@
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 
 // middleware to help with the form submission
 app.use(express.urlencoded({extended:true}));
+
+// mongoose connection logic
+mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true});
+mongoose.connection.once('open', ()=> {
+    console.log('connected to mongo');
+});
+
+
 
 // ROUTES
 // new
