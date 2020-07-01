@@ -7,16 +7,18 @@
 </head>
 
 <body>
-    <h1>logs index page</h1>
+    <h1>Logs Index Page</h1>
     <h3><a href="/new">Create New</a></h3>
     <ul>
         <% for(let i = 0; i < logs.length; i++){ %>
         <li>
-           
+            Title:
+            <a href="/logs/<%= logs[i].id %>">
                 <%=logs[i].title; %>
-            
-            Entry: <%=logs[i].entry; %>.
-
+            </a>
+            <br>
+            Entry: <%=logs[i].entry; %>
+            <br>
             <% if(logs[i].shipIsBroken === true){ %>
                     Ship is broken
             <% } else { %>

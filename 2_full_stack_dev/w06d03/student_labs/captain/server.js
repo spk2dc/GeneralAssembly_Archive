@@ -49,3 +49,11 @@ app.get('/logs', (req, res) => {
 
     });
 })
+
+//show
+app.get('/logs/:id', (req, res) => {
+    Logs.findById(req.params.id, (error, foundLog) => {
+        res.render('show.ejs', { logs: foundLog })
+
+    });
+})
