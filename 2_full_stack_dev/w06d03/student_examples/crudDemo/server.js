@@ -9,15 +9,17 @@ app.listen(3000, ()=>{
     console.log('listening');
 });
 
-app.get('/fruits/new', (req, res)=>{
-    res.render('new.ejs');
-});
-
 mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
+//new
+app.get('/fruits/new', (req, res)=>{
+    res.render('new.ejs');
+});
+
+//create
 app.post('/fruits/', (req, res)=>{
     if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
         req.body.readyToEat = true;
@@ -30,6 +32,7 @@ app.post('/fruits/', (req, res)=>{
     });
 });
 
+//index
 app.get('/fruits', (req, res)=>{
     Fruit.find({}, (error, allFruits)=>{
         res.render('index.ejs', {
@@ -38,6 +41,7 @@ app.get('/fruits', (req, res)=>{
     });
 });
 
+//show
 app.get('/fruits/:id', (req, res)=>{
     Fruit.findById(req.params.id, (err, foundFruit)=>{
         res.render('show.ejs', {
