@@ -48,6 +48,14 @@ app.get('/logs/new', (req, res) => {
     res.render('new.ejs');
 });
 
+app.get('/logs/:id', (req, res) => {
+    Log.findById(req.params.id, (err, foundLog) => {
+        res.render('show.ejs', {
+            log: foundLog,
+        });
+    });
+});
+
 app.post('/logs', (req, res) => {
     if (req.body.shipIsBroken === 'on') {
         req.body.shipIsBroken = true;

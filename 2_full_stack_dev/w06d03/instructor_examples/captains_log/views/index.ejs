@@ -9,7 +9,7 @@
     <h1>Log Index</h1>
     <ul>
         <% for (const log of logs) { %>
-            <li><%= log.title %></li>
+            <li><a href="/logs/<%= log.id %>"><%= log.title %></a></li>
         <% } %>
     </ul>
     <a href="/logs/new">Create new log</a>
