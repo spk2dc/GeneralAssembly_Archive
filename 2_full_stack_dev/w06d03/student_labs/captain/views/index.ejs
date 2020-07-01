@@ -9,6 +9,12 @@
 <body>
     <h1>Logs Index Page</h1>
     <h3><a href="/new">Create New</a></h3>
+    <form action="/logs?_method=DELETE" method="POST">
+        ID: <input type="text" name="id" /><br/>
+        <input type="submit" name="" value="Delete"/>
+    </form>
+    <br>
+    <h3>Entries</h3>
     <ul>
         <% for(let i = 0; i < logs.length; i++){ %>
         <li>

@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 const db = mongoose.connection
 
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'))
 
 app.listen(3000, () => {
     console.log('listening');
@@ -53,6 +55,14 @@ app.get('/logs', (req, res) => {
 //show
 app.get('/logs/:id', (req, res) => {
     Logs.findById(req.params.id, (error, foundLog) => {
+        res.render('show.ejs', { logs: foundLog })
+
+    });
+})
+
+//delete
+app.delete('/logs/:id', (req, res) => {
+    Logs.findByIdAndRemove(req.params.id, (error, foundLog) => {
         res.render('show.ejs', { logs: foundLog })
 
     });
