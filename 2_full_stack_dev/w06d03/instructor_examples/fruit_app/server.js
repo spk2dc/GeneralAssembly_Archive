@@ -6,12 +6,13 @@ const mongoose = require('mongoose')
 app.use(express.urlencoded({extended:true}));
 
 // mongoose connection logic
-mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true } );
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
-
+// importing the fruit model
+const Fruit = require('./models/fruits.js')
 
 // ROUTES
 // new
@@ -26,7 +27,9 @@ app.post('/fruits/', (req, res)=>{
   } else { //if not checked, req.body.readyToEat is undefined
     req.body.readyToEat = false;
   }
-  res.send(req.body);
+  Fruit.create(req.body, (error, createdFruit)=>{
+    res.send(createdFruit);
+  });
 });
 
 // the app running the server
