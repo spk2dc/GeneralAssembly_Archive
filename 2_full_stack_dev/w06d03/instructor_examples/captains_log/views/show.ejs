@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Log</title>
+</head>
+<body>
+    <h1><%= log.title %></h1>
+    <p><%= log.entry %></p>
+    <p>
+        <% if (log.shipIsBroken) { %>
+            The ship is broken!!
+        <% } else { %>
+            The ship is fine.
+        <% } %>
+    </p>
+    <p>Created at: <%= log.createdAt %></p>
+    <a href="/logs">Back to log index</a>
+</body>
+</html>
