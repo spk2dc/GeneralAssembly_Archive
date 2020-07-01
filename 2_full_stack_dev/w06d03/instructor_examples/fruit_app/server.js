@@ -15,6 +15,11 @@ mongoose.connection.once('open', ()=> {
 const Fruit = require('./models/fruits.js')
 
 // ROUTES
+// index
+app.get('/fruits', (req, res)=>{
+  res.render('index.ejs');
+})
+
 // new
 app.get('/fruits/new', (req, res) => {
   res.render('new.ejs');
