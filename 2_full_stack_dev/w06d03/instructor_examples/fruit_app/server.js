@@ -44,8 +44,10 @@ app.post('/fruits/', (req, res)=>{
 // show
 app.get('/fruits/:id', (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
-    res.send(foundFruit);
-  }) 
+    res.render('show.ejs', {
+      fruit: foundFruit,
+    })
+  })
 })
 
 // the app running the server
