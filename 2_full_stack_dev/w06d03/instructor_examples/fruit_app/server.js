@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 // middleware to help with the form submission
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}))
+app.use(methodOverride('_method'))
 
 // mongoose connection logic
 mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true } );
@@ -48,6 +50,11 @@ app.get('/fruits/:id', (req, res) =>{
       fruit: foundFruit,
     })
   })
+})
+
+// delete
+app.delete('/fruits/:id', (req, res) => {
+  res.send('deleting...')
 })
 
 // the app running the server
