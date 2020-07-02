@@ -59,6 +59,14 @@ app.get('/logs/:id', (req, res) => {
     });
 });
 
+app.get('/logs/:id/edit', (req, res) => {
+    Log.findById(req.params.id, (err, foundLog) => {
+        res.render('edit.ejs', {
+            log: foundLog,
+        });
+    });
+});
+
 app.post('/logs', (req, res) => {
     if (req.body.shipIsBroken === 'on') {
         req.body.shipIsBroken = true;
