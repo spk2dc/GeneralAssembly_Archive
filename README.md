@@ -19,7 +19,7 @@
 | w06d01 | [C.R.A.P](./2_full_stack_dev/w06d01/morning_exercise/) | [REST: Delete/Edit, Update](./2_full_stack_dev/w06d01/instructor_notes/) | [Exobiology](./2_full_stack_dev/w06d01/student_labs/) | [Pokedex](./2_full_stack_dev/w06d01/homework/) |
 | w06d02 | [Forms](./2_full_stack_dev/w06d02/morning_exercise/) | [Mongo, Mongoose, & Schemas](./2_full_stack_dev/w06d02/instructor_notes/) | [Intergalactic Bounty Hunters, Mongoose Vampires](./2_full_stack_dev/w06d02/student_labs/) | [Hamburgers and (bonus) Hotels](./2_full_stack_dev/w06d02/homework/) |
 | w06d03 | Outcomes (No exercise) | [Build an Express App](./2_full_stack_dev/w06d03/instructor_notes/) | [Captain's Log](./2_full_stack_dev/w06d03/student_labs/) | [Mongoose Store](./2_full_stack_dev/w06d03/homework/) |
-| w06d04 | Loop the Loop | C.R.U.D App | Captain's Log (contd) | Mongoose Store (contd) |
+| w06d04 | [Loop the Loop](./2_full_stack_dev/w06d04/morning_exercise/) | [C.R.U.D App](./2_full_stack_dev/w06d04/instructor_notes/) | Captain's Log (contd) | Mongoose Store (contd) |
 
 ### Week 5
 | Day | Morning Exercise | Lectures | Labs | Homework |
