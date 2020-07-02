@@ -9,12 +9,12 @@
     <h1>Create New Product</h1>
     <h3><a href="/products">Back to index</a></h3>
 
-    <form action="/products?_method=CREATE" method="POST">
-        Name: <input type="text" name="name" /><br>
-        Description: <input type="text" name="description" /><br>
-        Image URL: <input type="text" name="img" /><br>
-        Price: <input type="text" name="price" /><br>
-        Quantity: <input type="text" name="qty" /><br>
+    <form action="/products" method="POST">
+        Name: <input type="text" name="name" value="test name"/><br>
+        Description: <input type="text" name="description" value="test description"/><br>
+        Image URL: <input type="text" name="img" value="http://www.clipartbest.com/cliparts/ecM/ERB/ecMERBjei.jpg"/><br>
+        Price: <input type="text" name="price" value="1000"/><br>
+        Quantity: <input type="text" name="qty" value="1"/><br>
         <br>
         <input type="submit" name="" value="Create" />
     </form>
