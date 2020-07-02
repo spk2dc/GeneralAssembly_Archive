@@ -78,6 +78,17 @@ app.post('/logs', (req, res) => {
     });
 });
 
+app.put('/logs/:id', (req, res) => {
+    if (req.body.shipIsBroken === 'on') {
+        req.body.shipIsBroken = true;
+    } else {
+        req.body.shipIsBroken = false;
+    }
+    Log.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedLog) => {
+        res.redirect('/logs');
+    });
+});
+
 app.delete('/logs/:id', (req, res) => {
     Log.findByIdAndDelete(req.params.id, (err, deleteLog) => {
         res.redirect('/logs');
