@@ -52,6 +52,18 @@ app.get('/fruits/:id/edit', (req, res)=>{
   })
 })
 
+// update
+app.put('/fruits/:id', (req, res)=>{
+  if(req.body.readyToEat === 'on'){
+      req.body.readyToEat = true;
+  } else {
+      req.body.readyToEat = false;
+  }
+  Fruit.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedModel)=> {
+    res.redirect('/fruits');
+  })
+})
+
 // show
 app.get('/fruits/:id', (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
