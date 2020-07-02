@@ -61,9 +61,11 @@ app.get('/logs/:id', (req, res) => {
 })
 
 //delete
-app.delete('/logs/:id', (req, res) => {
-    Logs.findByIdAndRemove(req.params.id, (error, foundLog) => {
-        res.render('show.ejs', { logs: foundLog })
+app.delete('/logs', (req, res) => {
+    console.log(req.body.id);
+
+    Logs.findByIdAndRemove(req.body.id, (error, foundLog) => {
+        res.redirect('/logs')
 
     });
 })

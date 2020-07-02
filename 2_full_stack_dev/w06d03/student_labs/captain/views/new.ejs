@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Create New Product</h1>
-    <h3><a href="/products">Back to index</a></h3>
-    <br>
-    <form action="/products" method="POST">
-        Name: <input type="text" name="name" /><br>
-        Description: <input type="text" name="description" /><br>
-        Image URL: <input type="text" name="img" /><br>
-        Price: <input type="number" name="price" /><br>
-        Quantity: <input type="number" name="qty" /><br>
-        <input type="submit" name="" value="Create" />
-    </form>
-</body>
-
-</html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>New page</h1>
+        <form action="/logs" method="POST">
+            Title: <input type="text" name="title" /><br/>
+            Entry: <input type="text" name="entry" /><br/>
+            Ship is broken: <input type="checkbox" name="shipIsBroken" /><br/>
+            <input type="submit" name="" value="Create New"/>
+        </form>
+    </body>
+</html> 
