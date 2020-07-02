@@ -6,11 +6,11 @@
     </head>
     <body>
         <h1>New page</h1>
-        <form action="/logs/<%= logs[i].id %>" method="POST">
-            Title: <input type="text" name="title" value=""/><br/>
-            Entry: <input type="text" name="entry" /><br/>
-            Ship is broken: <input type="checkbox" name="shipIsBroken" /><br/>
-            <input type="submit" name="" value="Create New"/>
+        <form action="/logs/<%= logs.id %>" method="PUT">
+            Title: <input type="text" name="title" value="<%= logs.title %>"/><br/>
+            Entry: <input type="text" name="entry" value="<%= logs.entry %>"/><br/>
+            Ship is broken: <input type="checkbox" name="shipIsBroken" value="<%= logs.shipIsBroken %>"/><br/>
+            <input type="submit" name="" value="Edit"/>
         </form>
     </body>
 </html> 

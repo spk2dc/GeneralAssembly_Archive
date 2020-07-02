@@ -32,7 +32,7 @@
             <% } else { %>
                     Ship is not broken
             <% } %>
-            <form action="/logs/<%= logs[i].id %>/edit" method="POST">
+            <form action="/logs/<%= logs[i].id %>/edit" method="PUT">
                 <input type="submit" name="" value="Edit"/>
             </form>
         </li>

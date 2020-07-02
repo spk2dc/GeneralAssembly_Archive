@@ -89,3 +89,24 @@ app.delete('/logs', (req, res) => {
 
     });
 })
+
+//edit
+app.post('/logs/:id/edit', (req, res) => {
+    Logs.findById(req.params.id, (err, foundLog) => {
+        res.render('edit.ejs', { logs: foundLog })
+    })
+})
+
+//update
+app.put('/logs/:id', (req, res) => {
+    if (req.body.shipIsBroken === 'on') {
+        req.body.shipIsBroken = true
+    } else {
+        req.body.shipIsBroken = false
+
+    }
+
+    Logs.create(req.body, (error, newLog) => {
+        res.redirect('/logs');
+    });
+})
