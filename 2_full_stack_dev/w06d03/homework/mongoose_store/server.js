@@ -125,12 +125,37 @@ app.post('/products/:id', (req, res) => {
         })
 })
 
-//delete
+//delete all
 app.get('/products/delete/all', (req, res) => {
     Product.deleteMany({}, (err, deletedProduct) => {
         res.redirect('/products')
     })
 })
+
+//delete one
+app.delete('/products/:id/delete', (req, res) => {
+    Product.deleteOne({ _id: req.params.id }, (err, deletedProduct) => {
+        console.log(deletedProduct);
+        res.redirect('/products')
+    })
+})
+
+//buy
+app.post('/products/:id/buy', (req, res) => {
+    let buyQty = Number(req.body.qty) - 1
+    console.log(req.body, `new buy value: ${buyQty}`);
+    // res.send('edit redirect to update route')
+    Product.findByIdAndUpdate(req.params.id, {
+        qty: buyQty,
+    },
+        {
+            new: true
+        },
+        (err, oneProduct) => {
+            res.redirect(`/products/${req.params.id}`)
+        })
+})
+
 
 //LISTENER
 app.listen(port, () => {

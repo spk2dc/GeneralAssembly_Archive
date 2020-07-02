@@ -12,20 +12,25 @@
     <h3><a href="/products">Back to index</a></h3>
     <h3><a href="/products/<%= data.id %>/edit">Edit Product</a></h3>
     <br>
-    <form action="/products?_method=DELETE" method="POST">
+    <form action="/products/<%= data.id %>/delete?_method=DELETE" method="POST">
         <input type="submit" name="" value="Delete" />
     </form>
     <br>
-    <form action="/products" method="POST">
-        <input type="submit" name="" value="Buy" />
-    </form>
+    <% if(data.qty < 1) { %>
+            <h4>OUT OF STOCK</h4>
+    <% } else { %>
+            <form action="/products/<%= data.id %>/buy" method="POST">
+                <input type="hidden" name="qty" value="<%= data.qty %>" />
+                <button>Buy</button>
+            </form>
+    <% } %>
     <br>
     <br>
     <p>ID: <%= data.id %></p>
     <p>Description: <%= data.description %></p>
-    <img src="<%= data.img %>" alt=""></p>
     <p>Price: <%= data.price %></p>
     <p>Quantity: <%= data.qty %></p>
+    <img src="<%= data.img %>" alt=""></p>
     <p>Created: <%= data.createdAt %></p>
     <p>Updated: <%= data.updatedAt %></p>
 
