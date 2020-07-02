@@ -38,7 +38,7 @@ const { render } = require('ejs')
 //ROUTES
 
 //seed database
-app.get('/seed', async (req, res) => {
+app.get('/products/seed', async (req, res) => {
     const newProducts =
         [
             {
@@ -79,18 +79,56 @@ app.get('/products', (req, res) => {
 
 //new
 app.get('/products/new', (req, res) => {
+    // res.send('testing new page')
     res.render('new.ejs')
 })
 
 //create
-
+app.post('/products', (req, res) => {
+    Product.create(req.body, (err, newProduct) => {
+        res.redirect('/products')
+    })
+})
 
 //show
 app.get('/products/:id', (req, res) => {
-    console.log(req.params.id);
+    // console.log(req.params.id);
     Product.findById(req.params.id, (err, oneProduct) => {
-
         res.render('show.ejs', { data: oneProduct })
+    })
+})
+
+//edit
+app.get('/products/:id/edit', (req, res) => {
+    Product.findById(req.params.id, (err, oneProduct) => {
+        res.render('edit.ejs', { data: oneProduct })
+    })
+})
+
+//update
+app.post('/products/:id', (req, res) => {
+    console.log(req.body);
+    // res.send('edit redirect to update route')
+    Product.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        description: req.body.description,
+        img: req.body.img,
+        price: req.body.price,
+        qty: req.body.qty,
+
+    },
+        {
+            new: true
+        },
+        (err, oneProduct) => {
+            res.redirect(`/products/${req.params.id}`)
+        })
+})
+
+//delete
+app.get('/products/delete/all', (req, res) => {
+    Product.deleteMany({}, (err, deletedProduct) => {
+        res.redirect('/products')
     })
 })
 
