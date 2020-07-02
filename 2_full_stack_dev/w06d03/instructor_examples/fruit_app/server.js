@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 // middleware to help with the form submission
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}))
+app.use(methodOverride('_method'))
 
 // mongoose connection logic
 mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true } );
@@ -41,12 +43,40 @@ app.post('/fruits/', (req, res)=>{
   })
 })
 
+// edit
+app.get('/fruits/:id/edit', (req, res)=>{
+  Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
+      res.render('edit.ejs', 
+        { fruit: foundFruit, //pass in found fruit 
+      })
+  })
+})
+
+// update
+app.put('/fruits/:id', (req, res)=>{
+  if(req.body.readyToEat === 'on'){
+      req.body.readyToEat = true;
+  } else {
+      req.body.readyToEat = false;
+  }
+  Fruit.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedModel)=> {
+    res.redirect('/fruits');
+  })
+})
+
 // show
 app.get('/fruits/:id', (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
     res.render('show.ejs', {
       fruit: foundFruit,
     })
+  })
+})
+
+// delete
+app.delete('/fruits/:id', (req, res) => {
+  Fruit.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, data)=>{
+    res.redirect('/fruits') //redirect back to fruits index
   })
 })
 

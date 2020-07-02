@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Log</title>
+</head>
+<body>
+    <h1>Edit Log</h1>
+    <form action="/logs/<%= log.id %>?_method=PUT" method="POST">
+        Title: <input type="text" name="title" value="<%= log.title %>"/><br/>
+        Entry: <textarea name="entry"><%= log.entry %></textarea><br/>
+        Ship is broken:
+        <input type="checkbox" name="shipIsBroken"
+            <% if (log.shipIsBroken) { %>
+                checked
+            <% } %>
+        /><br/>
+        <input type="submit" value="Update log"/>
+    </form>
+</body>
+</html>
