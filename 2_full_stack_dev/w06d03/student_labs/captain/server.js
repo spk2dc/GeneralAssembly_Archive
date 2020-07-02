@@ -25,6 +25,26 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 
 const Logs = require('./models/logs.js');
 
+//seed
+app.get('/logs/seed', (req, res) => {
+    let temp = [{
+        title: 'testName1',
+        entry: 'test description 1',
+        shipIsBroken: true
+    }, {
+        title: 'testName2',
+        entry: 'test description 2',
+        shipIsBroken: false
+    }, {
+        title: 'testName3',
+        entry: 'test description 3',
+        shipIsBroken: true
+    },]
+    Logs.create(temp, (error, newLog) => {
+        res.redirect('/logs');
+    })
+})
+
 //new
 app.get('/new', (req, res) => {
     res.render('new.ejs')
