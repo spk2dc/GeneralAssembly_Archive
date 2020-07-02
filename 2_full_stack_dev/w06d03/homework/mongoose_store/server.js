@@ -32,7 +32,8 @@ db.on('disconnected', (err) => {
 
 
 
-const Products = require('./models/products.js')
+const Product = require('./models/products.js')
+const { render } = require('ejs')
 
 //ROUTES
 
@@ -69,8 +70,29 @@ app.get('/seed', async (req, res) => {
     }
 })
 
+//index
+app.get('/products', (req, res) => {
+    Product.find({}, (err, allProducts) => {
+        res.render('index.ejs', { data: allProducts })
+    })
+})
+
+//new
+app.get('/products/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+//create
 
 
+//show
+app.get('/products/:id', (req, res) => {
+    console.log(req.params.id);
+    Product.findById(req.params.id, (err, oneProduct) => {
+
+        res.render('show.ejs', { data: oneProduct })
+    })
+})
 
 //LISTENER
 app.listen(port, () => {

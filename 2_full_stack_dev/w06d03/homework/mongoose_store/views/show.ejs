@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><%= data.name %> Show Page</h1>
+    <h3><a href="/products">Back to index</a></h3>
+    <h3><a href="/<%= data.id %>/edit"></a>Edit Product</h3>
+    <br>
+    <form action="/products?_method=DELETE" method="POST">
+        <input type="submit" name="" value="Delete" />
+    </form>
+    <br>
+    <form action="/products" method="POST">
+        <input type="submit" name="" value="Buy" />
+    </form>
+    <br>
+    <br>
+    <p>ID: <%= data.id %></p>
+    <p>Description: <%= data.description %></p>
+    <img src="<%= data.img %>" alt=""></p>
+    <p>Price: <%= data.price %></p>
+    <p>Quantity: <%= data.qty %></p>
+    <p>Created: <%= data.createdAt %></p>
+    <p>Updated: <%= data.updatedAt %></p>
+
+</body>
+
+</html>
