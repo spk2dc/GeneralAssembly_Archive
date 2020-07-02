@@ -10,7 +10,7 @@
 <body>
     <h1><%= data.name %> Show Page</h1>
     <h3><a href="/products">Back to index</a></h3>
-    <h3><a href="/<%= data.id %>/edit"></a>Edit Product</h3>
+    <h3><a href="/products/<%= data.id %>/edit">Edit Product</a></h3>
     <br>
     <form action="/products?_method=DELETE" method="POST">
         <input type="submit" name="" value="Delete" />
