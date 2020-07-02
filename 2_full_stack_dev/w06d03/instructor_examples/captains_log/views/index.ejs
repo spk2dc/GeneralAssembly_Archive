@@ -10,6 +10,9 @@
     <ul>
         <% for (const log of logs) { %>
             <li><a href="/logs/<%= log.id %>"><%= log.title %></a></li>
+            <form action="/logs/<%= log.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete log"/>
+            </form>
         <% } %>
     </ul>
     <a href="/logs/new">Create new log</a>
