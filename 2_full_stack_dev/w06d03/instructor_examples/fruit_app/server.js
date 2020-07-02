@@ -54,7 +54,9 @@ app.get('/fruits/:id', (req, res) =>{
 
 // delete
 app.delete('/fruits/:id', (req, res) => {
-  res.send('deleting...')
+  Fruit.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, data)=>{
+    res.redirect('/fruits') //redirect back to fruits index
+  })
 })
 
 // the app running the server
