@@ -12,27 +12,24 @@
     <h1>Products Index Page</h1>
     <h3><a href="/products/new">Create New</a></h3>
     <br>
-    <form action="/products?_method=DELETE" method="POST">
-        <h3>Delete a product:</h3>
-        ID: <input type="text" name="id" /><br>
-        <input type="submit" name="" value="Delete" />
-    </form>
-    <br>
     <h3>Entries</h3>
     <ul>
         <% for(let i = 0; i < data.length; i++){ %>
-        <li>
-            Name:
-            <a href="/products/<%= data[i].id %>">
-                <%=data[i].name; %>
-            </a>
-            <br>
-            Price: <%=data[i].price; %>
-            <br>
-            <a href="/products/<%= data[i].id %>">
+        <a href="/products/<%= data[i].id %>">
+            <li>
+                Name:
+                    <%=data[i].name; %>
+                <br>
+                Price: <%=data[i].price; %>
+                <br>
                 <img src="<%= data[i].img %>" alt="">
-            </a>
-        </li>
+                <br>
+                <form action="/products/<%= data[i].id %>/delete?_method=DELETE" method="POST">
+                    <input type="submit" name="" value="Delete" />
+                </form>
+            </li>
+        </a>
+        
         <% } %>
     </ul>
 
