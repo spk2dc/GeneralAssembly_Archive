@@ -6,6 +6,7 @@ const methodOverride = require('method-override')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+app.use(express.static('public')); //tells express to try to match requests with files in the directory called 'public'
 
 //MONGOOSE SETUP
 const mongoose = require('mongoose')
