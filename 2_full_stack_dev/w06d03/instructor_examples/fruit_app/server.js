@@ -43,6 +43,15 @@ app.post('/fruits/', (req, res)=>{
   })
 })
 
+// edit
+app.get('/fruits/:id/edit', (req, res)=>{
+  Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
+      res.render('edit.ejs', 
+        { fruit: foundFruit, //pass in found fruit 
+      })
+  })
+})
+
 // show
 app.get('/fruits/:id', (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
