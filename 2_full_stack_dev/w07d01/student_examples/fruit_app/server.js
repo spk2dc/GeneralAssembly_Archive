@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+require('dotenv').config()
 
 // middleware to help with the form submission
 app.use(express.urlencoded({extended:true}))
@@ -18,6 +19,9 @@ const Fruit = require('./models/fruits.js')
 
 const fruitsController = require('./controllers/fruits.js')
 app.use('/fruits', fruitsController)
+
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
 
 // the app running the server
 app.listen(3000, () => {
