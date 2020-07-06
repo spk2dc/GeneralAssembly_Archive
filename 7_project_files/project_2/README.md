@@ -3,7 +3,7 @@
 # Project #2: Building Your First Full-Stack Application
 
 ## Attendance
-Log your attendance in the Garnet app at 10 AM ET daily and for your Outcomes session.  We will also be holding stand ups with instructors at 12 Noon ET to have a daily check on the progress your application.
+Log your attendance in the Garnet app at 12 Noon ET daily and for your Outcomes session.  We will also be holding stand ups with instructors at 12 Noon ET to have a daily check on the progress your application.
   - **Tuesday, July 7:** You're required to show up at 10 AM ET for a heroku deployment lesson
   - **Wednesday, July 8:** You're required to show up to Outcomes at 2:00PM ET
   - **Tuesday, July 14:** Project presentation day! You're required to show up in the classroom zoom at 10AM ET to present your projects.
@@ -31,8 +31,8 @@ For this project, you will be making a full CRUD app using the technologies outl
 #### Recommended Features
 
 * Add additional relationships (models can be related in a one-to-many relationship, for example)
-  - [Optional notes on having two models](/unit_2/w07d01/instructor_notes/FIRST_MODEL.md)
-  - [Optional notes on relating two models](/unit_2/w07d01/instructor_notes/SECOND_MODEL.md)
+  - [Optional notes on having two models](/unit_2/w07d03/instructor_notes/FIRST_MODEL.md)
+  - [Optional notes on relating two models](/unit_2/w07d03/instructor_notes/SECOND_MODEL.md)
 * Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
 * Use EJS Partials
 * Include portfolio-quality styling
