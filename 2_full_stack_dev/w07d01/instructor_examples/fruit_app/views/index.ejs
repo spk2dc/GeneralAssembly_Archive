@@ -7,7 +7,7 @@
     <body>
         <h1>Fruits index page</h1>
         <nav>
-          <a href="/fruits/new">Create a New Fruit</a>
+          <%- include('./partials/nav.ejs') %>
         </nav>
         <ul>
             <% for(let i = 0; i < fruits.length; i++){ %>

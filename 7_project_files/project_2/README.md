@@ -3,7 +3,7 @@
 # Project #2: Building Your First Full-Stack Application
 
 ## Attendance
-Log your attendance in the Garnet app at 10 AM ET daily and for your Outcomes session.
+Log your attendance in the Garnet app at 12 Noon ET daily and for your Outcomes session.  We will also be holding stand ups with instructors at 12 Noon ET to have a daily check on the progress your application.
   - **Tuesday, July 7:** You're required to show up at 10 AM ET for a heroku deployment lesson
   - **Wednesday, July 8:** You're required to show up to Outcomes at 2:00PM ET
   - **Tuesday, July 14:** Project presentation day! You're required to show up in the classroom zoom at 10AM ET to present your projects.
@@ -31,8 +31,7 @@ For this project, you will be making a full CRUD app using the technologies outl
 #### Recommended Features
 
 * Add additional relationships (models can be related in a one-to-many relationship, for example)
-  - [Optional notes on having two models](/unit_2/w07d01/instructor_notes/FIRST_MODEL.md)
-  - [Optional notes on relating two models](/unit_2/w07d01/instructor_notes/SECOND_MODEL.md)
+  - [Optional notes on having and relating two models](https://git.generalassemb.ly/seir-5-26/student-resources/blob/master/2_full_stack_dev/w07d03/instructor_notes/)
 * Include **sign up/log in** functionality, with encrypted passwords & an authorization flow
 * Use EJS Partials
 * Include portfolio-quality styling
@@ -44,9 +43,7 @@ For this project, you will be making a full CRUD app using the technologies outl
 
 ## Make A New Repo & Setup for Heroku Deployment
 
-To prepare for the heroku deployment lesson on Monday, please make sure you create a new github repo for your project and have a basic express server running. 
-
-[To see how to get set up for heroku deployment, take a look at these notes (up to the 'Test your app' section)](/unit_2/w07d01/instructor_notes/heroku.md).
+To prepare for the heroku deployment lesson on Monday, please make sure you create a new github repo for your project and have a basic express server running.
 
 :heavy_exclamation_mark: **REMEMBER:** For all projects, you will be creating the new repo's on [GitHub](https://github.com/), **not** GitHub Enterprise!
 
