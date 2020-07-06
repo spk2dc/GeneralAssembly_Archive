@@ -3,23 +3,34 @@ const router = express.Router();
 
 const Fruit = require('../models/fruits.js');
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next();
+  } else {
+    res.redirect('/sessions/new');
+  }
+}
+
 // ROUTES
 // index
-router.get('/', (req, res)=>{
+router.get('/', isAuthenticated, (req, res)=>{
   Fruit.find({}, (error, allFruits)=>{
     res.render('index.ejs', {
-      fruits: allFruits
-      })
+      fruits: allFruits,
+      currentUser: req.session.currentUser
+    })
   })
 })
 
 // new
-router.get('/new', (req, res) => {
-  res.render('new.ejs');
+router.get('/new', isAuthenticated, (req, res) => {
+  res.render('new.ejs', {
+    currentUser: req.session.currentUser
+  });
 })
 
 // post
-router.post('/', (req, res)=>{
+router.post('/', isAuthenticated, (req, res)=>{
   if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
     req.body.readyToEat = true;
   } else { //if not checked, req.body.readyToEat is undefined
@@ -31,16 +42,17 @@ router.post('/', (req, res)=>{
 })
 
 // edit
-router.get('/:id/edit', (req, res)=>{
+router.get('/:id/edit', isAuthenticated, (req, res)=>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
-      res.render('edit.ejs', 
-        { fruit: foundFruit, //pass in found fruit 
+      res.render('edit.ejs', {
+        fruit: foundFruit, //pass in found fruit
+        currentUser: req.session.currentUser
       })
   })
 })
 
 // update
-router.put('/:id', (req, res)=>{
+router.put('/:id', isAuthenticated, (req, res)=>{
   if(req.body.readyToEat === 'on'){
       req.body.readyToEat = true;
   } else {
@@ -52,16 +64,17 @@ router.put('/:id', (req, res)=>{
 })
 
 // show
-router.get('/:id', (req, res) =>{
+router.get('/:id', isAuthenticated, (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
     res.render('show.ejs', {
       fruit: foundFruit,
+      currentUser: req.session.currentUser
     })
   })
 })
 
 // delete
-router.delete('/:id', (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Fruit.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, data)=>{
     res.redirect('/fruits') //redirect back to fruits index
   })
