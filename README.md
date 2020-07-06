@@ -16,7 +16,7 @@
 ### Week 7
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w07d01 |[EJS Partials](./2_full_stack_dev/w07d01/morning_exercise)| Sessions, Authentication | | Kingsmen |
+| w07d01 |[EJS Partials](./2_full_stack_dev/w07d01/morning_exercise)| [Sessions, Authentication](./2_full_stack_dev/w07d01/instructor_notes/) | | Kingsmen |
 | w07d02 | | Heroku | | |
 | w07d03 | | Relational Data | | |
 | w07d04 | | | | |
