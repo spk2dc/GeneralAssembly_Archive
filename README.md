@@ -14,18 +14,6 @@
 ## Unit 2
 
 ### Week 7
-<<<<<<< HEAD
-| Day | Morning Exercise | Lectures | Labs | Homework |
-|:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w07d01 | EJS Partials | Sessions & Authentication | Build Me | Project 2 Planning |
-| w07d02 | Heroku & Mongolab | Project 2 Approvals | Project 2 | Project 2 |
-| w07d03 | Outcomes (No exercise) | Project 2 | Project 2 | Project 2 |
-| w07d04 | Project 2 | Project 2 | Project 2 | Project 2 |
-| w07d05 | Project 2 | Project 2 | Project 2 | Project 2 |
-
-### Week 6
-=======
->>>>>>> 025c0b3b43563da73ecf71ebfdf79a303abb42ae
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w07d01 |[EJS Partials](./2_full_stack_dev/w07d01/morning_exercise)| Sessions, Authentication | | Kingsmen |

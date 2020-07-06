@@ -2,8 +2,8 @@
 
 ## Lesson Objectives
 
-1. Explain what is Bcrypt
-1. Explain what are environmental variables
+1. Explain what Bcrypt is
+1. Explain what environmental variables are
 1. Explain why we need environmental variables
 1. Explain what a session is
 1. Use express-session package as middleware
