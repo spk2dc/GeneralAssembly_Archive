@@ -81,15 +81,19 @@ mongoose.connect(mongoURI);
 ```
 
 
-Getting a warning like this?
+Getting warnings like this?
 ![depreciation](https://i.imgur.com/47eb1oo.png)
 
-Warnings are ok, it'll still work, for now. But in later versions it may stop working and you'll have to update your code.
+Deprecation warnings are ok, it'll still work, for now. But in later versions it may stop working and you'll have to update your code.
 
 
 This should clear up the errors:
 ```js
-mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
+mongoose.connect(mongoURI, {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}, () => {
   console.log('the connection with mongod is established');
 });
 ```
@@ -130,7 +134,11 @@ const mongoURI = 'mongodb://localhost:27017/'+ 'tweets';
 const db = mongoose.connection;
 
 // Connect to Mongo
-mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
+mongoose.connect(mongoURI, {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}, () => {
   console.log('the connection with mongod is established');
 });
 

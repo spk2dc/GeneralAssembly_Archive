@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 app.use(methodOverride('_method'));
 
 mongoose.connect('mongodb://localhost:27017/captains_log', {
+    useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
