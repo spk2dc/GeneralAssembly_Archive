@@ -16,11 +16,11 @@
 ### Week 7
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w07d01 |[EJS Partials](./2_full_stack_dev/w07d01/morning_exercise)| [Sessions, Authentication](./2_full_stack_dev/w07d01/instructor_notes/) | | Kingsmen |
-| w07d02 | | Heroku | | |
-| w07d03 | | Relational Data | | |
-| w07d04 | | | | |
-| w07d05 | | | | |
+| w07d01 |[EJS Partials](./2_full_stack_dev/w07d01/morning_exercise)| [Sessions, Authentication](./2_full_stack_dev/w07d01/instructor_notes/) | [Project 2](./7_project_files/project_2/README.md) | [Kingsmen (optional)](./2_full_stack_dev/w07d01/homework/) |
+| w07d02 | Project 2 | Heroku | Project 2 | Project 2 |
+| w07d03 | Project 2 | Relational Data | Project 2 | Project 2 |
+| w07d04 | Project 2 | Project 2 | Project 2 | Project 2 |
+| w07d05 | Project 2 | Project 2 | Project 2 | Project 2 |
 
 ### Week 5
 | Day | Morning Exercise | Lectures | Labs | Homework |
