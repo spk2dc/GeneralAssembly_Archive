@@ -16,8 +16,8 @@ mongoose.connection.once('open', ()=> {
 // importing the fruit model
 const Fruit = require('./models/fruits.js')
 
-const logsController = require('./controllers/fruits.js')
-app.use('/fruits', logsController)
+const fruitsController = require('./controllers/fruits.js')
+app.use('/fruits', fruitsController)
 
 // the app running the server
 app.listen(3000, () => {

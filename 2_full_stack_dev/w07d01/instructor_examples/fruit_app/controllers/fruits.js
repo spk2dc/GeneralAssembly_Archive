@@ -14,12 +14,12 @@ router.get('/', (req, res)=>{
 })
 
 // new
-router.get('/fruits/new', (req, res) => {
+router.get('/new', (req, res) => {
   res.render('new.ejs');
 })
 
 // post
-router.post('/fruits/', (req, res)=>{
+router.post('/', (req, res)=>{
   if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
     req.body.readyToEat = true;
   } else { //if not checked, req.body.readyToEat is undefined
@@ -31,7 +31,7 @@ router.post('/fruits/', (req, res)=>{
 })
 
 // edit
-router.get('/fruits/:id/edit', (req, res)=>{
+router.get('/:id/edit', (req, res)=>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
       res.render('edit.ejs', 
         { fruit: foundFruit, //pass in found fruit 
@@ -40,7 +40,7 @@ router.get('/fruits/:id/edit', (req, res)=>{
 })
 
 // update
-router.put('/fruits/:id', (req, res)=>{
+router.put('/:id', (req, res)=>{
   if(req.body.readyToEat === 'on'){
       req.body.readyToEat = true;
   } else {
@@ -52,7 +52,7 @@ router.put('/fruits/:id', (req, res)=>{
 })
 
 // show
-router.get('/fruits/:id', (req, res) =>{
+router.get('/:id', (req, res) =>{
   Fruit.findById(req.params.id, (err, foundFruit)=>{
     res.render('show.ejs', {
       fruit: foundFruit,
@@ -61,7 +61,7 @@ router.get('/fruits/:id', (req, res) =>{
 })
 
 // delete
-router.delete('/fruits/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   Fruit.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, data)=>{
     res.redirect('/fruits') //redirect back to fruits index
   })
