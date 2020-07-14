@@ -27,3 +27,7 @@ After reading the above article, in your own words answer:
 3. What is an API? *
 
 *Further research may be required
+
+## Hungry for More
+
+[Try this React Tutorial](https://www.pluralsight.com/courses/code-school-powering-up-with-react)
