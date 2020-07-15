@@ -110,17 +110,38 @@ class App extends React.Component {
     super(props);
     this.state = {
       products: products,
+      name: '',
+      price: 0,
+      description: '',
     };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.id]: event.target.value,
+    });
   }
 
   render() {
     return (
       <div>
         <h1>Big Time Shopping</h1>
+        <form>
+          <label htmlFor="name">Name: </label>
+          <input type="text" id="name" value={ this.state.name } onChange={ this.handleChange }/>
+          <br/>
+          <label htmlFor="price">Price: </label>
+          <input type="number" id="price" value={ this.state.price } onChange={ this.handleChange }/>
+          <br/>
+          <label htmlFor="description">Description: </label>
+          <input type="text" id="description" value={ this.state.description } onChange={ this.handleChange }/>
+        </form>
         <ul>
           {
             this.state.products.map((product, i) => {
-              return <li key={ i }>{ product.name } | ${ product.price }</li>
+              return <li key={ i }>{ product.name } | ${ product.price } | { product.description }</li>
             })
           }
         </ul>
