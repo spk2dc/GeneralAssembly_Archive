@@ -22,10 +22,8 @@ Build an app that let's you make a list of groceries to buy
 
 ## Getting Started
 
-1. `mkdir react_groceries`
-1. `cd react_groceries`
-1. `touch index.html app.js`
-1. `add all of the scripts for a react app`
+1. Create your react app named `react_groceries` and go through to process of taking out any excessive code if you need to.  Refer back to today's notes for guidance
+1. `cd react_groceries` && `npm start`
 
 
 ## Deliverables

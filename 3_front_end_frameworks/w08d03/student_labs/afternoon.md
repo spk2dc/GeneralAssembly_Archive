@@ -8,7 +8,9 @@ Build a prototype of this short order receipts tracker.
 
 ## Part 1: Get Started
 
-Create a new folder for this project. Make an `index.html` and `app.js` ... follow the notes from class/lab to create an App component that renders
+1. Create your react app named `korilla_receipts` and go through to process of taking out any excessive code if you need to.  Refer back to today's notes for guidance
+1. `cd korilla_receipts` && `npm start`
+1. follow the notes from class/lab to create an App component that renders
  an `h1` with some text inside it
 
 
