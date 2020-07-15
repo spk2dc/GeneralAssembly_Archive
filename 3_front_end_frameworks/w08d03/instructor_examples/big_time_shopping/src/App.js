@@ -117,6 +117,13 @@ class App extends React.Component {
     return (
       <div>
         <h1>Big Time Shopping</h1>
+        <ul>
+          {
+            this.state.products.map((product, i) => {
+              return <li key={ i }>{ product.name } | ${ product.price }</li>
+            })
+          }
+        </ul>
       </div>
     )
   }
