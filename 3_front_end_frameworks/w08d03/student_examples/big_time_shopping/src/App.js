@@ -116,15 +116,34 @@ class App extends React.Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
+
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value })
   }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    const newItem = {
+      name: this.state.name,
+      price: this.state.price,
+      description: this.state.description
+    }
+    this.setState({
+      products: [ ...this.state.products, newItem],
+      name: '',
+      price: 0,
+      description: ''
+    })
+  }
+
+
   render() {
     return (
       <div>
         <h1> Big Time Shopping </h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor='name'>Name</label>
           <input type='text' value={this.state.name} onChange={this.handleChange} id='name' />
           <br />
