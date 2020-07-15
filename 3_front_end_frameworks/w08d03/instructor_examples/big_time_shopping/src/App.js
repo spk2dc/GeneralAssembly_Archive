@@ -113,9 +113,11 @@ class App extends React.Component {
       name: '',
       price: 0,
       description: '',
+      isHiring: true,
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -124,11 +126,31 @@ class App extends React.Component {
     });
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    const newProduct = {
+      name: this.state.name,
+      price: this.state.price,
+      description: this.state.description,
+    };
+    this.setState({
+      products: [ ...this.state.products, newProduct ],
+      name: '',
+      price: 0,
+      description: '',
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Big Time Shopping</h1>
-        <form>
+
+        {
+          this.state.isHiring ? <h2>Yes, we are hiring!</h2> : <h2>Sorry, check back tomorrow.</h2>
+        }
+
+        <form onSubmit={ this.handleSubmit }>
           <label htmlFor="name">Name: </label>
           <input type="text" id="name" value={ this.state.name } onChange={ this.handleChange }/>
           <br/>
@@ -137,7 +159,17 @@ class App extends React.Component {
           <br/>
           <label htmlFor="description">Description: </label>
           <input type="text" id="description" value={ this.state.description } onChange={ this.handleChange }/>
+          <br/>
+          <input type="submit" value="Add Product"/>
         </form>
+
+        <div>
+          <h2>Preview our new item</h2>
+          <h4>Name: {this.state.name}</h4>
+          <h4>Price: {this.state.price}</h4>
+          <h4>Description: {this.state.description}</h4>
+        </div>
+
         <ul>
           {
             this.state.products.map((product, i) => {
