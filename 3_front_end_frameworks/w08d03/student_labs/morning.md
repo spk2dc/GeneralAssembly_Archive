@@ -22,10 +22,10 @@ Try to recreate this wireframe with React. Be sure to create a few components (e
 - `code .`
 
 ### OR!!
-- You can use `npx install-react-app dashboard`, `cd` into that directory, and run `npm start`. (Navigate back to the create react app notes for guidance)
+- You can use `npx create-react-app dashboard`, `cd` into that directory, and run `npm start`. (Navigate back to the create react app notes for guidance)
 - Just remember that it will be a large application and you may need to remove some styling and components to get started.
 
-#### For those not using the npx install-react-app command
+#### For those not using the npx create-react-app command
 **index.html**
 - add html boilerplate
 - add script tags
