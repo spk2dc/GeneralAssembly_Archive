@@ -112,7 +112,8 @@ class App extends React.Component {
       products: products,
       name: '',
       price: 0,
-      description: ''
+      description: '',
+      isHiring: true
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -131,7 +132,7 @@ class App extends React.Component {
       description: this.state.description
     }
     this.setState({
-      products: [ ...this.state.products, newItem],
+      products: [...this.state.products, newItem],
       name: '',
       price: 0,
       description: ''
@@ -143,6 +144,15 @@ class App extends React.Component {
     return (
       <div>
         <h1> Big Time Shopping </h1>
+
+        {
+          this.state.isHiring ? (
+            <h2>Yes, we are hiring </h2>
+          ) : (
+              <h2>Sorry, try again tomorrow</h2>
+            )
+        }
+
         <form onSubmit={this.handleSubmit}>
           <label htmlFor='name'>Name</label>
           <input type='text' value={this.state.name} onChange={this.handleChange} id='name' />
