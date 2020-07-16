@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React, { Component } from 'react'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Playlist from './components/Playlist.jsx'
 import playlist from './data.js'
 
 console.table(playlist)
 
 class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -17,22 +19,23 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleDelete = this.handleDelete.bind(this)
+    this.removeSong = this.removeSong.bind(this)
   }
 
-  handleChange(event) {
+  handleChange (event) {
     this.setState({ [event.target.id]: event.target.value })
   }
 
-  handleSubmit(event) {
+  handleSubmit (event) {
     event.preventDefault()
+
     const newSong = {
       title: this.state.title,
       artist: this.state.artist,
       time: this.state.time
     }
 
-    const updatedSongs = [...this.state.playlist, newSong]
+    const updatedSongs = [ ...this.state.playlist, newSong ]
 
     this.setState({
       playlist: updatedSongs,
@@ -42,89 +45,44 @@ class App extends Component {
     })
   }
 
-  handleDelete(index) {
+  removeSong (index) {
     const playlist = this.state.playlist
-
-    const updatedSongs = playlist.filter((song, i) => i != index)
+    let updatedPlaylist = playlist.filter((song, i) => i !== index)
 
     this.setState({
-      playlist: updatedSongs,
+      playlist: updatedPlaylist,
     })
   }
+
 
   render() {
     return (
       <div>
         <Header />
-
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">
             Song
-            <input
-              type="text"
-              id="title"
-              value={this.state.title}
-              onChange={this.handleChange}
-            />
+            <input type="text" id="title" value={this.state.title} onChange={this.handleChange} />
           </label>
           <label htmlFor="artist">
             Artist
-            <input
-              type="text"
-              id="artist"
-              value={this.state.artist}
-              onChange={this.handleChange}
-            />
+            <input type="text" id="artist" value={this.state.artist} onChange={this.handleChange} />
           </label>
           <label htmlFor="time">
             Time
-            <input
-              type="text"
-              id="time"
-              value={this.state.time}
-              onChange={this.handleChange}
-            />
+            <input type="text" id="time" value={this.state.time} onChange={this.handleChange} />
           </label>
           <label>
             <input type="submit" />
           </label>
         </form>
-
-        <main>
-          <div>
-            <h3>Playlist 1</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Song</th>
-                  <th>Arist</th>
-                  <th>Time</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.playlist.map((song, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{song.title}</td>
-                      <td>{song.artist}</td>
-                      <td>{song.time}</td>
-                      <td>
-                        <button onClick={() => this.handleDelete(index)}>Delete</button>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </main>
-
+        <Playlist
+          playlist={ this.state.playlist }
+          removeSong={ this.removeSong }/>
         <Footer />
       </div>
     )
   }
 }
-
 
 export default App;
