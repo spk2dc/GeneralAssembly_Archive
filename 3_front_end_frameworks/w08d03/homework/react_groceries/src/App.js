@@ -49,13 +49,80 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
+    if (this.state.isPurchased == 'on') {
+      this.state.isPurchased = true
+    } else {
+      this.state.isPurchased = false
+    }
+
+    const newItem = {
+      item: this.state.item,
+      brand: this.state.brand,
+      units: this.state.units,
+      quantity: this.state.quantity,
+      isPurchased: this.state.isPurchased
+    }
+
+    this.setState({
+      groceries: [...groceries, newItem],
+      item: '',
+      brand: '',
+      units: '',
+      quantity: 0,
+      isPurchased: false
+    })
   }
 
   render() {
+
+    let displayArr = []
+
+    displayArr = this.state.groceries.map((item, i) => {
+      return (
+        item.isPurchased && <li key={i}>{item.item} | {item.brand} | {item.units} | {item.quantity}</li>
+      )
+    })
+
     return (
       <div>
+        <h1>React Groceries</h1>
 
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor='item'>item</label>
+          <input type='text' value={this.state.item} onChange={this.handleChange} id='item' />
+          <br />
+          <label htmlFor='brand'>brand</label>
+          <input type='text' value={this.state.brand} onChange={this.handleChange} id='brand' />
+          <br />
+          <label htmlFor='units'>units</label>
+          <input type='text' value={this.state.units} onChange={this.handleChange} id='units' />
+          <br />
+          <label htmlFor='quantity'>quantity</label>
+          <input type='number' value={this.state.quantity} onChange={this.handleChange} id='quantity' />
+          <br />
+          <label htmlFor='purchased'>purchased</label>
+          <input type='radio' value={this.state.isPurchased} onChange={this.handleChange} id='purchased' name='isPurchased'/>
+          <label htmlFor='notpurchased'>not purchased</label>
+          <input type='radio' value={this.state.isPurchased} onChange={this.handleChange} id='notpurchased' name='isPurchased'/>
+          <br />
+          <input type='submit' />
+        </form>
+
+        <br />
+        <ul>
+          {
+            displayArr
+          }
+
+          {/* {
+            this.state.isPurchased
+              ? <li key={i}>{item.item} | {item.brand} | {item.units} | {item.quantity}</li>
+              : <li key={i}>{item.item} | {item.brand} | {item.units} | {item.quantity}</li>
+          } */}
+        </ul>
       </div>
     )
   }
 }
+
+export default App
