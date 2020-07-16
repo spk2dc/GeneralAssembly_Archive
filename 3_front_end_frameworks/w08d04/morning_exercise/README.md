@@ -14,7 +14,8 @@ By the end of this lesson, you'll be able to:
 - Define constant, linear, quadratic and logarithmic Big O runtimes.
 - Analyze algorithms to determine their Big O runtime.
 
-<br />
+<hr />
+
 By now you must know that any coding problem can have multiple solutions. There's never one "right" way to do things with code. However, that doesn't mean that all the possible ways to solve a problem are equally valid!
 
 One of the things computer scientists are trained to do is to find ways to make things faster, smaller, cheaper and more precise. One way to approach such problems is to consider the worst case scenario. Big O Notation is a way to denote the worst case scenario.
@@ -299,8 +300,9 @@ Early optimization is problematic because it can be overwhelming to think about 
 
 In your career as a programmer (especially as a junior developer), you probably won't encounter very large datasets or strict time constraints on a daily basis. But you might sometimes, and knowing how to formally analyze your code's limitations and complexity is an important part of becoming a versatile engineer capable of handling novel problems and situations.
 
-<br />
-### Exercise: [Analyzing Algorithms](/exercises/Exercises.md)
+<hr />
+
+### Exercise: [Analyzing Algorithms](exercises/Exercises.md)
 
 ## Additional Resources
 - [The Big O Cheat Sheet](http://bigocheatsheet.com/) is the authority on Big O complexities.
