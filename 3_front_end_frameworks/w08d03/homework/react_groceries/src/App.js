@@ -49,11 +49,11 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    if (this.state.isPurchased == 'on') {
-      this.state.isPurchased = true
-    } else {
-      this.state.isPurchased = false
-    }
+    // if (this.state.isPurchased == 'on') {
+    //   this.state.isPurchased = true
+    // } else {
+    //   this.state.isPurchased = false
+    // }
 
     const newItem = {
       item: this.state.item,
@@ -101,9 +101,9 @@ class App extends React.Component {
           <input type='number' value={this.state.quantity} onChange={this.handleChange} id='quantity' />
           <br />
           <label htmlFor='purchased'>purchased</label>
-          <input type='radio' value={this.state.isPurchased} onChange={this.handleChange} id='purchased' name='isPurchased'/>
+          <input type='radio' onChange={this.handleChange} id='purchased' checked={this.state.isPurchased == true}/>
           <label htmlFor='notpurchased'>not purchased</label>
-          <input type='radio' value={this.state.isPurchased} onChange={this.handleChange} id='notpurchased' name='isPurchased'/>
+          <input type='radio' onChange={this.handleChange} id='notpurchased' checked={this.state.isPurchased == false}/>
           <br />
           <input type='submit' />
         </form>
@@ -113,12 +113,6 @@ class App extends React.Component {
           {
             displayArr
           }
-
-          {/* {
-            this.state.isPurchased
-              ? <li key={i}>{item.item} | {item.brand} | {item.units} | {item.quantity}</li>
-              : <li key={i}>{item.item} | {item.brand} | {item.units} | {item.quantity}</li>
-          } */}
         </ul>
       </div>
     )
