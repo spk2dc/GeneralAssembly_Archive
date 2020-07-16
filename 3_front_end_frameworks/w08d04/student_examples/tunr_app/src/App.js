@@ -17,6 +17,7 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   handleChange(event) {
@@ -30,14 +31,24 @@ class App extends Component {
       artist: this.state.artist,
       time: this.state.time
     }
-  
-    const updatedSongs = [ ...this.state.playlist, newSong ]
-  
+
+    const updatedSongs = [...this.state.playlist, newSong]
+
     this.setState({
       playlist: updatedSongs,
       title: '',
       artist: '',
       time: '0:00'
+    })
+  }
+
+  handleDelete(index) {
+    const playlist = this.state.playlist
+
+    const updatedSongs = playlist.filter((song, i) => i != index)
+
+    this.setState({
+      playlist: updatedSongs,
     })
   }
 
@@ -88,6 +99,7 @@ class App extends Component {
                   <th>Song</th>
                   <th>Arist</th>
                   <th>Time</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -97,6 +109,9 @@ class App extends Component {
                       <td>{song.title}</td>
                       <td>{song.artist}</td>
                       <td>{song.time}</td>
+                      <td>
+                        <button onClick={() => this.handleDelete(index)}>Delete</button>
+                      </td>
                     </tr>
                   )
                 })}
