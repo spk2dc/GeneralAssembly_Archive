@@ -44,11 +44,11 @@ Don't forget to bind it in the constructor
 Add the event listener
 
 ```js
-<label htmlFor="song">
+<label htmlFor="title">
   Song
   <input
     type="text"
-    id="song"
+    id="title"
     value={this.state.title}
     onChange={this.handleChange}
   />
@@ -96,10 +96,10 @@ handleSubmit(event){
     time: this.state.time
   }
 
-  const updatedSongs = [ ...this.state.playlists.songs, newSong ]
+  const updatedSongs = [ ...this.state.playlist, newSong ]
 
   this.setState({
-    playlists: updatedSongs,
+    playlist: updatedSongs,
     name: '',
     artist: '',
     time: '0:00'
