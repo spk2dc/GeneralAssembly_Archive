@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './components/Form';
 import birdArr from './data.js'
 
 class App extends React.Component {
@@ -34,6 +35,8 @@ class App extends React.Component {
       <div>
         <h1>Bird Photo Contest</h1>
 
+        {Form(App)}
+
         <table>
           <thead>
             <tr>
@@ -52,7 +55,17 @@ class App extends React.Component {
                     <td>{item.birdName}</td>
                     <td><img src={item.image} /></td>
                     <td>{item.user}</td>
-                    <td>{item.approved}</td>
+                    <td>
+                      {
+                        item.approved
+                          ? <button onClick={() => this.handleDelete(index)}>
+                            Unapprove
+                            </button>
+                          : <button onClick={() => this.handleDelete(index)}>
+                            Approve
+                            </button>
+                      }
+                    </td>
                     <td>
                       <button onClick={() => this.handleDelete(index)}>
                         Delete
