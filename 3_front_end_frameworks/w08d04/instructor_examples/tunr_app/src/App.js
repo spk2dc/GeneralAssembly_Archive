@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import Playlist from './components/Playlist.jsx'
 import playlist from './data.js'
 
 console.table(playlist)
@@ -75,35 +76,9 @@ class App extends Component {
             <input type="submit" />
           </label>
         </form>
-        <main>
-          <div>
-            <h3>Playlist 1</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Song</th>
-                  <th>Arist</th>
-                  <th>Time</th>
-                  <th>Remove</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.playlist.map((song, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{song.title}</td>
-                      <td>{song.artist}</td>
-                      <td>{song.time}</td>
-                      <td>
-                        <button onClick = {() => this.removeSong(index)}>Delete</button>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </main>
+        <Playlist
+          playlist={ this.state.playlist }
+          removeSong={ this.removeSong }/>
         <Footer />
       </div>
     )
