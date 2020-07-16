@@ -19,7 +19,7 @@
 | w08d01 | Project 2 | Project 2 | Project 2 | Project 2 |
 | w08d02 | Project 2 | Project 2 Presentations | Project 2 Presentations | [Single Page Apps Prep](./3_front_end_frameworks/w08d02/homework/README.md) |
 | w08d03 | Outcomes (no exercie) | [Intro to React, State, Forms, Conditional Rendering](./3_front_end_frameworks/w08d03/instructor_notes/) | [Static Components/Korilla Receipts](./3_front_end_frameworks/w08d03/student_labs/) | [Groceries](./3_front_end_frameworks/w08d03/homework/) |
-| w08d04 | Big O | [CRA, React Props, and more](./3_front_end_frameworks/w08d04/instructor_notes/) | Audubon Society, Dr. Who's Police Box | Labs continued |
+| w08d04 | [Big O](./3_front_end_frameworks/w08d04/morning_exercise) | [CRA, React Props, and more](./3_front_end_frameworks/w08d04/instructor_notes/) | Audubon Society, Dr. Who's Police Box | Labs continued |
 | w08d05 | Intro to Sorting | Props, State Managing, Lifting State Up, AJAX-Fetch | Heirloom Furniture, React Taco | jService |
 
 
