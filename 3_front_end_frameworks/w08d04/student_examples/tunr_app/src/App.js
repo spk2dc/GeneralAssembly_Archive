@@ -16,10 +16,29 @@ class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    const newSong = {
+      title: this.state.title,
+      artist: this.state.artist,
+      time: this.state.time
+    }
+  
+    const updatedSongs = [ ...this.state.playlist, newSong ]
+  
+    this.setState({
+      playlist: updatedSongs,
+      title: '',
+      artist: '',
+      time: '0:00'
+    })
   }
 
   render() {
@@ -27,7 +46,7 @@ class App extends Component {
       <div>
         <Header />
 
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">
             Song
             <input
@@ -54,6 +73,9 @@ class App extends Component {
               value={this.state.time}
               onChange={this.handleChange}
             />
+          </label>
+          <label>
+            <input type="submit" />
           </label>
         </form>
 
