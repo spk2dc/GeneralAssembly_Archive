@@ -10,7 +10,7 @@ class DivThree extends React.Component {
             }
         }
 
-        this.changeIt = this.props.changeIt
+        this.changeIt = this.props.changeIt.bind(this)
     }
 
     render() {
