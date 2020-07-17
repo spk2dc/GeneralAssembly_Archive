@@ -40,8 +40,8 @@ class Form extends Component {
                         type="checkbox"
                         name="approved"
                         id="approved"
-                        checked={this.props.state.approved==='on' ? true : false}
-                        onChange={this.props.handleChange}
+                        checked={this.props.state.approved}
+                        onChange={this.props.inputApproval}
                     />
 
                 </label>

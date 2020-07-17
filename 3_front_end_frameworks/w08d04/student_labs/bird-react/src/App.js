@@ -15,6 +15,7 @@ class App extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.inputApproval = this.inputApproval.bind(this)
     this.changeApproval = this.changeApproval.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
   }
@@ -45,6 +46,11 @@ class App extends React.Component {
     })
   }
 
+  inputApproval(event) {
+    console.log(`App -> inputApproval -> event.target`, event.target.checked)
+    this.setState({ approved: event.target.checked })
+  }
+
   changeApproval(index) {
     const birdArr = this.state.birdArr
     birdArr[index].approved = !birdArr[index].approved
@@ -65,6 +71,7 @@ class App extends React.Component {
         <Form
           state={this.state}
           handleChange={this.handleChange}
+          inputApproval={this.inputApproval}
           handleSubmit={this.handleSubmit}/>
 
         <table>
