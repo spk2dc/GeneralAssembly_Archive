@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   handleChange(event) {
-    console.log(`App -> handleApproval -> event.target.value`, event.target.value)
+    // console.log(`App -> handleChange -> event.target.value`, event.target.value)
     this.setState({ [event.target.id]: event.target.value })
   }
 
@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   inputApproval(event) {
-    console.log(`App -> inputApproval -> event.target`, event.target.checked)
+    console.log(`App -> inputApproval -> event.target.checked`, event.target.checked)
     this.setState({ approved: event.target.checked })
   }
 
