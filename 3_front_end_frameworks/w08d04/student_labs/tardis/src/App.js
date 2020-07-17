@@ -13,7 +13,7 @@ class App extends React.Component {
       }
     }
 
-    this.changeIt = this.changeIt.bind(this)
+    this.changeIt = this.changeIt
   }
 
 

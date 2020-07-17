@@ -11,15 +11,15 @@ class DivOne extends React.Component {
             }
         }
 
-        // this.props.changeIt = this.props.changeIt.bind(this)
+        this.changeIt = this.props.changeIt
     }
 
     render() {
         return (
             <div>
                 <DivTwo
-                    state={this.props.state}
-                    changeIt={this.props.changeIt} />
+                    state={this.state}
+                    changeIt={this.changeIt} />
             </div>
         )
     }
