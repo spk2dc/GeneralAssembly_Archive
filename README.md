@@ -13,7 +13,7 @@
 
 ## Unit 3
 
-### Week 7
+### Week 8
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w08d01 | Project 2 | Project 2 | Project 2 | Project 2 |
