@@ -18,7 +18,7 @@ class DivOne extends React.Component {
         return (
             <div>
                 <DivTwo
-                    state={this.state}
+                    state={this.props.state}
                     changeIt={this.props.changeIt} />
             </div>
         )
