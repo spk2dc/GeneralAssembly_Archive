@@ -1,14 +1,22 @@
 import React from 'react'
+import ListItem from './ListItem'
 
 export default class Furniture extends React.Component {
     render() {
         return (
             <ul>
-                <li>{this.props.chair}</li>
                 {
-                    this.props.recommendationMade
-                        ? <button>No Recommendation</button>
-                        : <button onClick={() => this.props.restore()}>Recommendation</button>
+                    this.props.furniture.map((val, i) => {
+                        return (
+                            <ListItem
+                                key={i}
+                                piece={val.piece}
+                                recommendationMade={val.recommendationMade}
+                                id={val.id}
+                                restore={() => this.props.restore()} />
+                        )
+
+                    })
                 }
             </ul>
         )
