@@ -5,7 +5,6 @@ import Song from './Song.jsx';
 class PlayList extends Component {
   render() {
     return (
-        <main>
         <div>
         <h3>Playlist 1</h3>
         <table>
@@ -23,12 +22,12 @@ class PlayList extends Component {
                 return <Song
                     key={index}
                     index={ index } song={ song }
+                    addLovedSong={ this.props.addLovedSong }
                     removeSong={ this.props.removeSong }/>
             })}
             </tbody>
         </table>
         </div>
-    </main>
     )
   }
 }

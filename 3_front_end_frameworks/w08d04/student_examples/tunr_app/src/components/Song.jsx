@@ -14,7 +14,7 @@ class Song extends Component {
     render() {
         return (
             <tr>
-                <td onClick={ () => this.toggleLove() }>{this.props.song.title}</td>
+                <td onClick={ () => { this.props.addLovedSong(this.props.song); this.toggleLove() }}>{this.props.song.title}</td>
                 <td>{this.props.song.artist}</td>
                 <td>{this.props.song.time}</td>
                 { this.state.love ? <td>&hearts;</td> : <td></td> }

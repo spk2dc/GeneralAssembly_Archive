@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Playlist from './components/Playlist.jsx'
+import FavoriteSongs from './components/FavoriteSongs.jsx'
 import playlist from './data.js'
-
-console.table(playlist)
 
 class App extends Component {
 
@@ -14,11 +13,13 @@ class App extends Component {
       playlist: playlist,
       title: '',
       artist: '',
-      time: '0:00'
+      time: '0:00',
+      lovedSongs: []
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.addLovedSong = this.addLovedSong.bind(this)
     this.removeSong = this.removeSong.bind(this)
   }
 
@@ -43,6 +44,10 @@ class App extends Component {
       artist: '',
       time: '0:00'
     })
+  }
+
+  addLovedSong(song) {
+    this.setState({lovedSongs: [song, ...this.state.lovedSongs]})
   }
 
   removeSong (index) {
@@ -76,9 +81,13 @@ class App extends Component {
             <input type="submit" />
           </label>
         </form>
+        <main>
         <Playlist
           playlist={ this.state.playlist }
-          removeSong={ this.removeSong }/>
+          addLovedSong={ this.addLovedSong }
+          removeSong={ this.removeSong } />
+        <FavoriteSongs songs={this.state.lovedSongs} />
+        </main>
         <Footer />
       </div>
     )
