@@ -1,4 +1,7 @@
 import React from 'react';
+import DivOne from './components/DivOne';
+import DivTwo from './components/DivTwo';
+import DivThree from './components/DivThree';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,7 +39,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>
+        <DivOne
+          state={this.state}
+          changeIt={this.changeIt} />
       </div>
     )
   }
