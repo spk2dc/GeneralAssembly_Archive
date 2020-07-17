@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import MovieInfo from './components/MovieInfo';
+
 class App extends Component {
   state = {
     baseURL: 'http://www.omdbapi.com/?apikey=b764ea59&t=',
@@ -21,7 +23,11 @@ class App extends Component {
       fetch(this.state.searchURL).then(response => {
         return response.json();
       }).then(data => {
-        console.log('data:', data);
+        this.setState({
+          movie: data,
+          movieTitle: '',
+        });
+
       }).catch(err => {
         console.log('error:', err);
       });
@@ -38,7 +44,11 @@ class App extends Component {
             onChange={ (evt) => this.handleChange(evt) }/>
           <input type="submit" value="Search"/>
         </form>
-        <a href={ this.state.searchURL }>{ this.state.searchURL }</a>
+        {
+          this.state.movie
+            ? <MovieInfo movie={ this.state.movie }/>
+            : ''
+        }
       </>
     )
   }
