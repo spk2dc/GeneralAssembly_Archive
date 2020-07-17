@@ -15,7 +15,6 @@ class App extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    // this.handleApproval = this.handleApproval.bind(this)
     this.changeApproval = this.changeApproval.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
   }
@@ -49,7 +48,7 @@ class App extends React.Component {
   changeApproval(index) {
     const birdArr = this.state.birdArr
     birdArr[index].approved = !birdArr[index].approved
-    console.log(`App -> changeApproval -> birdArr`, birdArr[index])
+    // console.log(`App -> changeApproval -> birdArr`, birdArr[index])
     this.setState({})
   }
 
