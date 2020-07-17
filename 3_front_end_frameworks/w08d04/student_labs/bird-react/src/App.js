@@ -52,10 +52,10 @@ class App extends React.Component {
   }
 
   changeApproval(index) {
-    const birdArr = this.state.birdArr
-    birdArr[index].approved = !birdArr[index].approved
+    const newArr = [...this.state.birdArr]
+    newArr[index].approved = !newArr[index].approved
     // console.log(`App -> changeApproval -> birdArr`, birdArr[index])
-    this.setState({})
+    this.setState({birdArr: newArr})
   }
 
   handleDelete(index) {

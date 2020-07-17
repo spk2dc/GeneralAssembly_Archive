@@ -10,10 +10,15 @@ class App extends React.Component {
       tardis: {
         name: 'Time and Relative Dimension in Space',
         caps: false,
+      },
+
+      tardis2: {
+        name: 'Time and Relative Dimension in Space',
+        caps: false,
       }
     }
 
-    this.changeIt = this.changeIt
+    this.changeIt = this.changeIt.bind(this)
   }
 
 
@@ -40,7 +45,8 @@ class App extends React.Component {
     return (
       <div>
         <DivOne
-          state={this.state}
+          tardis={this.state.tardis}
+          tardis2={this.state.tardis2}
           changeIt={this.changeIt} />
       </div>
     )
