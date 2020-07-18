@@ -29,9 +29,14 @@ class App extends React.Component {
       <div>
         <h1>Welcome to Jeopardy</h1>
         <button onClick={() => this.getQuestion()}>Random Trivia Question</button>
-        <Question
-          apiObj={this.state.apiObj}
-        />
+        {
+          this.state.apiObj !== ''
+            ? <Question
+              apiObj={this.state.apiObj}
+            />
+            : ''
+        }
+
         <Answer
           answer={this.state.apiObj.answer}
         />
