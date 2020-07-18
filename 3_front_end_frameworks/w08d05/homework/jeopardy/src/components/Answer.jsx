@@ -19,7 +19,7 @@ export default class Answer extends React.Component {
                     this.state.display
                         ? <div>
                             <button onClick={() => this.toggleAnswer()}>Hide</button>
-                            <p>{this.props.answer}</p>
+                            <p id='answerText'>{this.props.answer}</p>
                         </div>
                         : <div>
                             <button onClick={() => this.toggleAnswer()}>Show</button>

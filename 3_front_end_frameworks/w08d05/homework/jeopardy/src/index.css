@@ -31,3 +31,24 @@ button {
   border: 1px solid black;
   border-radius: 3px;
 }
+
+#answerText {
+  background-color: red;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+#questionText {
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+#scoreText {
+  background-color: rgb(0, 226, 0);
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 3px;
+}

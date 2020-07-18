@@ -34,7 +34,7 @@ export default class Score extends React.Component {
     render() {
         return (
             <div className='section'>
-                <h2>Score: {this.state.score}</h2>
+                <h2>Score: <span id='scoreText'>{this.state.score}</span></h2>
                 <button onClick={(event) => this.changeScore(event)}>- Dec</button>
                 <button onClick={(event) => this.changeScore(event)}>+ Inc</button>
                 <button onClick={(event) => this.changeScore(event)}>Reset</button>

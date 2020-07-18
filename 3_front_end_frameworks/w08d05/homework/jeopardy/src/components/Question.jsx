@@ -7,7 +7,7 @@ export default class Question extends React.Component {
                 <h3>POINTS: {this.props.apiObj.value}</h3>
                 <h3>CATEGORY: {this.props.apiObj.category.title}</h3>
                 <h3>QUESTION: </h3>
-                <p>{this.props.apiObj.question}</p>
+                <p id='questionText'>{this.props.apiObj.question}</p>
             </div>
         )
     }
