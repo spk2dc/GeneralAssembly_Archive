@@ -33,7 +33,7 @@ export default class Score extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='section'>
                 <h2>Score: {this.state.score}</h2>
                 <button onClick={(event) => this.changeScore(event)}>- Dec</button>
                 <button onClick={(event) => this.changeScore(event)}>+ Inc</button>

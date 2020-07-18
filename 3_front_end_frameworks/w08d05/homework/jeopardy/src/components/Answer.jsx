@@ -13,7 +13,7 @@ export default class Answer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='section'>
                 <h3>ANSWER: </h3>
                 {
                     this.state.display

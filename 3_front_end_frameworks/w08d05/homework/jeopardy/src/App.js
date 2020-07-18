@@ -27,21 +27,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <h1>Welcome to Jeopardy</h1>
-        <Score 
+        <Score
           value={this.state.apiObj.value}
         />
         <br />
 
-        <button onClick={() => this.getQuestion()}>Random Trivia Question</button>
-        {
-          this.state.apiObj !== ''
-            ? <Question
-              apiObj={this.state.apiObj}
-            />
-            : ''
-        }
+        <div className='section'>
+          <button onClick={() => this.getQuestion()}>Random Trivia Question</button>
+          {
+            this.state.apiObj !== ''
+              ? <Question
+                apiObj={this.state.apiObj}
+              />
+              : ''
+          }
+        </div>
 
         <Answer
           answer={this.state.apiObj.answer}
