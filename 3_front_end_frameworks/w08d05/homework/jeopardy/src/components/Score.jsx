@@ -15,13 +15,17 @@ export default class Score extends React.Component {
             ? tempVal = 0
             : tempVal = this.props.value
 
-        if (event.target.textContent === '+') {
+        if (event.target.textContent === '+ Inc') {
             this.setState({
                 score: this.state.score + tempVal
             })
-        } else {
+        } else if (event.target.textContent === '- Dec') {
             this.setState({
                 score: this.state.score - tempVal
+            })
+        } else {
+            this.setState({
+                score: 0
             })
         }
 
@@ -31,8 +35,9 @@ export default class Score extends React.Component {
         return (
             <div>
                 <h2>Score: {this.state.score}</h2>
-                <button onClick={(event) => this.changeScore(event)}>-</button>
-                <button onClick={(event) => this.changeScore(event)}>+</button>
+                <button onClick={(event) => this.changeScore(event)}>- Dec</button>
+                <button onClick={(event) => this.changeScore(event)}>+ Inc</button>
+                <button onClick={(event) => this.changeScore(event)}>Reset</button>
             </div>
         )
     }
