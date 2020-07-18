@@ -1,6 +1,7 @@
 import React from 'react';
 import Question from './components/Question'
 import Answer from './components/Answer'
+import Score from './components/Score'
 
 class App extends React.Component {
   state = {
@@ -28,6 +29,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>Welcome to Jeopardy</h1>
+        <Score />
+        <br />
+
         <button onClick={() => this.getQuestion()}>Random Trivia Question</button>
         {
           this.state.apiObj !== ''
