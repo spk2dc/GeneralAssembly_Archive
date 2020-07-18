@@ -29,7 +29,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>Welcome to Jeopardy</h1>
-        <Score />
+        <Score 
+          value={this.state.apiObj.value}
+        />
         <br />
 
         <button onClick={() => this.getQuestion()}>Random Trivia Question</button>
