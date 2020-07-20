@@ -53,7 +53,7 @@ router.get('/showids', (req, res) => {
 /**************************************************************
 ************************* DELETE ROUTE ************************
 
-curl curl -X DELETE http://localhost:3003/shelter/5f15c9728f578a27cd4dedad
+curl -X DELETE http://localhost:3003/shelter/5f15c9728f578a27cd4dedad
 **************************************************************/
 router.delete('/:id', (req, res) => {
     Animal.findByIdAndRemove(req.params.id, (err, deletedAnimal) => {
@@ -61,6 +61,20 @@ router.delete('/:id', (req, res) => {
             res.status(400).json({ error: err.message })
         }
         res.status(200).json(deletedAnimal)
+    })
+})
+
+/**************************************************************
+************************* UPDATE ROUTE ************************
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"I updated this"}' http://localhost:3003/shelter/5f15c9878f578a27cd4dedae
+**************************************************************/
+router.put('/:id', (req, res) => {
+    Animal.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedAnimal) => {
+        if (err) {
+            res.status(400).json({ error: err.message })
+        }
+        res.status(200).json(updatedAnimal)
     })
 })
 
