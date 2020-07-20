@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const PORT = 3003;
 
@@ -15,6 +16,19 @@ mongoose.connection.once('open', ()=>{
 
 // middleware
 app.use(express.json()); //use .json(), not .urlencoded()
+
+const whitelist = ['http://localhost:3000'];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) >= 0) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 
 
 const holidaysController = require('./controllers/holidays.js')
