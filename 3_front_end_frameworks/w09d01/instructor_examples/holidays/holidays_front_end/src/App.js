@@ -1,5 +1,7 @@
 import React from 'react';
 
+import NewForm from './components/NewForm';
+
 let baseUrl = 'http://localhost:3003';
 
 class App extends React.Component {
@@ -7,13 +9,21 @@ class App extends React.Component {
     holidays: [],
   }
 
-  getHolidays() {
+  getHolidays = () => {
     fetch(baseUrl + '/holidays').then(res => {
       return res.json();
     }).then(data => {
       this.setState({
         holidays: data,
       });
+    });
+  }
+
+  addHoliday = (newHoliday) => {
+    const copyHolidays = [...this.state.holidays];
+    copyHolidays.push(newHoliday);
+    this.setState({
+      holidays: copyHolidays,
     });
   }
 
@@ -25,6 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Holidays! Celebrate!</h1>
+        <NewForm addHoliday={ this.addHoliday }/>
         <table>
           <tbody>
             {
