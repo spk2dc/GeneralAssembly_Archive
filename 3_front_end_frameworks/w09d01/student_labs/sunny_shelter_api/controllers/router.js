@@ -3,10 +3,6 @@ const router = express.Router()
 
 const Animal = require('../models/animal.js')
 
-router.get('/', (req, res) => {
-    res.send('index')
-})
-
 /**************************************************************
 ************************* CREATE ROUTE ************************
 
@@ -27,7 +23,7 @@ router.post('/', async (req, res) => {
 curl http://localhost:3003/shelter
 **************************************************************/
 router.get('/', (req, res) => {
-    Holiday.find({}, (err, foundAnimal) => {
+    Animal.find({}, (err, foundAnimal) => {
         if (err) {
             res.status(400).json({ error: err.message })
         }
