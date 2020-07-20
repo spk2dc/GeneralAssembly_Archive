@@ -10,7 +10,7 @@ class App extends React.Component {
     }
   }
 
-  getAnimals() {
+  getAnimals = () => {
     fetch(baseURL + '/shelter')
       .then(data => {
         return data.json()
