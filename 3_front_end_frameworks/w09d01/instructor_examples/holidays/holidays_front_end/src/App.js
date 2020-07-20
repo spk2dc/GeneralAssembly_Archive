@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Holidays! Celebrate!</h1>
-        <NewForm addHoliday={ this.addHoliday }/>
+        <NewForm baseUrl={ baseUrl } addHoliday={ this.addHoliday }/>
         <table>
           <tbody>
             {

@@ -13,8 +13,21 @@ export default class NewForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.addHoliday({
-            name: this.state.name,
+        fetch(this.props.baseUrl + '/holidays', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: this.state.name,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }).then(res => {
+            return res.json();
+        }).then(data => {
+            this.props.addHoliday(data);
+            this.setState({
+                name: '',
+            });
         });
     }
 
