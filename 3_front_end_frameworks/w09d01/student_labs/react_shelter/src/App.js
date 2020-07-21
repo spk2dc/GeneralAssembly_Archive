@@ -1,4 +1,5 @@
 import React from 'react';
+import NewForm from './components/NewForm';
 
 let baseURL = 'http://localhost:3003'
 
@@ -17,6 +18,25 @@ class App extends React.Component {
       })
       .then(parsedData => {
         console.log(parsedData)
+        let newArr = [...this.state.animals, ...parsedData]
+        this.setState({
+          animals: newArr
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
+  addAnimal = () => {
+    fetch(baseURL + '/shelter')
+      .then(data => {
+        return data.json()
+      })
+      .then(parsedData => {
+        console.log(parsedData)
+        let newArr = [...this.state.animals, ...parsedData]
+        this.setState({
+          animals: newArr
+        })
       })
       .catch(err => console.log(err))
   }
@@ -29,6 +49,7 @@ class App extends React.Component {
     return (
       <div className='container'>
         <h1>Animal Shelter API</h1>
+        <NewForm baseURL={baseURL} addAnimal={this.addAnimal} />
         <table>
           <tbody>
             {
