@@ -54,6 +54,22 @@ class App extends React.Component {
       })
   }
 
+  addLike = (holiday) => {
+    fetch(baseUrl + '/holidays/' + holiday._id, {
+      method: 'PUT',
+      body: JSON.stringify({ likes: holiday.likes+1 }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(resJson => {
+        const copyHolidays = [...this.state.holidays]
+        const findIndex = this.state.holidays.findIndex(holiday => holiday._id === resJson._id)
+        copyHolidays[findIndex].likes = resJson.likes
+        this.setState({ holidays: copyHolidays })
+      })
+  }
+
   componentDidMount() {
     this.getHolidays();
   }
@@ -75,6 +91,7 @@ class App extends React.Component {
                       :
                       null}
                   >{holiday.name} Day</td>
+                  <td onClick={() => this.addLike(holiday)}>X</td>
                   <td onClick={() => this.deleteHoliday(holiday._id)}>X</td>
                 </tr>
               )
