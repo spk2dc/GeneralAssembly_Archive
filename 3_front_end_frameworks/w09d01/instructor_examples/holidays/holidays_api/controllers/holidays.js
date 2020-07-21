@@ -35,6 +35,7 @@ holidays.put('/:id', (req, res) => {
 
 // DELETE ROUTE
 holidays.delete('/:id', (req, res) => {
+  console.log(req.body)
   Holiday.findByIdAndRemove(req.params.id, (err, deletedHoliday) => {
     if (err) {
       res.status(400).json({ error: err.message })
