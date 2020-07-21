@@ -26,19 +26,13 @@ class App extends React.Component {
       .catch(err => console.log(err))
   }
 
-  addAnimal = () => {
-    fetch(baseURL + '/shelter')
-      .then(data => {
-        return data.json()
-      })
-      .then(parsedData => {
-        console.log(parsedData)
-        let newArr = [...this.state.animals, ...parsedData]
-        this.setState({
-          animals: newArr
-        })
-      })
-      .catch(err => console.log(err))
+  addAnimal = (newAnimal) => {
+    const copyAnimal = [...this.state.animals];
+    console.log(`App -> addAnimal -> copyAnimal`, copyAnimal)
+    copyAnimal.push(newAnimal);
+    this.setState({
+      animals: copyAnimal,
+    });
   }
 
   componentDidMount() {

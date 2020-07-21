@@ -13,7 +13,7 @@ export default class NewForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch(this.props.baseUrl + '/shelter', {
+        fetch(this.props.baseURL + '/shelter', {
             method: 'POST',
             body: JSON.stringify({
                 name: this.state.name,
@@ -28,17 +28,19 @@ export default class NewForm extends Component {
             this.setState({
                 name: '',
             });
-        });
+        }).catch(err => {
+            console.log(`NewForm -> handleSubmit -> err`, err)
+        })
     }
 
     render() {
         return (
-            <form onSubmit={ (evt) => this.handleSubmit(evt) }>
+            <form onSubmit={(evt) => this.handleSubmit(evt)}>
                 <label htmlFor="name">Name: </label>
                 <input type="text" id="name"
-                    onChange={ (evt) => this.handleChange(evt) }
-                    value={ this.state.name }/>
-                <input type="submit" value="Add animal"/>
+                    onChange={(evt) => this.handleChange(evt)}
+                    value={this.state.name} />
+                <input type="submit" value="Add animal" />
             </form>
         )
     }
