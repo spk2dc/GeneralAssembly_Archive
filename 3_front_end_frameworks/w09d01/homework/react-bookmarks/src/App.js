@@ -1,17 +1,33 @@
-import React from 'react';
-import Form from './components/Form';
+import React from "react";
+import Form from "./components/Form";
+import { copy } from "../../api-bookmarks/controllers/router";
 
-let baseURL = 'http://localhost:3003'
+let baseURL = "http://localhost:3003";
 
 class App extends React.Component {
   state = {
-    title: '',
-    url: ''
-  }
+    allBookmarks: [],
+    title: "",
+    url: "",
+  };
 
-  addBookmark = () => {
+  getBookmarks = () => {
+    fetch(`baseURL${bookmark}`)
+      .then((data) => {
+        return data.json();
+      })
+      .then((jsonData) => {})
+      .catch((err) => console.log(`App -> getBookmarks -> err`, err));
+  };
 
-  }
+  addBookmark = (newBookmark) => {
+    const copyBookmarks = [...this.state.allBookmarks];
+    console.log(`App -> addBookmarks -> copyBookmarks`, copyBookmarks);
+    copyBookmarks.push(newBookmarks);
+    this.setState({
+      animals: copyBookmarks,
+    });
+  };
 
   render() {
     return (
@@ -22,9 +38,9 @@ class App extends React.Component {
           url={this.state.url}
           baseURL={baseURL}
           addBookmark={this.addBookmark}
-          />
+        />
       </div>
-    )
+    );
   }
 }
 
