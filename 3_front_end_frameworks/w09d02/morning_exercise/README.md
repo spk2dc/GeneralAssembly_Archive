@@ -17,8 +17,8 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 ## Setup
 #### Make a plan/assign tasks
 - Read the homework together
-- [Tonight's OPTIONAL Homework](./3_front_end_frameworks/w09d02/homework/README.md)
-- [How to tell if you're working in groups](./7_project_files/project_3/working_in_groups.md)
+- [Tonight's OPTIONAL Homework](../homework/README.md)
+- [How to tell if you're working in groups](../../../7_project_files/project_3/working_in_groups.md)
 - To be sure everyone is getting practice pulling and pushing be sure to keep communication open on who is working on what task
 - _Note:_ It is fine for the group to screenshare and work on one file simultaneously - feel free to create a way of working together that will help you get the deliverable complete
 - _Note:_ Two people working on the same file at the same time is the most likely way to get a merge conflict! Communicate well to avoid this sort of time-suck!
@@ -99,5 +99,5 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - Remember this is a one evening homework, keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
 ### Resources
 - [GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)
-- [Happy Fun Ball](3_front_end_frameworks/w09d01/morning_exercise)
+- [Happy Fun Ball](../3_front_end_frameworks/w09d01/morning_exercise)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
