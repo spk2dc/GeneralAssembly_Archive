@@ -99,5 +99,5 @@ Using collaboration via GitHub, each pair will create a new repo **outside the c
 - Remember this is a one evening homework, keep it simple but make it watertight and polish it, rather than trying to add another model or some other big feature!
 ### Resources
 - [GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)
-- [Happy Fun Ball](../3_front_end_frameworks/w09d01/morning_exercise)
+- [Happy Fun Ball](../../w09d01/morning_exercise)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
