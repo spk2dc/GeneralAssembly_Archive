@@ -16,8 +16,8 @@
 ### Week 9
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w09d01 | [HFB (Git merge)](./3_front_end_frameworks/w09d01/morning_exercise/README.md) | [Express API, Consuming the API w/ React](./3_front_end_frameworks/w09d01/instructor_notes/1-api.md) | Animal Shelter | Bookmarks |
-| w09d02 | Pairing | Consuming the API, Heroku Deployment of CRA | Animal Shelter | Project 3 |
+| w09d01 | [HFB (Git merge)](./3_front_end_frameworks/w09d01/morning_exercise/README.md) | [Express API, Consuming the API w/ React](./3_front_end_frameworks/w09d01/instructor_notes/) | [Animal Shelter](./3_front_end_frameworks/w09d01/student_labs/) | [Bookmarks](./3_front_end_frameworks/w09d01/homework/) |
+| w09d02 | [Pairing](./3_front_end_frameworks/w09d02/morning_exercise/README.md) | Consuming the API, Heroku Deployment of CRA | Animal Shelter | Project 3 |
 | w09d03 | Outcomes (no exercise) | Project 3 | Project 3 | Project 3 |
 | w09d04 | Recursion (optional) | Project 3 | Project 3 | Project 3 |
 | w09d05 | Basic sorting (optional) | Project 3 | Project 3 | Project 3 |
