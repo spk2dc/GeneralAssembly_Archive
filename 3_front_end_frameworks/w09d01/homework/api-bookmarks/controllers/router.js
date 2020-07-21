@@ -6,7 +6,7 @@ const Bookmark = require('../models/schema.js')
 /**************************************************************
 ************************* CREATE ROUTE ************************
 
-curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' http://localhost:3003/bookmark
+curl -X POST -H "Content-Type: application/json" -d '{"title":"test", "url":"https://www.test.com"}' http://localhost:3003/bookmark
 **************************************************************/
 router.post('/', async (req, res) => {
     Bookmark.create(req.body, (error, createdBookmark) => {
