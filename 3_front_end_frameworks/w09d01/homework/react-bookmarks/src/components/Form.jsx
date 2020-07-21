@@ -8,7 +8,7 @@ export default class Form extends React.Component {
 
     handleChange = (event) => {
         this.setState({
-            title: event.target.value,
+            [event.target.id]: event.target.value,
         })
     }
 
@@ -18,6 +18,7 @@ export default class Form extends React.Component {
             method: 'POST',
             body: JSON.stringify({
                 title: this.state.title,
+                url: this.state.url
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -28,6 +29,7 @@ export default class Form extends React.Component {
             this.props.addHoliday(data)
             this.setState({
                 title: '',
+                url: ''
             })
         })
     }
