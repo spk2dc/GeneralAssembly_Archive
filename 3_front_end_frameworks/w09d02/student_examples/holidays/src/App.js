@@ -27,6 +27,17 @@ class App extends React.Component {
     });
   }
 
+  deleteHoliday = (id) => {
+    fetch(baseUrl + '/holidays/' + id, {
+      method: 'DELETE'
+    }).then(response => {
+      const findIndex = this.state.holidays.findIndex(holiday => holiday._id === id)
+      const copyHolidays = [...this.state.holidays]
+      copyHolidays.splice(findIndex, 1)
+      this.setState({ holidays: copyHolidays })
+    })
+  }
+
   componentDidMount() {
     this.getHolidays();
   }
@@ -35,17 +46,17 @@ class App extends React.Component {
     return (
       <div>
         <h1>Holidays! Celebrate!</h1>
-        <NewForm baseUrl={ baseUrl } addHoliday={ this.addHoliday }/>
+        <NewForm baseUrl={baseUrl} addHoliday={this.addHoliday} />
         <table>
           <tbody>
-            {
-              this.state.holidays.map(holiday => {
-                return (
-                  <tr key={ holiday._id }>
-                    <td>{ holiday.name }</td>
-                  </tr>
-                )
-              })
+            {this.state.holidays.map(holiday => {
+              return (
+                <tr key={holiday._id} >
+                  <td> {holiday.name}</td>
+                  <td onClick={() => this.deleteHoliday(holiday._id)}>X</td>
+                </tr>
+              )
+            })
             }
           </tbody>
         </table>
