@@ -86,10 +86,11 @@ class App extends React.Component {
                 <tr key={holiday._id} >
                   <td
                     onDoubleClick={() => this.toggleCelebrated(holiday)}
-                    className={holiday.celebrated
-                      ? 'celebrated'
-                      :
-                      null}
+                    className={
+                      holiday.celebrated
+                        ? 'celebrated'
+                        : null
+                    }
                   >{holiday.name} Day</td>
                   <td onClick={() => this.addLike(holiday)}>{holiday.likes} Likes</td>
                   <td onClick={() => this.deleteHoliday(holiday._id)}>X</td>
