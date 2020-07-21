@@ -26,7 +26,7 @@ export default class Form extends React.Component {
         }).then(res => {
             return res.json()
         }).then(data => {
-            this.props.addHoliday(data)
+            this.props.addBookmark(data)
             this.setState({
                 title: '',
                 url: ''

@@ -6,18 +6,18 @@ const PORT = 3003
 
 // middleware
 app.use(express.json()); //use .json(), not .urlencoded()
-// const whitelist = ['http://localhost:3000', 'http://localhost:3003']
-// const corsOptions = {
-//     origin: function (origin, callback) {
-//         if (whitelist.indexOf(origin) !== -1) {
-//             callback(null, true)
-//         } else {
-//             callback(new Error('Not allowed by CORS'))
-//         }
-//     }
-// }
+const whitelist = ['http://localhost:3000', 'http://localhost:3003']
+const corsOptions = {
+    origin: function (origin, callback) {
+        if (whitelist.indexOf(origin) !== -1) {
+            callback(null, true)
+        } else {
+            callback(new Error('Not allowed by CORS'))
+        }
+    }
+}
 
-// app.use(cors(corsOptions)) // all routes are now exposed, sometimes you just want to limit access
+app.use(cors(corsOptions)) // all routes are now exposed, sometimes you just want to limit access
 
 // Error / Disconnection
 mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'))

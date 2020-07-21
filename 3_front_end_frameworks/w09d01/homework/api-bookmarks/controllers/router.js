@@ -53,7 +53,7 @@ router.get('/showids', (req, res) => {
 /**************************************************************
 ************************* DELETE ROUTE ************************
 
-curl -X DELETE http://localhost:3003/bookmark/5f15c9728f578a27cd4dedad
+curl -X DELETE http://localhost:3003/bookmark/5f17390cec2fe10ed80ed3a7
 **************************************************************/
 router.delete('/:id', (req, res) => {
     Bookmark.findByIdAndRemove(req.params.id, (err, deletedBookmark) => {
@@ -67,7 +67,7 @@ router.delete('/:id', (req, res) => {
 /**************************************************************
 ************************* UPDATE ROUTE ************************
 
-curl -X PUT -H "Content-Type: application/json" -d '{"name":"I updated this"}' http://localhost:3003/bookmark/5f15c9878f578a27cd4dedae
+curl -X PUT -H "Content-Type: application/json" -d '{"title":"I updated this"}' http://localhost:3003/bookmark/5f17390cec2fe10ed80ed3a7
 **************************************************************/
 router.put('/:id', (req, res) => {
     Bookmark.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBookmark) => {
