@@ -57,7 +57,7 @@ class App extends React.Component {
   addLike = (holiday) => {
     fetch(baseUrl + '/holidays/' + holiday._id, {
       method: 'PUT',
-      body: JSON.stringify({ likes: holiday.likes+1 }),
+      body: JSON.stringify({ likes: holiday.likes + 1 }),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -91,7 +91,7 @@ class App extends React.Component {
                       :
                       null}
                   >{holiday.name} Day</td>
-                  <td onClick={() => this.addLike(holiday)}>X</td>
+                  <td onClick={() => this.addLike(holiday)}>{holiday.likes} Likes</td>
                   <td onClick={() => this.deleteHoliday(holiday._id)}>X</td>
                 </tr>
               )
