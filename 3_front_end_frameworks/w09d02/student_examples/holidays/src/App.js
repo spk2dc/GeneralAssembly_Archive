@@ -38,6 +38,22 @@ class App extends React.Component {
     })
   }
 
+  toggleCelebrated = (holiday) => {
+    fetch(baseUrl + '/holidays/' + holiday._id, {
+      method: 'PUT',
+      body: JSON.stringify({ celebrated: !holiday.celebrated }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(resJson => {
+        const copyHolidays = [...this.state.holidays]
+        const findIndex = this.state.holidays.findIndex(holiday => holiday._id === resJson._id)
+        copyHolidays[findIndex].celebrated = resJson.celebrated
+        this.setState({ holidays: copyHolidays })
+      })
+  }
+
   componentDidMount() {
     this.getHolidays();
   }
@@ -52,7 +68,13 @@ class App extends React.Component {
             {this.state.holidays.map(holiday => {
               return (
                 <tr key={holiday._id} >
-                  <td> {holiday.name}</td>
+                  <td
+                    onDoubleClick={() => this.toggleCelebrated(holiday)}
+                    className={holiday.celebrated
+                      ? 'celebrated'
+                      :
+                      null}
+                  >{holiday.name} Day</td>
                   <td onClick={() => this.deleteHoliday(holiday._id)}>X</td>
                 </tr>
               )
