@@ -14,7 +14,15 @@ export default class AllBookmarks extends React.Component {
         </thead>
         <tbody>
           {this.props.allBookmarks.map((val, i) => {
-            return <Bookmark key={i} index={i} bookmark={val} />;
+            return (
+              <Bookmark
+                key={i}
+                baseURL={this.props.baseURL}
+                index={i}
+                bookmark={val}
+                deleteBookmark={this.props.deleteBookmark}
+              />
+            );
           })}
         </tbody>
       </table>

@@ -10,7 +10,7 @@ export default class Bookmark extends React.Component {
             {this.props.bookmark.url}
           </a>
         </td>
-        <td>X</td>
+        <td onClick={() => this.props.deleteBookmark()}>X</td>
       </tr>
     );
   }

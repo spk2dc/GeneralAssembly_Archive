@@ -34,6 +34,19 @@ class App extends React.Component {
     });
   };
 
+  deleteBookmark = (id) => {
+    fetch(`${baseURL}/bookmark/${id}`, {
+      method: "DELETE",
+    }).then((res) => {
+      const findIndex = this.state.allBookmarks.findIndex(
+        (val) => val._id === id
+      );
+      const copyBookmarks = [...this.state.allBookmarks];
+      copyBookmarks.splice(findIndex, 1);
+      this.setState({ allBookmarks: copyBookmarks });
+    });
+  };
+
   componentDidMount = () => {
     this.getBookmarks();
   };
@@ -48,7 +61,11 @@ class App extends React.Component {
           baseURL={baseURL}
           addBookmark={this.addBookmark}
         />
-        <AllBookmarks allBookmarks={this.state.allBookmarks} />
+        <AllBookmarks
+          baseURL={baseURL}
+          allBookmarks={this.state.allBookmarks}
+          deleteBookmark={this.deleteBookmark}
+        />
       </div>
     );
   }
