@@ -1,6 +1,5 @@
 import React from "react";
 import Form from "./components/Form";
-import { copy } from "../../api-bookmarks/controllers/router";
 
 let baseURL = "http://localhost:3003";
 
@@ -12,7 +11,7 @@ class App extends React.Component {
   };
 
   getBookmarks = () => {
-    fetch(`baseURL${bookmark}`)
+    fetch(`${baseURL}/bookmark`)
       .then((data) => {
         return data.json();
       })
@@ -23,9 +22,9 @@ class App extends React.Component {
   addBookmark = (newBookmark) => {
     const copyBookmarks = [...this.state.allBookmarks];
     console.log(`App -> addBookmarks -> copyBookmarks`, copyBookmarks);
-    copyBookmarks.push(newBookmarks);
+    copyBookmarks.push(newBookmark);
     this.setState({
-      animals: copyBookmarks,
+      allBookmarks: copyBookmarks,
     });
   };
 
