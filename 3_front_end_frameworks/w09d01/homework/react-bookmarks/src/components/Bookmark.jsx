@@ -3,11 +3,11 @@ import React from "react";
 export default class Bookmark extends React.Component {
   render() {
     return (
-      <tr key={this.props.index}>
-        <td>{this.props.title}</td>
+      <tr key={this.props.index} id={this.props.bookmark._id}>
+        <td>{this.props.bookmark.title}</td>
         <td>
-          <a href={this.props.url} target='_blank'>
-            {this.props.url}
+          <a href={this.props.bookmark.url} target='_blank'>
+            {this.props.bookmark.url}
           </a>
         </td>
         <td>X</td>
