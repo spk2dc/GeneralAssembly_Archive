@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.navBar {
+  display: flex;
+  font-size: 30px;
+}
+
+.navBar a {
+  margin: 15px;
+}
