@@ -16,7 +16,12 @@ class App extends React.Component {
       .then((data) => {
         return data.json();
       })
-      .then((jsonData) => {})
+      .then((jsonData) => {
+        console.log(`App -> getBookmarks -> jsonData`, jsonData);
+        this.setState({
+          allBookmarks: jsonData,
+        });
+      })
       .catch((err) => console.log(`App -> getBookmarks -> err`, err));
   };
 
@@ -27,6 +32,10 @@ class App extends React.Component {
     this.setState({
       allBookmarks: copyBookmarks,
     });
+  };
+
+  componentDidMount = () => {
+    this.getBookmarks();
   };
 
   render() {
