@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./components/Form";
+import AllBookmarks from "./components/AllBookmarks";
 
 let baseURL = "http://localhost:3003";
 
@@ -21,7 +22,7 @@ class App extends React.Component {
 
   addBookmark = (newBookmark) => {
     const copyBookmarks = [...this.state.allBookmarks];
-    console.log(`App -> addBookmarks -> copyBookmarks`, copyBookmarks);
+    // console.log(`App -> addBookmarks -> copyBookmarks`, copyBookmarks);
     copyBookmarks.push(newBookmark);
     this.setState({
       allBookmarks: copyBookmarks,
@@ -38,6 +39,7 @@ class App extends React.Component {
           baseURL={baseURL}
           addBookmark={this.addBookmark}
         />
+        <AllBookmarks allBookmarks={this.state.allBookmarks} />
       </div>
     );
   }
