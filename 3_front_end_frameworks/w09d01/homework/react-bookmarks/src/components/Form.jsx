@@ -20,7 +20,11 @@ export default class Form extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch(this.props.baseURL + "/bookmark", {
+    console.log(
+      `Form -> handleSubmit -> url`,
+      `${this.props.baseURL}/bookmark`
+    );
+    fetch(`${this.props.baseURL}/bookmark`, {
       method: "POST",
       body: JSON.stringify({
         title: this.state.title,
