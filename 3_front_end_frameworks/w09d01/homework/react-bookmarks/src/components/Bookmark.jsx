@@ -5,7 +5,11 @@ export default class Bookmark extends React.Component {
     return (
       <tr key={this.props.index}>
         <td>{this.props.title}</td>
-        <td>{this.props.url}</td>
+        <td>
+          <a href={this.props.url} target='_blank'>
+            {this.props.url}
+          </a>
+        </td>
         <td>X</td>
       </tr>
     );
