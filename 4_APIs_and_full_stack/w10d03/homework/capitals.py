@@ -1,4 +1,7 @@
+import random
+
 # an array of state dictionaries
+
 states = [
 {
     "name": "Alabama",
@@ -151,3 +154,14 @@ states = [
     "name": "Wyoming",
     "capital": "Cheyenne"
 }]
+
+
+print('Welcome to the state capitals game!')
+
+random.shuffle(states)
+
+for val in states:
+    val['correct'] = 0
+    val['wrong'] = 0
+
+print(states[0])
