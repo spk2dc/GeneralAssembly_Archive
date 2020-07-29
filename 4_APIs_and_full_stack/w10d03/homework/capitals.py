@@ -155,13 +155,33 @@ states = [
     "capital": "Cheyenne"
 }]
 
+def gameLoop(states):
+    for i, val in enumerate(states, start=1):
+        print(f'\n{i}. What is the capital of {val["name"]}?')
+        inp = input()
+        if inp == val["capital"]:
+            val["correct"] += 1
+            print(f'\n{inp} is correct! You have gotten this correct {val["correct"]} times.')
+        else:
+            val["wrong"] += 1
+            print(f'{inp} is wrong. You have gotten this wrong {val["wrong"]} times.')
+        
+        print(f'Capital was right {val["correct"]} out of {val["correct"]+val["wrong"]} times.')
+
+    print(f'\nWould you like to play again [y/n]?')
+    restart = input()
+    if restart=='y':
+        gameLoop(states)
+    else:
+        return
+
+
 
 print('Welcome to the state capitals game!')
 
 random.shuffle(states)
-
 for val in states:
-    val['correct'] = 0
-    val['wrong'] = 0
+        val['correct'] = 0
+        val['wrong'] = 0
 
-print(states[0])
+gameLoop(states)
