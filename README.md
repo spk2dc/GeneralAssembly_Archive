@@ -18,7 +18,7 @@
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w10d01 | Project 3 | Project 3 | Project 3 | Project 3 |
 | w10d02 | Project 3 | Project 3 Presentations | [Divide and Conquer Algorithms](./4_APIs_and_full_stack/w10d02/instructor_notes/divide-and-conquer-sorts) | [Python Prep](./4_APIs_and_full_stack/w10d02/homework/README.md) |
-| w10d03 | Outcomes (no exercise) | [Intro to Python](./4_APIs_and_full_stack/w10d03/instructor_notes/README.md) | Python Functions/Lists/Ranges/Tuples/etc | Python State Capitals |
+| w10d03 | Outcomes (no exercise) | [Intro to Python](./4_APIs_and_full_stack/w10d03/instructor_notes/README.md) | Python Functions/Lists/Ranges/Tuples/etc | [Python State Capitals](./4_APIs_and_full_stack/w10d03/homework/README.md) |
 | w10d04 | Python Lab Review | Python OOP | Python OOP Lists/Sequences | Python OOP Build |
 | w10d05 | Intro to SQL | Intro to SQL/Relations in SQL, Foreign Keys, Joins | Basic SQL/Airplane Lab | Carmen Sandiego |
 
