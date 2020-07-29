@@ -2,7 +2,13 @@ import React from 'react';
 
 import NewForm from './components/NewForm';
 
-let baseUrl = 'http://localhost:3003';
+let baseUrl;
+if (process.env.NODE_ENV === 'development') {
+  baseUrl = 'http://localhost:3003';
+} else {
+  baseUrl = 'https://peaceful-stream-27012.herokuapp.com';
+}
+console.log('current base URL:', baseUrl);
 
 class App extends React.Component {
   state = {

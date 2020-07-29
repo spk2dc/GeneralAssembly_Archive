@@ -11,16 +11,41 @@
 
 **Outcomes Meetings are Wednesdays from 2pm EST/1pm CST to 3:30/2:30**
 
-## Unit 3
+## Unit 4
 
-### Week 9
+### Week 10
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w09d01 | [HFB (Git merge)](./3_front_end_frameworks/w09d01/morning_exercise/README.md) | [Express API, Consuming the API w/ React](./3_front_end_frameworks/w09d01/instructor_notes/) | [Animal Shelter](./3_front_end_frameworks/w09d01/student_labs/) | [Bookmarks](./3_front_end_frameworks/w09d01/homework/) |
-| w09d02 | [Pairing](./3_front_end_frameworks/w09d02/morning_exercise/README.md) | [Consuming the API, Heroku Deployment of CRA](./3_front_end_frameworks/w09d02/instructor_notes/) | Animal Shelter | Project 3 |
-| w09d03 | Outcomes (no exercise) | Project 3 | Project 3 | Project 3 |
-| w09d04 | Recursion (optional) | Project 3 | Project 3 | Project 3 |
-| w09d05 | Basic sorting (optional) | Project 3 | Project 3 | Project 3 |
+| w10d01 | Project 3 | Project 3 | Project 3 | Project 3 |
+| w10d02 | Project 3 | Project 3 Presentations | [Divide and Conquer Algorithms](./4_APIs_and_full_stack/w10d02/instructor_notes/divide-and-conquer-sorts) | [Python Prep](./4_APIs_and_full_stack/w10d02/homework/README.md) |
+| w10d03 | Outcomes (no exercise) | Intro to Python | Python Functions/Lists/Ranges/Tuples/etc | Python State Capitals |
+| w10d04 | Python Lab Review | Python OOP | Python OOP Lists/Sequences | Python OOP Build |
+| w10d05 | Intro to SQL | Intro to SQL/Relations in SQL, Foreign Keys, Joins | Basic SQL/Airplane Lab | Carmen Sandiego |
+
+### Week 11
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w11d01 | Intro to Flask | Setting up Flask App/Creat, Index, Show | Flask API | Wrap up class example |
+| w11d02 | Flask API (Delete/Update) | Flask API contd/Flask Auth | Auth in Flask App | Wrap up class example |
+| w11d03 | Outcomes (no exercise) | One-to-many Flask | Add Relations | Final Project Intro |
+| w11d04 | Final Project Approvals | Final Project | Final Project | Final Project |
+| w11d05 | React/Flask/Heroku | Final Project | Final Project | Final Project |
+
+### Week 12
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w12d01 | Searching Algorithms | Final Project | Final Project | Final Project |
+| w12d02 | Intro to Data Structures | Final Project | Final Project | Final Project |
+| w12d03 | Outcomes (no exercise) | Linked Lists | Final Project | Final Project |
+| w12d04 | Stacks and Queues | Final Project | Final Project | Final Project |
+| w12d05 | Hash Tables | Final Project | Final Project | Final Project |
+
+### Week 12 (contd)
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w13d01 | Binary Trees | Final Project | Final Project | Final Project |
+| w13d02 | Graphs | Final Project | Final Project | Final Project |
+| w13d03 | Final Project | Final Project Presentations | Final Project Presentations | Fin |
 
 ## Unit 1
 
@@ -86,6 +111,8 @@
 | w07d04 | Project 2 | Project 2 | Project 2 | Project 2 |
 | w07d05 | Project 2 | Project 2 | Project 2 | Project 2 |
 
+## Unit 3
+
 ### Week 8
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
@@ -94,3 +121,12 @@
 | w08d03 | Outcomes (no exercie) | [Intro to React, State, Forms, Conditional Rendering](./3_front_end_frameworks/w08d03/instructor_notes/) | [Static Components/Korilla Receipts](./3_front_end_frameworks/w08d03/student_labs/) | [Groceries](./3_front_end_frameworks/w08d03/homework/) |
 | w08d04 | [Big O](./3_front_end_frameworks/w08d04/morning_exercise) | [CRA, React Props, and more](./3_front_end_frameworks/w08d04/instructor_notes/) | [Audubon Society, Dr. Who's Police Box](./3_front_end_frameworks/w08d04/student_labs/) | Labs continued |
 | w08d05 | [Intro to Sorting](./3_front_end_frameworks/w08d05/instructor_examples/intro_to_sorting/intro_to_sorting.js) | [Props, State Managing, Lifting State Up, AJAX-Fetch](./3_front_end_frameworks/w08d05/instructor_notes/) | [Heirloom Furniture, React Taco](./3_front_end_frameworks/w08d05/student_labs/) | [jService](./3_front_end_frameworks/w08d05/homework/) |
+
+### Week 9
+| Day | Morning Exercise | Lectures | Labs | Homework |
+|:---:|:-----------:|:-------:|:-----------:|:-----------:|
+| w09d01 | [HFB (Git merge)](./3_front_end_frameworks/w09d01/morning_exercise/README.md) | [Express API, Consuming the API w/ React](./3_front_end_frameworks/w09d01/instructor_notes/) | [Animal Shelter](./3_front_end_frameworks/w09d01/student_labs/) | [Bookmarks](./3_front_end_frameworks/w09d01/homework/) |
+| w09d02 | [Pairing](./3_front_end_frameworks/w09d02/morning_exercise/README.md) | [Consuming the API, Heroku Deployment of CRA](./3_front_end_frameworks/w09d02/instructor_notes/) | Animal Shelter | [Project 3](./7_project_files/project_3/README.md) |
+| w09d03 | Outcomes (no exercise) | Project 3 | Project 3 | Project 3 |
+| w09d04 | [Recursion (optional)](./3_front_end_frameworks/w09d04/morning_exercise/) | Project 3 | Project 3 | Project 3 |
+| w09d05 | [Basic sorting (optional)](./3_front_end_frameworks/w09d05/morning_exercise/) | Project 3 | Project 3 | Project 3 |
