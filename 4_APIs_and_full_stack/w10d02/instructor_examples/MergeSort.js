@@ -34,10 +34,13 @@ function mergeSort(arr) {
     let j = 0;
     // Keep adding to a new, sorted array as long as we have values to add
     while (i < sortedFirstHalf.length || j < sortedSecondHalf.length) {
-        // If we have no more values from the second half of the array,
-        // OR the next value in the first half is smaller than that in the second,
+        // If we still have values in the first half of the array,
+        // AND (we have no more values from the second half of the array,
+        //      OR the next value in the first half is smaller than that in the second),
         // then add the value from the first half
-        if (j >= sortedSecondHalf.length || sortedFirstHalf[i] < sortedSecondHalf[j]) {
+        if (i < sortedFirstHalf.length &&
+                (j >= sortedSecondHalf.length ||
+                 sortedFirstHalf[i] < sortedSecondHalf[j])) {
             newArr.push(sortedFirstHalf[i]);
             i++;
         // Otherwise, add the value from the second half
