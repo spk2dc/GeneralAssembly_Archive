@@ -68,3 +68,12 @@ def product(*nums):
 print('product: ')
 print(product(3,2,4))   # returns 24
 print(product(1,2,4))   # returns 24
+
+
+where_are_my_things = {
+    'laptop': 'lenovo',
+    'coding environment': 'linux',
+    'keys': 1
+}
+for key, val in where_are_my_things.items():
+    print(f'My {key} is {val}')
