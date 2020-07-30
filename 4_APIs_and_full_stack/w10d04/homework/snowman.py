@@ -31,15 +31,12 @@ class Word():
 # `remaining_guesses` (start a round with 8), `letters_used`, the `chosen_word` (randomly 
 # chosen from a list of words you also declare here perhaps?), 
 #and whatever else you might want to keep track of
-wordInp = 'test'
-chosen_word = Word(wordInp)
-remaining_guesses = 8
-letters_used = []
+
 
 # a loop here that will cause game to play and be exited when user either wins or loses
 # see below for tips on how to structure this loop
 def game_loop():
-    global remaining_guesses 
+    global remaining_guesses
     while remaining_guesses > 0:
         userInp = input('Enter a letter: ')
         userInpExists = False
@@ -54,12 +51,15 @@ def game_loop():
 
         print('\n',chosen_word.guessed_string)
         if '_' not in chosen_word.guessed_string:
-            print(f'\nCONGRATS! You won with {remaining_guesses} guesses left')
+            print(f'\nCONGRATS! You won with {remaining_guesses} guesses left\n')
             return
     
-    print(f'\nLOST. Word was "{wordInp}"')
+    print(f'\nLOST. Word was "{wordInp}"\n')
 
 
+wordInp = 'test'
+chosen_word = Word(wordInp)
+remaining_guesses = 8
 
 print('\nWelcome to snowman word guessing game! \n')
 print(f'Your word is {len(wordInp)} characters long. You have {remaining_guesses} guesses')
