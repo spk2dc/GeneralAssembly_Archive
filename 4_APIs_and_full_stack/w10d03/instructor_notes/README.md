@@ -283,8 +283,8 @@ would remove the first element from a list.
 ```python
 secret_files = ["TOP SECRET", "ALSO TOP SECRET", "DON'T EVEN LOOK AT THIS"]
 
-for file in secret_files:
-  print(lang)
+for secret_file in secret_files:
+  print(secret_file)
 ```
 
 ## Dictionaries
