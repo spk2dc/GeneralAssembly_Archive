@@ -87,4 +87,4 @@ my_squirrel.say_hello()
 # my_dog.find_acorn()
 
 # this won't work, because potty_train is specific to the Dog class
-my_squirrel.potty_train()
+# my_squirrel.potty_train()
