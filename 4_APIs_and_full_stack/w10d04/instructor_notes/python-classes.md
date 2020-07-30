@@ -152,27 +152,27 @@ object in order to keep it accurate. It's much better if we can store it once in
 That way, each dog object can access it but we only need to store it and set it in one place.
 
 Let's add some code to our class. To create a class variable, we simply add a variable outside
-of any existing functions. Let's add a `totalDogs` variable to the class. Let's also add a
+of any existing functions. Let's add a `total_dogs` variable to the class. Let's also add a
 line that increments this value inside our `__init__` method. And just for fun, let's add
 another line to our `bark_hello` method that references this total:
 
 ```python
 class Dog():
-  totalDogs = 0
+  total_dogs = 0
   def __init__(self, name="", age=0 color=""):
     self.name = name
     self.age = age
     self.color = color
-    Dog.totalDogs += 1
+    Dog.total_dogs += 1
     print(name, "created:", self)
 
   def bark_hello(self):
     print("Woof! I am called", self.name, "I am", self.color "and I am", self.age, "human-years old.")
-    print("There are", Dog.totalDogs, "dogs in this room!")
+    print("There are", Dog.total_dogs, "dogs in this room!")
 ```
 
-Now when we create a new dog, the `__init__` method increments the `totalDogs` counter which
-is stored in the Dog class itself. We can access the value stored in `Dog.totalDogs` inside our script
+Now when we create a new dog, the `__init__` method increments the `total_dogs` counter which
+is stored in the Dog class itself. We can access the value stored in `Dog.total_dogs` inside our script
 and each dog object can access it from their own functions.
 
 ## Subclasses and Inheritance
@@ -230,7 +230,7 @@ Now the daughter says something more in line with her character. The child class
 Now that we've seen a dog-based example of Python classes, let's make one a bit more sophisticated.
 Create a `BankAccount` class.  
 
-* Bank accounts should be created with the `accountType` property (like "savings" or "checking").
+* Bank accounts should be created with the `account_type` property (like "savings" or "checking").
 * Bank accounts should have a class-level variable tracking the total amount of money in all account objects.
 * Each account should keep track of its own current `balance`.
 * Each account should have a `deposit` and a `withdraw` method.
@@ -244,8 +244,8 @@ Things to think about:
 
 Bonus: 
 
-1. Start each account with an additional `overdraftFees` property that starts at zero. If a call
-to `withdraw` ends with the `balance` below zero then `overdraftFees` should be incremented by twenty.
+1. Start each account with an additional `overdraft_fees` property that starts at zero. If a call
+to `withdraw` ends with the `balance` below zero then `overdraft_fees` should be incremented by twenty.
 2. Make a `ChildBankAccount` class that inherits from `BankAccount`. The `ChildBankAccount` should override the `withdraw` method so that no overdraft fees are applied. Instead, output a message that there are insufficient funds available.
 
 
