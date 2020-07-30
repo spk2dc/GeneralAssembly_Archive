@@ -38,22 +38,31 @@ letters_used = []
 
 # a loop here that will cause game to play and be exited when user either wins or loses
 # see below for tips on how to structure this loop
+def game_loop(remaining_guesses): 
+    while remaining_guesses > 0:
+        userInp = input('Enter a letter: ')
+        userInpExists = False
+        remaining_guesses -= 1
+
+        userInpExists = chosen_word.check_guessed(userInp)
+
+        if userInpExists:
+            print(f'"{userInp}" is correct! {remaining_guesses} guesses left')
+        else:
+            print(f'Sorry "{userInp}" is incorrect. {remaining_guesses} guesses left')
+
+        print('\n',chosen_word.guessed_string)
+        if '_' not in chosen_word.guessed_string:
+            print(f'\nCONGRATS! You won with {remaining_guesses} guesses left')
+            return
+    
+    print(f'\nLOST. Word was "{wordInp}"')
+
+
+
 print('\nWelcome to snowman word guessing game! \n')
 print(f'Your word is {len(wordInp)} characters long. You have {remaining_guesses} guesses')
 
-while remaining_guesses > 0:
-    userInp = input('Enter a letter: ')
-    userInpExists = False
-    remaining_guesses -= 1
-
-    userInpExists = chosen_word.check_guessed(userInp)
-
-    if userInpExists:
-        print(f'"{userInp}" is correct! {remaining_guesses} guesses left')
-    else:
-        print(f'Sorry "{userInp}" is incorrect. {remaining_guesses} guesses left')
-
-    print('\n',chosen_word.guessed_string)
-        
+game_loop(remaining_guesses)
 
 chosen_word.debugging_print()
