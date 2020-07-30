@@ -38,7 +38,8 @@ letters_used = []
 
 # a loop here that will cause game to play and be exited when user either wins or loses
 # see below for tips on how to structure this loop
-def game_loop(remaining_guesses): 
+def game_loop():
+    global remaining_guesses 
     while remaining_guesses > 0:
         userInp = input('Enter a letter: ')
         userInpExists = False
@@ -63,6 +64,4 @@ def game_loop(remaining_guesses):
 print('\nWelcome to snowman word guessing game! \n')
 print(f'Your word is {len(wordInp)} characters long. You have {remaining_guesses} guesses')
 
-game_loop(remaining_guesses)
-
-chosen_word.debugging_print()
+game_loop()
