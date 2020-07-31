@@ -13,7 +13,10 @@ SELECT * FROM airports AS origin WHERE origin.city = 'New York';
 select * from airports as destination where destination.city = 'Paris';
 
 -- Find out how many routes originate from New York
-
+SELECT airline_code, origin_code, dest_code
+  FROM routes
+  INNER JOIN airports
+  ON routes.origin_id = airports.id;
 
 -- Find out how many routes have destinations in Paris
 
