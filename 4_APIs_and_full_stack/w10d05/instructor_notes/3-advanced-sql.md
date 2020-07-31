@@ -15,8 +15,7 @@
 1. Views
 1. Transactions
 1. Locks
-1. Privileges
-1. Denormalization
+1. SQL Injection
 
 
 ### Joins
@@ -27,7 +26,7 @@
 1. Full Join
 
 1. Cross Join
-The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table if no WHERE clause is used along with CROSS JOIN. This kind of result is called as Cartesian Product.
+The SQL CROSS JOIN produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table if no WHERE clause is used along with CROSS JOIN.
 
 ```sql
 SELECT table1.column1, table2.column2
