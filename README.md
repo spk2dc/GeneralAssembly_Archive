@@ -20,7 +20,7 @@
 | w10d02 | Project 3 | Project 3 Presentations | [Divide and Conquer Algorithms](./4_APIs_and_full_stack/w10d02/instructor_notes/divide-and-conquer-sorts) | [Python Prep](./4_APIs_and_full_stack/w10d02/homework/README.md) |
 | w10d03 | Outcomes (no exercise) | [Intro to Python](./4_APIs_and_full_stack/w10d03/instructor_notes/) | [Python Functions/Lists/Ranges/Tuples/etc](./4_APIs_and_full_stack/w10d03/student_labs) | [Python State Capitals](./4_APIs_and_full_stack/w10d03/homework/README.md) |
 | w10d04 | [Python Lab Review](./4_APIs_and_full_stack/w10d04/morning_exercise) | [Python OOP](./4_APIs_and_full_stack/w10d04/instructor_notes/python-classes.md) | [Python OOP Lab](./4_APIs_and_full_stack/w10d04/student_labs/python-oop.md) | [Python OOP Build](./4_APIs_and_full_stack/w10d04/homework/python-oop-snowman.md) |
-| w10d05 | Python Lab Review | [Intro to SQL/Relations in SQL](./4_APIs_and_full_stack/w10d05/instructor_notes), Foreign Keys, Joins | [Basic SQL/Airplane Lab](./4_APIs_and_full_stack/w10d05/student_labs/) | Carmen Sandiego |
+| w10d05 | Python Lab Review | [Intro to SQL/Relations in SQL](./4_APIs_and_full_stack/w10d05/instructor_notes), Foreign Keys, Joins | [Basic SQL/Airplane Lab](./4_APIs_and_full_stack/w10d05/student_labs/) | [Carmen Sandiego](./4_APIs_and_full_stack/w10d05/homework/carmen-sandiego/README.md) |
 
 ### Week 11
 | Day | Morning Exercise | Lectures | Labs | Homework |
