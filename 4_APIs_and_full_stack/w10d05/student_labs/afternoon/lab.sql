@@ -35,5 +35,4 @@ SELECT count(*), airline_code, origin_code, dest_code
   ON routes.origin_id = origin.id
   INNER JOIN airports as dest
   ON routes.dest_id = dest.id 
-  WHERE origin.city = 'New York' AND dest.city = 'Paris'
-  GROUP BY routes.airline_id;
+  WHERE origin.city = 'New York' AND dest.city = 'Paris';
