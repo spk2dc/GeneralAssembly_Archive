@@ -34,3 +34,70 @@ occurences('mississippi', 'ss')  # returns 2
 ## Hungry for More?  
 
 Whether its python or JavaScript, you should be building your raw algorithmic problem-solving muscles!  Send a group message to Ben, James, John and Deja and we will send you extra functions to write.  Avoid using Google—solve them by pseudocoding and just thinking through stuff until you get a solution, _then_ Google it.  
+
+
+## Solutions (do not peek unless you are stuck or finished)
+
+<details>
+  <summary><strong>Challenge 1</strong></summary>
+
+  ```python
+  def sum_to(num):
+    sum = 0
+    for i in range(num + 1):
+      sum += i
+    return sum
+  ```
+</details>
+
+<details>
+  <summary><strong>Challenge 2</strong></summary>
+
+  ```python
+  def largest(ls):
+    largest = 0
+    for num in ls:
+      if num > largest:
+        largest = num
+    return largest
+  ```
+</details>
+
+<details>
+  <summary><strong>Challenge 3</strong></summary>
+
+  ```python
+  def occurances(string, substr):
+    mismatch = False
+    count = 0
+    # Check to see if the substr exists in the string at all
+    if substr in string:
+      # If it does, start looking through the string
+      for i in range( len(string) ):
+        # If the string character matches the first char in substr...
+        if string[i] == substr[0]:
+          # Loop through substr to see if the rest of the chars match
+          for j in range( len(substr) ):
+            if substr[j] != string[i + j]:
+              # If they ever don't match along rhe lengtrh of the substr, then mark a mismatch
+              mismatch = True
+              break;
+          # If there were no mismatches, we can up the occurance count by 1
+          if not mismatch:
+            count += 1
+    # Finally return the count
+    return count
+  ```
+</details>
+
+<details>
+  <summary><strong>Challenge 4</strong></summary>
+
+  ```python
+  def product(*args):
+    product = 1
+    for arg in args:
+      product *= arg
+    return product
+  ```
+</details>
