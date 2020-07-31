@@ -26,6 +26,19 @@ SELECT * FROM COUNTRY LIMIT 1;
 -- code2          | AF
 
 
+-- country language table:
+-- 0|CountryCode|char(3)|1|''|0
+-- 1|Language|char(30)|1|''|0
+-- 2|IsOfficial|text|1|'F'|0
+-- 3|Percentage|decimal(4,1)|1|'0.0'|0
+
+-- city table:
+-- 0|ID|INTEGER|1||1
+-- 1|Name|char(35)|1|''|0
+-- 2|CountryCode|char(3)|1|''|0
+-- 3|District|char(20)|1|''|0
+-- 4|Population|int|1|'0'|0
+
 -- Clue #1: We recently got word that someone fitting Carmen Sandiego's description has been traveling through Southern Europe. She's most likely traveling someplace where she won't be noticed, so find the least populated country in Southern Europe, and we'll start looking for her there.
 SELECT MIN(population), name 
     FROM country
@@ -40,6 +53,8 @@ SELECT MIN(population), name
 
 SELECT MIN(population), name 
     FROM country
+    INNER JOIN countrylanguage
+    ON routes.origin_id = origin.id
     WHERE region = 'Southern Europe';
 
 
