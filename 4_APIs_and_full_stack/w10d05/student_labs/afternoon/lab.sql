@@ -13,13 +13,19 @@ SELECT * FROM airports AS origin WHERE origin.city = 'New York';
 select * from airports as destination where destination.city = 'Paris';
 
 -- Find out how many routes originate from New York
-SELECT airline_code, origin_code, dest_code
+SELECT count(origin_code), airline_code, origin_code, dest_code
   FROM routes
   INNER JOIN airports
-  ON routes.origin_id = airports.id;
+  ON routes.origin_id = airports.id
+  WHERE airports.city = 'New York'
+  GROUP BY routes.airline_id;
 
 -- Find out how many routes have destinations in Paris
-
+-- SELECT airline_id, airline_code, origin_code, dest_code
+--   FROM routes
+--   INNER JOIN airports
+--   ON routes.origin_id = airports.id
+--   WHERE airports.city = 'Paris';
 
 -- Try to decide which statements are necessary and find how to combine them to find out how many routes originate from New York and land in Paris!
 
