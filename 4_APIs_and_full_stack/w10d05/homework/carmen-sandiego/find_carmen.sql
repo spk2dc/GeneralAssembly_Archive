@@ -73,7 +73,7 @@ SELECT name, language, percentage
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time. There are only two cities she could be flying to in the country. One is named the same as the country – that would be too obvious. We're following our gut on this one; find out what other city in that country she might be flying to.
 .print ' '
 .print ' Clue #4 '
-.width 0 0 0
+.width 0 0 20
 
 SELECT country.name as 'Country Name', city.name as City, district
     FROM country
@@ -86,7 +86,18 @@ SELECT country.name as 'Country Name', city.name as City, district
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
+.print ' '
+.print ' Clue #5 '
+.width 0 20 20
 
+SELECT country.name as 'Country Name', city.name as City, district
+    FROM country
+    INNER JOIN countrylanguage
+    ON country.code = countrylanguage.countrycode
+    INNER JOIN city
+    ON country.code = city.countrycode
+    WHERE city.name LIKE 'Serra%' AND city.name IS NOT 'Serravalle'
+    GROUP BY city.name;
 
 
 
