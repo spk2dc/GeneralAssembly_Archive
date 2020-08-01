@@ -131,6 +131,18 @@ SELECT country.name as 'Country Name', city.name as City, capital, id
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
+.print ' '
+.print ' Clue #7 '
+.width 0
+
+SELECT country.name as 'Country Name', city.name as City, city.population
+    FROM country
+    INNER JOIN countrylanguage
+    ON country.code = countrylanguage.countrycode
+    INNER JOIN city
+    ON country.code = city.countrycode
+    WHERE city.population < 91090 AND city.population > 91083
+    GROUP BY city.name;
 
 
 
