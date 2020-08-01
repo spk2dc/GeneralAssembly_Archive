@@ -81,7 +81,7 @@ SELECT country.name as 'Country Name', city.name as City, district
     ON country.code = countrylanguage.countrycode
     INNER JOIN city
     ON country.code = city.countrycode
-    WHERE region = 'Southern Europe' AND language = 'Italian' AND percentage = 100;
+    WHERE region = 'Southern Europe' AND language = 'Italian' AND percentage = 100 AND country.name != city.name;
 
 
 
