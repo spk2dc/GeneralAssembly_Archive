@@ -102,7 +102,18 @@ SELECT country.name as 'Country Name', city.name as City, district
 
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll follow right behind you!
+.print ' '
+.print ' Clue #6 '
+.width 0 15 15
 
+SELECT country.name as 'Country Name', city.name as City, capital, id
+    FROM country
+    INNER JOIN countrylanguage
+    ON country.code = countrylanguage.countrycode
+    INNER JOIN city
+    ON country.code = city.countrycode
+    WHERE country.name IS 'Brazil' AND capital = id
+    GROUP BY city.name;
 
 
 
