@@ -13,7 +13,7 @@
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w09d01 | [HFB (Git merge)](./w09d01/morning_exercise/README.md) | [Express API, Consuming the API w/ React](./w09d01/instructor_notes/) | [Animal Shelter](./w09d01/student_labs/) | [Bookmarks](./w09d01/homework/) |
-| w09d02 | [Pairing](./w09d02/morning_exercise/README.md) | [Consuming the API, Heroku Deployment of CRA](./w09d02/instructor_notes/) | Animal Shelter | [Project 3](./7_project_files/project_3/README.md) |
+| w09d02 | [Pairing](./w09d02/morning_exercise/README.md) | [Consuming the API, Heroku Deployment of CRA](./w09d02/instructor_notes/) | Animal Shelter | [Project 3](../7_project_files/project_3/README.md) |
 | w09d03 | Outcomes (no exercise) | Project 3 | Project 3 | Project 3 |
 | w09d04 | [Recursion (optional)](./w09d04/morning_exercise/) | Project 3 | Project 3 | Project 3 |
 | w09d05 | [Basic sorting (optional)](./w09d05/morning_exercise/) | Project 3 | Project 3 | Project 3 |

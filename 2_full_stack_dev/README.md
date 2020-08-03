@@ -20,7 +20,7 @@
 ### Week 7
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w07d01 |[EJS Partials](./w07d01/morning_exercise)| [Sessions, Authentication](./w07d01/instructor_notes/) | [Project 2](./7_project_files/project_2/README.md) | [Kingsmen (optional)](./w07d01/homework/) |
+| w07d01 |[EJS Partials](./w07d01/morning_exercise)| [Sessions, Authentication](./w07d01/instructor_notes/) | [Project 2](../7_project_files/project_2/README.md) | [Kingsmen (optional)](./w07d01/homework/) |
 | w07d02 | Project 2 | [Heroku](./2_full_stack_dev/w07d02/instructor_notes/) | Project 2 | Project 2 |
 | w07d03 | Project 2 | Relational Data | Project 2 | Project 2 |
 | w07d04 | Project 2 | Project 2 | Project 2 | Project 2 |
