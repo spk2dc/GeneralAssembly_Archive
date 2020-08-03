@@ -1,0 +1,1 @@
+INSERT INTO dog (name, owner, breed, created_at)

@@ -20,3 +20,18 @@ def get_all_dogs():
         return jsonify(data=dogs, status={"code": 200, "message": "Success"})
     except models.DoesNotExist:
         return jsonify(data={}, status={"code": 401, "message": "Error getting the resources"})
+
+@dog.route('/', methods=["POST"])
+def create_dogs():
+    ## see request payload anagolous to req.body in express
+    payload = request.get_json()
+    print(type(payload), 'payload')
+    dog = models.Dog.create(**payload)
+    ## see the object
+    print(dog.__dict__)
+    ## Look at all the methods
+    print(dir(dog))
+    # Change the model to a dict
+    print(model_to_dict(dog), 'model to dict')
+    dog_dict = model_to_dict(dog)
+    return jsonify(data=dog_dict, status={"code": 201, "message": "Success"})
