@@ -14,3 +14,14 @@ def get_all_dogs():
         return jsonify(data=dogs, status={'code': 200, 'message': 'Success'})
     except:
         return jsonify(data={}, status={'code': 500, 'message': 'Error getting resources'})
+
+
+@dog.route('/', methods=["POST"])
+def create_dogs():
+    body = request.get_json()
+    print(body)
+    new_dog = models.Dog.create(**body)
+    # same exact thing as:
+    # new_dog = models.Dog.create(name=body['name'], owner=body['owner'], breed=body['breed'])
+    dog_data = model_to_dict(new_dog)
+    return jsonify(data=dog_data, status={'code': 200, 'message': 'Success'})
