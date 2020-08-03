@@ -4,25 +4,6 @@ const DogTable = () => {
   //State Hook
   const [allRows, setAllRows] = useState([]);
 
-  const createDogs = async () => {
-    let requestOptions = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name: "Snoopy", owner: "Ben", breed: "Beagle" }),
-    };
-
-    const response = await fetch(
-      "http://localhost:8000/api/v1/dogs/",
-      requestOptions
-    );
-    const promise = await response.json();
-    console.log(`createDogs -> promise`, promise);
-
-    return promise;
-  };
-
   const getDogs = () => {
     let requestOptions = {
       method: "GET",
@@ -33,10 +14,7 @@ const DogTable = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(`getDogs -> data`, data.data);
-
         setAllRows(data.data);
-        console.log(`getDogs -> allRows`, allRows);
       });
   };
 
@@ -56,7 +34,6 @@ const DogTable = () => {
       </thead>
       <tbody>
         {allRows.map((val, i) => {
-          console.log(`getDogs -> val`, val.id, val.name);
           return (
             <tr>
               <td>{val.id}</td>
