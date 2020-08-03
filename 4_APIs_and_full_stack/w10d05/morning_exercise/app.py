@@ -33,18 +33,25 @@ class Workshop:
     else:
       # else add to students
       self.students.append(member)
-
-  def print_details(self):
+  
+  def print_header(self):
     print("Workshop -", self.date, "-", self.subject, "\n")
+
+  def print_students(self):
     print("Students")
     for idx, student in enumerate(self.students):
       print(idx + 1, student.full_name, "-", student.reason)
+
+  def print_instructors(self):
     print("\n", "Instructors")
     for idx, instructor in enumerate(self.instructors):
       print(idx + 1, instructor.full_name, "-", *instructor.skills, sep=" ")
       print(instructor.bio)
 
-
+  def print_details(self):
+    self.print_header()
+    self.print_students()
+    self.print_instructors()
 
 
 
