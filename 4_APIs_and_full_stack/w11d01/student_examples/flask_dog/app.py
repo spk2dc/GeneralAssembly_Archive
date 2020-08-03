@@ -1,6 +1,9 @@
 from flask import Flask, render_template, jsonify, g
+from flask_cors import CORS
 
 import models
+from resources.dogs import dog 
+
 
 DEBUG = True
 PORT = 8000
@@ -22,6 +25,9 @@ def after_request(response):
     g.db.close()
     return response
 
+CORS(dog, origins=['http://localhost:3000'], supports_credentials=True) 
+
+app.register_blueprint(dog, url_prefix='/api/v1/dogs') 
 
 # The default URL ends in / ("my-website.com/").
 @app.route('/')
