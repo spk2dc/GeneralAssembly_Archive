@@ -50,7 +50,7 @@ Let's also build a virtual environment. Virtual environments allow us to have mu
 
 ```bash
 python3 -m venv venv
-venv/bin/activate
+. venv/bin/activate
 ```
 
 #### Dependencies
@@ -133,7 +133,7 @@ def index():
 ### Json
 
 ```python
-from flask import Flask, render_template, jsonify
+from flask import Flask, jsonify
 
 @app.route('/json')
 def dog():
