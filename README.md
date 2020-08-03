@@ -22,8 +22,8 @@
 ### Week 11
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w11d01 | Intro to Flask | [Setting up Flask App/Create, Index, Show](./4_APIs_and_full_stack/w11d01/instructor_notes/flask-intro-get-post.md) | Flask API | Wrap up class example |
-| w11d02 | Flask API (Delete/Update) | Flask API contd/Flask Auth | Auth in Flask App | Wrap up class example |
+| w11d01 | Intro to Flask | [Setting up Flask App/Create, Index, Show](./4_APIs_and_full_stack/w11d01/instructor_notes/flask-intro-get-post.md) | [React + Flask API](./4_APIs_and_full_stack/w11d01/student_labs/flask-react-app.md) | Wrap up lab |
+| w11d02 | Flask API (Delete/Update) | Flask API contd/Flask Auth | React + Flask API | Wrap up lab |
 | w11d03 | Outcomes (no exercise) | One-to-many Flask | Add Relations | Final Project Intro |
 | w11d04 | Final Project Approvals | Final Project | Final Project | Final Project |
 | w11d05 | React/Flask/Heroku | Final Project | Final Project | Final Project |
