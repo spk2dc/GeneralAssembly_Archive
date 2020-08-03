@@ -1,4 +1,4 @@
-## Unit 1
+## Unit 1: Front End Development
 
 ### Week 1
 | Day | Morning Exercise | Lectures | Labs | Homework |
