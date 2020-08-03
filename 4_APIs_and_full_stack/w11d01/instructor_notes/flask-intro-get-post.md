@@ -327,7 +327,7 @@ dog = Blueprint('dogs', 'dog')
 
 -  *BluePrints* - The basic concept of blueprints is that they record operations to execute when registered on an application. Flask associates view functions with blueprints when dispatching requests and generating URLs from one endpoint to another.
 
-- `dog = Blueprint('dogs', 'user')` says treat this as a blueprint in the application (module) that we can attach to our flask app the will define a set of view functions.  
+- `dog = Blueprint('dogs', 'user')` says treat this as a blueprint in the application (module) that we can attach to our flask app that will define a set of view functions.  
 
 
 - In `app.py`
@@ -367,7 +367,7 @@ app.register_blueprint(dog, url_prefix='/api/v1/dogs') # adding this line
 - `app.register_blueprint(api, url_prefix='/api/v1/dogs')` - sets up the directions for handling the routes for the api
 
 
-- `CORS(dogs, origins=['http://localhost:3000'], supports_credentials=True, url_prefix='/api/v1/dogs')` - This line sets up our [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), which will allow us to allow an app that hosted on a different origin to communicate with each other. (For example, www.jim.com can talk to www.reuben.com/api/v1/dogs, and of course when I say talk, I mean send HTTP requests)
+- `CORS(dogs, origins=['http://localhost:3000'], supports_credentials=True, url_prefix='/api/v1/dogs')` - This line sets up our [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS), which will allow us to allow an app that is hosted on a different origin to communicate with each other. (For example, www.jim.com can talk to www.reuben.com/api/v1/dogs, and of course when I say talk, I mean send HTTP requests)
 
 - ` supports_credentials=True` - when we set this value to true, we will allow cookies to be sent to the server, for example we can send a session cookie to our server.  
 
