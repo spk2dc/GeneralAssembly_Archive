@@ -11,12 +11,14 @@
 
 <details>
   <summary>Click for hints - Delete</summary>
+    
   * Create a Delete button next to each dog in your list. Make it so that it logs the array index of the dog whose delete button the user clicking by calling a method passed down through props and attached to the button, like we did in class. You don't necessarily need forms here, but there are a couple of different patterns for getting that index number into the delete method. See the notes from class. Commit when you see the index in the console.
   * Make your deleteDog function actually remove the dog from state (without directly mutating state, of course). Commit when it works.
 </details>
 
 <details>
   <summary>Click for hints - Update</summary>
+    
   * Add an Edit button next to each dog in your list. Make it so that it logs the array index of the dog whose edit button the user is clicking by calling a method (editDog) passed down through props and attached to the button, like we did in class. Commit when you see the index in the console.
 
   * Have a value in state of DogContainer called indexOfDogToEdit initialized to -1. Later, this will represent a dog currently being edited, and be used to conditionally hide and show an edit form, but for now just have your editDog button set the value of this.state.indexOfDogToEdit using setState. Test by logging and/or using React Dev tools, and commit when it works.
