@@ -17,15 +17,11 @@ const DogEdit = ({ currEdit, getDogs }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: inpObj.name,
-        owner: inpObj.owner,
-        breed: inpObj.breed,
-      }),
+      body: JSON.stringify(inpObj),
     };
     console.log(`editDogs -> inpObj`, inpObj);
 
-    fetch("http://localhost:8000/api/v1/dogs/", requestOptions)
+    fetch(`http://localhost:8000/api/v1/dogs/${inpObj.id}`, requestOptions)
       .then((response) => {
         return response.json();
       })
@@ -56,6 +52,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
       "breed" === event.target.name ? event.target.value : inputs.breed;
 
     setInputs({
+      id: inputs.id,
       name: name,
       owner: owner,
       breed: breed,
