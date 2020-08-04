@@ -2,6 +2,8 @@ CREATE (POST)
 
 curl -X POST localhost:8000/api/v1/dogs/ -H 'Content-Type: application/json' --data '{"name": "Snoopy", "owner": "Ben", "breed": "Beagle"}'
 
+curl -X POST localhost:8000/user/register -H 'Content-Type: application/json' --data '{"email": "email@email.com", "username": "user1", "password": "pass"}'
+
 
 SHOW (GET)
 

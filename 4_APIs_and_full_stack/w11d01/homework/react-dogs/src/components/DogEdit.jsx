@@ -43,6 +43,8 @@ const DogEdit = ({ currEdit, getDogs }) => {
       breed: "",
     });
 
+    document.getElementById("editForm").classList.add("hidden");
+
     getDogs();
   };
 
@@ -67,6 +69,12 @@ const DogEdit = ({ currEdit, getDogs }) => {
       owner: currEdit.owner,
       breed: currEdit.breed,
     });
+
+    if (currEdit.id == -1) {
+      document.getElementById("editForm").classList.add("hidden");
+    } else {
+      document.getElementById("editForm").classList.remove("hidden");
+    }
   }, [currEdit]);
 
   return (
