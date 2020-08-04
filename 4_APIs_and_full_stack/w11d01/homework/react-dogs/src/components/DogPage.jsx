@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DogTable from "./DogTable";
-import Form from "./Form";
+import DogCreate from "./DogCreate";
 import DogEdit from "./DogEdit";
 
 export default function DogPage() {
@@ -35,7 +35,7 @@ export default function DogPage() {
   return (
     <div>
       <h1 className='mainHeader'>Dog Lab/HW</h1>
-      <Form getDogs={() => getDogs()} />
+      <DogCreate getDogs={() => getDogs()} />
       <div>
         <DogTable allRows={allRows} getDogs={getDogs} showEdit={showEdit} />
         <DogEdit currEdit={currEdit} getDogs={getDogs} />
