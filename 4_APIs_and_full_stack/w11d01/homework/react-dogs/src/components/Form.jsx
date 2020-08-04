@@ -28,7 +28,7 @@ const Form = ({ getDogs }) => {
         return response.json();
       })
       .then((data) => {
-        console.log(`createDogs -> data`, data);
+        // console.log(`createDogs -> data`, data);
       })
       .catch((err) => {
         console.log(`createDogs -> err`, err);
