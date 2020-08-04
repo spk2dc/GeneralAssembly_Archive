@@ -146,4 +146,4 @@ SELECT country.name as 'Country Name', city.name as City, city.population
 
 
 
--- She's in ____________________________!
+-- She's in _____Santa Monica______!
