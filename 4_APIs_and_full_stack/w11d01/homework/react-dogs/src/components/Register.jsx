@@ -34,7 +34,7 @@ export default function Register() {
         <br />
         <label htmlFor='password'>Password</label>
         <input
-          type='text'
+          type='password'
           id='password'
           name='password'
           value={inputs.password}
