@@ -44,11 +44,11 @@ const Form = ({ getDogs }) => {
   };
 
   const handleChange = (event) => {
-    let name = "name" == event.target.name ? event.target.value : inputs.name;
+    let name = "name" === event.target.name ? event.target.value : inputs.name;
     let owner =
-      "owner" == event.target.name ? event.target.value : inputs.owner;
+      "owner" === event.target.name ? event.target.value : inputs.owner;
     let breed =
-      "breed" == event.target.name ? event.target.value : inputs.breed;
+      "breed" === event.target.name ? event.target.value : inputs.breed;
 
     setInputs({
       name: name,
