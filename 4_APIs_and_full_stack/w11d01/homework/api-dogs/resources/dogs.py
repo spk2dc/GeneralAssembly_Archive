@@ -35,3 +35,23 @@ def create_dogs():
     print(model_to_dict(dog), 'model to dict')
     dog_dict = model_to_dict(dog)
     return jsonify(data=dog_dict, status={"code": 201, "message": "Success"})
+
+@dog.route('/<id>', methods=["GET"])
+def get_one_dog(id):
+    print(id, 'reserved word?')
+    dog = models.Dog.get_by_id(id)
+    print(dog.__dict__)
+    return jsonify(data=model_to_dict(dog), status={"code": 200, "message": "Success"})
+
+@dog.route('/<id>', methods=["PUT"])
+def update_dog(id):
+    payload = request.get_json()
+    query = models.Dog.update(**payload).where(models.Dog.id==id)
+    query.execute()
+    return jsonify(data=model_to_dict(models.Dog.get_by_id(id)), status={"code": 200, "message": "resource updated successfully"})
+
+@dog.route('/<id>', methods=["Delete"])
+def delete_dog(id):
+    query = models.Dog.delete().where(models.Dog.id==id)
+    query.execute()
+    return jsonify(data='resource successfully deleted', status={"code": 200, "message": "resource deleted successfully"})
