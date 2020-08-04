@@ -7,6 +7,7 @@ import DogEdit from "./components/DogEdit";
 function App() {
   //State Hook
   const [allRows, setAllRows] = useState([]);
+  const [currEdit, setCurrEdit] = useState(-1);
 
   const getDogs = () => {
     let requestOptions = {
@@ -22,13 +23,22 @@ function App() {
       });
   };
 
+  const showEdit = (event, id) => {
+    event.preventDefault();
+    setCurrEdit(id);
+  };
+
   return (
     <div className='App'>
       <h1 className='mainHeader'>Dog Lab/HW</h1>
       <Form getDogs={() => getDogs()} />
       <div>
-        <DogTable allRows={allRows} getDogs={() => getDogs()} />
-        <DogEdit />
+        <DogTable
+          allRows={allRows}
+          getDogs={() => getDogs()}
+          showEdit={() => showEdit()}
+        />
+        <DogEdit id={currEdit} />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const DogEdit = ({ getDogs }) => {
     event.preventDefault();
 
     let requestOptions = {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -60,8 +60,8 @@ const DogEdit = ({ getDogs }) => {
 
   return (
     <div id='editDiv'>
-      <h3>Edit</h3>
-      <form onSubmit={(e) => editDogs(e, inputs)} method='POST'>
+      <h3>Edit Form</h3>
+      <form id='editForm' onSubmit={(e) => editDogs(e, inputs)} method='POST'>
         <label htmlFor='name'>Name</label>
         <input
           type='text'
@@ -89,7 +89,7 @@ const DogEdit = ({ getDogs }) => {
           onChange={(e) => handleChange(e)}
         />
         <br />
-        <button type='submit'>Edit</button>
+        <button type='submit'>Submit Edit</button>
       </form>
     </div>
   );

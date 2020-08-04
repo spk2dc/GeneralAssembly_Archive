@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const DogTable = ({ allRows, getDogs }) => {
+const DogTable = ({ allRows, getDogs, showEdit }) => {
   const deleteDogs = (event, id) => {
     event.preventDefault();
 
@@ -37,6 +37,7 @@ const DogTable = ({ allRows, getDogs }) => {
           <th>Name</th>
           <th>Owner</th>
           <th>Breed</th>
+          <th>Edit</th>
           <th>Delete</th>
         </tr>
       </thead>
@@ -48,6 +49,11 @@ const DogTable = ({ allRows, getDogs }) => {
               <td>{val.name}</td>
               <td>{val.owner}</td>
               <td>{val.breed}</td>
+              <td>
+                <button type='submit' onClick={(e) => showEdit(e, val.id)}>
+                  Edit
+                </button>
+              </td>
               <td>
                 <button type='submit' onClick={(e) => deleteDogs(e, val.id)}>
                   Delete
