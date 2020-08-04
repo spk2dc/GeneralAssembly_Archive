@@ -8,7 +8,9 @@ const Form = () => {
     breed: "",
   });
 
-  const createDogs = () => {
+  const createDogs = (event) => {
+    event.preventDefault();
+
     let requestOptions = {
       method: "POST",
       headers: {
@@ -54,7 +56,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={""} method='POST'>
+    <form onSubmit={(e) => createDogs(e)} method='POST'>
       <label htmlFor='name'>Name</label>
       <input
         type='text'
