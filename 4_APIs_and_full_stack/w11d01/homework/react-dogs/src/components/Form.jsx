@@ -62,6 +62,7 @@ const Form = () => {
         type='text'
         id='name'
         name='name'
+        value={inputs.name}
         onChange={(e) => handleChange(e)}
       />
       <br />
@@ -70,6 +71,7 @@ const Form = () => {
         type='text'
         id='owner'
         name='owner'
+        value={inputs.owner}
         onChange={(e) => handleChange(e)}
       />
       <br />
@@ -78,6 +80,7 @@ const Form = () => {
         type='text'
         id='breed'
         name='breed'
+        value={inputs.breed}
         onChange={(e) => handleChange(e)}
       />
       <br />
