@@ -1,13 +1,17 @@
 import models
 
 from flask import Blueprint, jsonify, request
+from flask_login import current_user, login_required
 
 from playhouse.shortcuts import model_to_dict
 
 dog = Blueprint('dogs', 'dog')
 
 @dog.route('/', methods=["GET"])
+@login_required
 def get_all_dogs():
+    # if not current_user.email.endswith('.gov'):
+    #     return jsonify(data={}, status={'code': 500, 'message': 'Error getting resources'})
     try:
         dogs = [model_to_dict(dog) for dog in models.Dog.select()]
         # print(dogs)
