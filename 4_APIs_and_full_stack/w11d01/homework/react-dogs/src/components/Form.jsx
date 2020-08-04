@@ -22,6 +22,7 @@ const Form = ({ getDogs }) => {
         breed: inputs.breed,
       }),
     };
+    console.log(`createDogs -> inputs`, inputs);
 
     fetch("http://localhost:8000/api/v1/dogs/", requestOptions)
       .then((response) => {
@@ -43,6 +44,44 @@ const Form = ({ getDogs }) => {
     getDogs();
   };
 
+  const seedDogs = (event) => {
+    event.preventDefault();
+
+    let seed = [
+      {
+        name: "dog1",
+        owner: "owner1",
+        breed: "breed1",
+      },
+      {
+        name: "dog2",
+        owner: "owner2",
+        breed: "breed2",
+      },
+      {
+        name: "dog3",
+        owner: "owner3",
+        breed: "breed3",
+      },
+      {
+        name: "dog4",
+        owner: "owner4",
+        breed: "breed4",
+      },
+    ];
+
+    seed.map((val, i) => {
+      setInputs({
+        name: val.name,
+        owner: val.owner,
+        breed: val.breed,
+      });
+
+      console.log(`seedDogs -> val`, inputs);
+      createDogs(event);
+    });
+  };
+
   const handleChange = (event) => {
     let name = "name" === event.target.name ? event.target.value : inputs.name;
     let owner =
@@ -58,36 +97,42 @@ const Form = ({ getDogs }) => {
   };
 
   return (
-    <form onSubmit={(e) => createDogs(e)} method='POST'>
-      <label htmlFor='name'>Name</label>
-      <input
-        type='text'
-        id='name'
-        name='name'
-        value={inputs.name}
-        onChange={(e) => handleChange(e)}
-      />
-      <br />
-      <label htmlFor='owner'>Owner</label>
-      <input
-        type='text'
-        id='owner'
-        name='owner'
-        value={inputs.owner}
-        onChange={(e) => handleChange(e)}
-      />
-      <br />
-      <label htmlFor='breed'>Breed</label>
-      <input
-        type='text'
-        id='breed'
-        name='breed'
-        value={inputs.breed}
-        onChange={(e) => handleChange(e)}
-      />
-      <br />
-      <button type='submit'>Submit</button>
-    </form>
+    <div>
+      <form onSubmit={(e) => createDogs(e)} method='POST'>
+        <label htmlFor='name'>Name</label>
+        <input
+          type='text'
+          id='name'
+          name='name'
+          value={inputs.name}
+          onChange={(e) => handleChange(e)}
+        />
+        <br />
+        <label htmlFor='owner'>Owner</label>
+        <input
+          type='text'
+          id='owner'
+          name='owner'
+          value={inputs.owner}
+          onChange={(e) => handleChange(e)}
+        />
+        <br />
+        <label htmlFor='breed'>Breed</label>
+        <input
+          type='text'
+          id='breed'
+          name='breed'
+          value={inputs.breed}
+          onChange={(e) => handleChange(e)}
+        />
+        <br />
+        <button type='submit'>Submit</button>
+      </form>
+
+      <form onSubmit={(e) => seedDogs(e)} method='POST'>
+        <button type='submit'>Seed Database</button>
+      </form>
+    </div>
   );
 };
 
