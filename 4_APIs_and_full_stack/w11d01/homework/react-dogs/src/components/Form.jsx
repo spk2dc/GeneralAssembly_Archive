@@ -77,10 +77,9 @@ const Form = ({ getDogs }) => {
         breed: val.breed,
       });
 
-      console.log(`seedDogs -> inputs`, inputs);
-      console.log(`seedDogs -> val`, val);
+      // console.log(`seedDogs -> inputs`, inputs);
       createDogs(event, val);
-      return;
+      return val;
     });
   };
 

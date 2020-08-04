@@ -43,7 +43,7 @@ const DogTable = ({ allRows, getDogs }) => {
       <tbody>
         {allRows.map((val, i) => {
           return (
-            <tr>
+            <tr key={`row${i}-id${val.id}`}>
               <td>{val.id}</td>
               <td>{val.name}</td>
               <td>{val.owner}</td>
