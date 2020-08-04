@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const DogEdit = ({ currEdit, getDogs }) => {
   //State Hook
   const [inputs, setInputs] = useState({
-    name: "",
-    owner: "",
-    breed: "",
+    name: currEdit.name,
+    owner: currEdit.owner,
+    breed: currEdit.breed,
   });
 
   const editDogs = (event, inpObj) => {
@@ -58,6 +58,14 @@ const DogEdit = ({ currEdit, getDogs }) => {
     });
   };
 
+  useEffect(() => {
+    setInputs({
+      name: currEdit.name,
+      owner: currEdit.owner,
+      breed: currEdit.breed,
+    });
+  }, [currEdit]);
+
   return (
     <div id='editDiv'>
       <h3>Edit Form</h3>
@@ -67,6 +75,9 @@ const DogEdit = ({ currEdit, getDogs }) => {
         onSubmit={(e) => editDogs(e, inputs)}
         method='POST'
       >
+        <label htmlFor='name'>ID</label>
+        <input type='text' id='id' name='id' value={currEdit.id} disabled />
+        <br />
         <label htmlFor='name'>Name</label>
         <input
           type='text'

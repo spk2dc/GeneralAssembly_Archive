@@ -50,7 +50,7 @@ const DogTable = ({ allRows, getDogs, showEdit }) => {
               <td>{val.owner}</td>
               <td>{val.breed}</td>
               <td>
-                <button type='submit' onClick={(e) => showEdit(e, val.id)}>
+                <button type='submit' onClick={(e) => showEdit(e, val)}>
                   Edit
                 </button>
               </td>
