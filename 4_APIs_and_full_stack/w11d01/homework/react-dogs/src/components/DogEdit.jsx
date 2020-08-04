@@ -19,7 +19,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
       },
       body: JSON.stringify(inpObj),
     };
-    console.log(`editDogs -> inpObj`, inpObj);
+    // console.log(`editDogs -> inpObj`, inpObj);
 
     fetch(`http://localhost:8000/api/v1/dogs/${inpObj.id}`, requestOptions)
       .then((response) => {
@@ -67,7 +67,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
       breed: currEdit.breed,
     });
 
-    if (currEdit.id == -1) {
+    if (currEdit.id === -1) {
       document.getElementById("editForm").classList.add("hidden");
     } else {
       document.getElementById("editForm").classList.remove("hidden");

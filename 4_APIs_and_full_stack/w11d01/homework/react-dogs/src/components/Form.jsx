@@ -46,27 +46,28 @@ const Form = ({ getDogs }) => {
 
   const seedDogs = (event) => {
     event.preventDefault();
+    let num = Math.floor(Math.random() * 100);
 
     let seed = [
       {
-        name: "dog1",
-        owner: "owner1",
-        breed: "breed1",
+        name: `dog_${num}`,
+        owner: `owner_${num}`,
+        breed: `breed_${num}`,
       },
       {
-        name: "dog2",
-        owner: "owner2",
-        breed: "breed2",
+        name: `dog_${num + 1}`,
+        owner: `owner_${num + 1}`,
+        breed: `breed_${num + 1}`,
       },
       {
-        name: "dog3",
-        owner: "owner3",
-        breed: "breed3",
+        name: `dog_${num + 2}`,
+        owner: `owner_${num + 2}`,
+        breed: `breed_${num + 2}`,
       },
       {
-        name: "dog4",
-        owner: "owner4",
-        breed: "breed4",
+        name: `dog_${num + 3}`,
+        owner: `owner_${num + 3}`,
+        breed: `breed_${num + 3}`,
       },
     ];
 

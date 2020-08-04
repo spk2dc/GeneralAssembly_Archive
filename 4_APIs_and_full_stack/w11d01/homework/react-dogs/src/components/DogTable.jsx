@@ -27,7 +27,7 @@ const DogTable = ({ allRows, getDogs, showEdit }) => {
 
   useEffect(() => {
     getDogs();
-  }, []);
+  });
 
   return (
     <table>
