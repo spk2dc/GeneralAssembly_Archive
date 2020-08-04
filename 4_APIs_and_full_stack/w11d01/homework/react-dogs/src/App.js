@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import DogTable from "./components/DogTable";
 import Form from "./components/Form";
+import DogEdit from "./components/DogEdit";
 
 function App() {
   //State Hook
@@ -23,9 +24,12 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='mainHeader'>Dog Lab/HW</header>
+      <h1 className='mainHeader'>Dog Lab/HW</h1>
       <Form getDogs={() => getDogs()} />
-      <DogTable allRows={allRows} getDogs={() => getDogs()} />
+      <div>
+        <DogTable allRows={allRows} getDogs={() => getDogs()} />
+        <DogEdit />
+      </div>
     </div>
   );
 }
