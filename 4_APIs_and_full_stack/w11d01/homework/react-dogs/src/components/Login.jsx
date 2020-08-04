@@ -19,10 +19,42 @@ export default function Login() {
     });
   };
 
+  const login = (event) => {
+    event.preventDefault();
+
+    let requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: inputs.email,
+        password: inputs.password,
+      }),
+    };
+    // console.log(`register -> inpObj`, inpObj);
+
+    fetch("http://localhost:8000/user/login", requestOptions)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(`register -> data`, data);
+      })
+      .catch((err) => {
+        console.log(`register -> err`, err);
+      });
+
+    setInputs({
+      email: "",
+      password: "",
+    });
+  };
+
   return (
     <div>
       <h1>Login</h1>
-      <form onSubmit='' method='POST'>
+      <form onSubmit={(e) => login(e)} method='POST'>
         <label htmlFor='email'>Email</label>
         <input
           type='text'
