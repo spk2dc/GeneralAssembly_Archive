@@ -1,6 +1,30 @@
 import React, { useEffect } from "react";
 
 const DogTable = ({ allRows, getDogs }) => {
+  const deleteDogs = (event, id) => {
+    event.preventDefault();
+
+    let requestOptions = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    fetch(`http://localhost:8000/api/v1/dogs/${id}`, requestOptions)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(`deleteDogs -> data`, data);
+      })
+      .catch((err) => {
+        console.log(`deleteDogs -> err`, err);
+      });
+
+    getDogs();
+  };
+
   useEffect(() => {
     getDogs();
   }, []);
@@ -13,6 +37,7 @@ const DogTable = ({ allRows, getDogs }) => {
           <th>Name</th>
           <th>Owner</th>
           <th>Breed</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +48,11 @@ const DogTable = ({ allRows, getDogs }) => {
               <td>{val.name}</td>
               <td>{val.owner}</td>
               <td>{val.breed}</td>
+              <td>
+                <button type='submit' onClick={(e) => deleteDogs(e, val.id)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           );
         })}
