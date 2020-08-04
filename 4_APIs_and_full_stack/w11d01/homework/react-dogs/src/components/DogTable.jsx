@@ -1,23 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const DogTable = () => {
-  //State Hook
-  const [allRows, setAllRows] = useState([]);
-
-  const getDogs = () => {
-    let requestOptions = {
-      method: "GET",
-    };
-
-    fetch("http://localhost:8000/api/v1/dogs/", requestOptions)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setAllRows(data.data);
-      });
-  };
-
+const DogTable = ({ allRows, getDogs }) => {
   useEffect(() => {
     getDogs();
   }, []);

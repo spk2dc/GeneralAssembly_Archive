@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ getDogs }) => {
   //State Hook
   const [inputs, setInputs] = useState({
     name: "",
@@ -39,6 +39,8 @@ const Form = () => {
       owner: "",
       breed: "",
     });
+
+    getDogs();
   };
 
   const handleChange = (event) => {
