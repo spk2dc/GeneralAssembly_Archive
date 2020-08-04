@@ -19,18 +19,20 @@ const Form = () => {
     );
     const promise = await response.json();
     console.log(`createDogs -> promise`, promise);
-
-    return promise;
   };
 
   return (
-    <form action='' method='POST'>
+    <form action={createDogs()} method='POST'>
       <label htmlFor='name'>Name</label>
-      <input type='text' name='name' />
+      <input type='text' id='name' name='name' />
+      <br />
       <label htmlFor='owner'>Owner</label>
-      <input type='text' />
+      <input type='text' id='owner' name='owner' />
+      <br />
       <label htmlFor='breed'>Breed</label>
-      <input type='text' />
+      <input type='text' id='breed' name='breed' />
+      <br />
+      <button type='submit'>Submit</button>
     </form>
   );
 };
