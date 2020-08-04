@@ -11,3 +11,8 @@ curl -X GET localhost:8000/api/v1/dogs/2
 UPDATE (PUT)
 
 curl -X PUT localhost:8000/api/v1/dogs/2 -H 'Content-Type: application/json' --data '{"owner": "test"}'
+
+
+DELETE
+
+curl -X DELETE localhost:8000/api/v1/dogs/2
