@@ -131,9 +131,11 @@ const Form = ({ getDogs }) => {
         <button type='submit'>Submit</button>
       </form>
 
+      <br />
       <form onSubmit={(e) => seedDogs(e)} method='POST'>
         <button type='submit'>Seed Database</button>
       </form>
+      <br />
     </div>
   );
 };
