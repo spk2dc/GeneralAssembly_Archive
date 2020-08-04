@@ -13,7 +13,6 @@ from flask_login import login_required
 dog = Blueprint('dogs', 'dog')
 
 @dog.route('/', methods=["GET"])
-@login_required
 def get_all_dogs():
     ## find the dogs and change each one to a dictionary into a new array
     try:

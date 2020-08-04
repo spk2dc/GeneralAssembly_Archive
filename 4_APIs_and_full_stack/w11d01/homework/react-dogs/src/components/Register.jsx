@@ -39,7 +39,7 @@ export default function Register() {
     };
     // console.log(`register -> inpObj`, inpObj);
 
-    fetch("http://localhost:8000/user/register/", requestOptions)
+    fetch("http://localhost:8000/user/register", requestOptions)
       .then((response) => {
         return response.json();
       })
