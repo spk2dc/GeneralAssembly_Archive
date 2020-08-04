@@ -4,6 +4,7 @@ from flask import Blueprint, jsonify, request
 
 from playhouse.shortcuts import model_to_dict
 
+from flask_login import login_required
 
 # first argument is blueprints name
 # second argument is it's import_name
@@ -12,6 +13,7 @@ from playhouse.shortcuts import model_to_dict
 dog = Blueprint('dogs', 'dog')
 
 @dog.route('/', methods=["GET"])
+@login_required
 def get_all_dogs():
     ## find the dogs and change each one to a dictionary into a new array
     try:
