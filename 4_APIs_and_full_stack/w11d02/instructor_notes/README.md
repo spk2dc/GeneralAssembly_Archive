@@ -1,5 +1,3 @@
-execute## ![](https://s3.amazonaws.com/python-ga/images/GA_Cog_Medium_White_RGB.png)
-
 # flask-edit-delete-put-dogs-app
 
 
@@ -81,7 +79,7 @@ def update_dog(id):
 
 
 ```python
- dog = models.Dog.update(name=payload['owner'], owner=payload["owner"], breed=payload["breed"]).where(models.Dog.id==id)
+ dog = models.Dog.update(name=payload['name'], breed=payload["breed"]).where(models.Dog.id==id)
 ```
 
 ### Delete Route
