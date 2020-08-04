@@ -8,7 +8,7 @@ const Form = ({ getDogs }) => {
     breed: "",
   });
 
-  const createDogs = (event) => {
+  const createDogs = (event, inpObj) => {
     event.preventDefault();
 
     let requestOptions = {
@@ -17,12 +17,12 @@ const Form = ({ getDogs }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: inputs.name,
-        owner: inputs.owner,
-        breed: inputs.breed,
+        name: inpObj.name,
+        owner: inpObj.owner,
+        breed: inpObj.breed,
       }),
     };
-    console.log(`createDogs -> inputs`, inputs);
+    console.log(`createDogs -> inpObj`, inpObj);
 
     fetch("http://localhost:8000/api/v1/dogs/", requestOptions)
       .then((response) => {
@@ -77,8 +77,10 @@ const Form = ({ getDogs }) => {
         breed: val.breed,
       });
 
-      console.log(`seedDogs -> val`, inputs);
-      createDogs(event);
+      console.log(`seedDogs -> inputs`, inputs);
+      console.log(`seedDogs -> val`, val);
+      createDogs(event, val);
+      return;
     });
   };
 
@@ -98,7 +100,7 @@ const Form = ({ getDogs }) => {
 
   return (
     <div>
-      <form onSubmit={(e) => createDogs(e)} method='POST'>
+      <form onSubmit={(e) => createDogs(e, inputs)} method='POST'>
         <label htmlFor='name'>Name</label>
         <input
           type='text'
