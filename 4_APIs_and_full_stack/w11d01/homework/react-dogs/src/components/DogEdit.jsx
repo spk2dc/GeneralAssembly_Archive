@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DogEdit = ({ getDogs }) => {
+const DogEdit = ({ currEdit, getDogs }) => {
   //State Hook
   const [inputs, setInputs] = useState({
     name: "",
@@ -61,7 +61,12 @@ const DogEdit = ({ getDogs }) => {
   return (
     <div id='editDiv'>
       <h3>Edit Form</h3>
-      <form id='editForm' onSubmit={(e) => editDogs(e, inputs)} method='POST'>
+      <form
+        id='editForm'
+        className=''
+        onSubmit={(e) => editDogs(e, inputs)}
+        method='POST'
+      >
         <label htmlFor='name'>Name</label>
         <input
           type='text'

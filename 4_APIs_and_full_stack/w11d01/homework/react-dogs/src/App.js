@@ -38,7 +38,7 @@ function App() {
           getDogs={() => getDogs()}
           showEdit={() => showEdit()}
         />
-        <DogEdit id={currEdit} />
+        <DogEdit currEdit={currEdit} getDogs={() => getDogs()} />
       </div>
     </div>
   );
