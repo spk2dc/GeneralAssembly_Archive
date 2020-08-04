@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import DogTable from "./components/DogTable";
-import Form from "./components/Form";
-import DogEdit from "./components/DogEdit";
+import DogTable from "./DogTable";
+import Form from "./Form";
+import DogEdit from "./DogEdit";
 
 export default function DogPage() {
   //State Hook

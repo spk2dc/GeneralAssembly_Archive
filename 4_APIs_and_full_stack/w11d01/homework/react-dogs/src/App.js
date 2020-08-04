@@ -3,6 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import DogPage from "./components/DogPage";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Error from "./components/Error";
 
 function App() {
   return (
