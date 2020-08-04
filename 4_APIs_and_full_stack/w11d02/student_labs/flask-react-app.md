@@ -9,6 +9,11 @@
 1. Create a form that that is pre-filled and will make a put request to update a dog resource
 1. Have your react app submit a delete request to your flask app from an "onclick" event that will send the ID of the resource you want deleted on the flask app
 
+##### Hungry for more
+
+1. Set up register and login
+1. Require users to be authenticated before editing data on your server
+
 <details>
   <summary>Click for hints - Delete</summary>
 
@@ -30,4 +35,13 @@
     * `updateDog` actually sends an AJAX request to update the dog on your server (should be reflected on the screen)
     * `updateDog` closes the editModal
     * `updateDog` resets other edit-related state properties to their initial values
+</details>
+
+<details>
+  <summary>Click for hints - Authentication</summary>
+
+  * Set up separate Register and Login routes using react-router.
+  * Each of these routes should contain a form with the user's email, and password (and username, for the register form).
+  * The forms should submit post requests to their respective register/login routes on your server. You may need to do some research to figure out how to make the Fetch API send cookies in cross-origin requests.
+  * Send the user's credentials with any AJAX calls that require authentication on your server.
 </details>
