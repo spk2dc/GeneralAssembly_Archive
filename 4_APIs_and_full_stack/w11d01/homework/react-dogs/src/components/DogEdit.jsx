@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 const DogEdit = ({ currEdit, getDogs }) => {
   //State Hook
   const [inputs, setInputs] = useState({
+    id: currEdit.id,
     name: currEdit.name,
     owner: currEdit.owner,
     breed: currEdit.breed,
@@ -36,6 +37,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
       });
 
     setInputs({
+      id: -1,
       name: "",
       owner: "",
       breed: "",
@@ -60,6 +62,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
 
   useEffect(() => {
     setInputs({
+      id: currEdit.id,
       name: currEdit.name,
       owner: currEdit.owner,
       breed: currEdit.breed,
@@ -76,7 +79,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
         method='POST'
       >
         <label htmlFor='name'>ID</label>
-        <input type='text' id='id' name='id' value={currEdit.id} disabled />
+        <input type='text' id='id' name='id' value={inputs.id} disabled />
         <br />
         <label htmlFor='name'>Name</label>
         <input

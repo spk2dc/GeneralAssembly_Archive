@@ -8,6 +8,7 @@ function App() {
   //State Hook
   const [allRows, setAllRows] = useState([]);
   const [currEdit, setCurrEdit] = useState({
+    id: -1,
     name: "",
     owner: "",
     breed: "",
