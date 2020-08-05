@@ -154,4 +154,5 @@ def get_all_dogs():
 
 - [flask](https://flask.palletsprojects.com/en/1.0.x/)
 - [flask_login](https://flask-login.readthedocs.io/en/latest/#flask_login.current_user)
+- [customize login](https://flask-login.readthedocs.io/en/latest/#customizing-the-login-process)
 - [PeeWee](http://docs.peewee-orm.com/en/latest/) (orm)
