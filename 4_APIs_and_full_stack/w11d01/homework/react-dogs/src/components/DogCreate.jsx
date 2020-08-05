@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ getDogs }) => {
+const DogCreate = ({ getDogs }) => {
   //State Hook
   const [inputs, setInputs] = useState({
     name: "",
@@ -13,6 +13,7 @@ const Form = ({ getDogs }) => {
 
     let requestOptions = {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -22,7 +23,7 @@ const Form = ({ getDogs }) => {
         breed: inpObj.breed,
       }),
     };
-    console.log(`createDogs -> inpObj`, inpObj);
+    // console.log(`createDogs -> inpObj`, inpObj);
 
     fetch("http://localhost:8000/api/v1/dogs/", requestOptions)
       .then((response) => {
@@ -140,4 +141,4 @@ const Form = ({ getDogs }) => {
   );
 };
 
-export default Form;
+export default DogCreate;

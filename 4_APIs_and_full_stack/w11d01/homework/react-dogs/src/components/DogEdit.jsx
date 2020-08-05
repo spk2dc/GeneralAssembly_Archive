@@ -14,6 +14,7 @@ const DogEdit = ({ currEdit, getDogs }) => {
 
     let requestOptions = {
       method: "PUT",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },

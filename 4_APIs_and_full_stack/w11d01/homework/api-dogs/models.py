@@ -1,10 +1,16 @@
-# import * means import everything from peewee
-
-from peewee import *
 import datetime
+from peewee import *
+from flask_login import UserMixin
 
 DATABASE = SqliteDatabase('dogs.sqlite')
 
+class User(UserMixin, Model):
+    username = CharField()
+    email = CharField(unique=True)
+    password = CharField()
+
+    class Meta:
+        database = DATABASE
 
 class Dog(Model):
     name = CharField()
@@ -18,6 +24,6 @@ class Dog(Model):
 
 def initialize():
     DATABASE.connect()
-    DATABASE.create_tables([Dog], safe=True)
+    DATABASE.create_tables([User, Dog], safe=True)
     print("TABLES Created")
     DATABASE.close()

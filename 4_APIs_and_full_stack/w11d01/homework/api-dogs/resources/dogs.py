@@ -4,6 +4,7 @@ from flask import Blueprint, jsonify, request
 
 from playhouse.shortcuts import model_to_dict
 
+from flask_login import login_required
 
 # first argument is blueprints name
 # second argument is it's import_name
@@ -12,6 +13,7 @@ from playhouse.shortcuts import model_to_dict
 dog = Blueprint('dogs', 'dog')
 
 @dog.route('/', methods=["GET"])
+@login_required
 def get_all_dogs():
     ## find the dogs and change each one to a dictionary into a new array
     try:
@@ -22,6 +24,7 @@ def get_all_dogs():
         return jsonify(data={}, status={"code": 401, "message": "Error getting the resources"})
 
 @dog.route('/', methods=["POST"])
+@login_required
 def create_dogs():
     ## see request payload anagolous to req.body in express
     payload = request.get_json()
@@ -37,6 +40,7 @@ def create_dogs():
     return jsonify(data=dog_dict, status={"code": 201, "message": "Success"})
 
 @dog.route('/<id>', methods=["GET"])
+@login_required
 def get_one_dog(id):
     print(id, 'reserved word?')
     dog = models.Dog.get_by_id(id)
@@ -44,6 +48,7 @@ def get_one_dog(id):
     return jsonify(data=model_to_dict(dog), status={"code": 200, "message": "Success"})
 
 @dog.route('/<id>', methods=["PUT"])
+@login_required
 def update_dog(id):
     payload = request.get_json()
     query = models.Dog.update(**payload).where(models.Dog.id==id)
@@ -51,6 +56,7 @@ def update_dog(id):
     return jsonify(data=model_to_dict(models.Dog.get_by_id(id)), status={"code": 200, "message": "resource updated successfully"})
 
 @dog.route('/<id>', methods=["Delete"])
+@login_required
 def delete_dog(id):
     query = models.Dog.delete().where(models.Dog.id==id)
     query.execute()
