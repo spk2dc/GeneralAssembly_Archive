@@ -16,6 +16,7 @@ export default function DogPage() {
   const getDogs = () => {
     let requestOptions = {
       method: "GET",
+      credentials: "include",
     };
 
     fetch("http://localhost:8000/api/v1/dogs/", requestOptions)

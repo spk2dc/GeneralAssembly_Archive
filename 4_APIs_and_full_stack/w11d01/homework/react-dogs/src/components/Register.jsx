@@ -28,6 +28,7 @@ export default function Register() {
 
     let requestOptions = {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -44,7 +45,7 @@ export default function Register() {
         return response.json();
       })
       .then((data) => {
-        // console.log(`register -> data`, data);
+        console.log(`register -> data`, data);
       })
       .catch((err) => {
         console.log(`register -> err`, err);

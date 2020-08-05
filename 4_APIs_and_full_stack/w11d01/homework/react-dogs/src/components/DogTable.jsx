@@ -6,6 +6,7 @@ const DogTable = ({ allRows, getDogs, showEdit }) => {
 
     let requestOptions = {
       method: "DELETE",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },

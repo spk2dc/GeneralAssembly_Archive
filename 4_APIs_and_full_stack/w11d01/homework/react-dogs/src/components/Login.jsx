@@ -24,6 +24,7 @@ export default function Login() {
 
     let requestOptions = {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -39,7 +40,7 @@ export default function Login() {
         return response.json();
       })
       .then((data) => {
-        // console.log(`register -> data`, data);
+        console.log(`register -> data`, data);
       })
       .catch((err) => {
         console.log(`register -> err`, err);
