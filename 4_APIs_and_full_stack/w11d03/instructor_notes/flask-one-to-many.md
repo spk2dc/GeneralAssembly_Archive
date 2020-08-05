@@ -69,6 +69,8 @@ def initialize():
 
 **PROTIP** - if you're having problems with your tables, try changing the name of your database, to start with a fresh one, or look up how to drop your tables in sqlite
 
+_Note: sqlite does have limitations when it comes to alter the table.  You can read more [here](https://www.sqlite.org/lang_altertable.html)._
+
 
 ### Create an instance of a dog related to a user
 -  The first thing we will want to do is adjust some logic in the dogs resource
