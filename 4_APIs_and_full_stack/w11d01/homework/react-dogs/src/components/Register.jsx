@@ -7,6 +7,10 @@ export default function Register() {
     email: "",
     password: "",
   });
+  const [isRegistered, setIsRegistered] = useState({
+    bool: false,
+    data: {},
+  });
 
   const handleChange = (event) => {
     let username =
@@ -46,9 +50,17 @@ export default function Register() {
       })
       .then((data) => {
         console.log(`register -> data`, data);
+        setIsRegistered({
+          bool: true,
+          data: data,
+        });
       })
       .catch((err) => {
         console.log(`register -> err`, err);
+        setIsRegistered({
+          bool: false,
+          data: err,
+        });
       });
 
     setInputs({
@@ -91,6 +103,15 @@ export default function Register() {
         <br />
         <button type='submit'>Sign Up</button>
       </form>
+      <br />
+      <div>
+        <p>Status: </p>
+        {isRegistered.bool ? (
+          <p>{isRegistered.data.status.message}</p>
+        ) : (
+          <p></p>
+        )}
+      </div>
     </div>
   );
 }

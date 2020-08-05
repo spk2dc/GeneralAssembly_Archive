@@ -5,7 +5,7 @@ from flask_login import UserMixin
 DATABASE = SqliteDatabase('dogs.sqlite')
 
 class User(UserMixin, Model):
-    username = CharField(unique=True)
+    username = CharField()
     email = CharField(unique=True)
     password = CharField()
 

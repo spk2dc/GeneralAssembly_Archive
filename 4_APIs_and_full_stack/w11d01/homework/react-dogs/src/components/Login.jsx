@@ -6,6 +6,10 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const [loggedIn, setLoggedIn] = useState({
+    bool: false,
+    data: {},
+  });
 
   const handleChange = (event) => {
     let email =
@@ -41,9 +45,17 @@ export default function Login() {
       })
       .then((data) => {
         console.log(`register -> data`, data);
+        setLoggedIn({
+          bool: true,
+          data: data,
+        });
       })
       .catch((err) => {
         console.log(`register -> err`, err);
+        setLoggedIn({
+          bool: true,
+          data: err,
+        });
       });
 
     setInputs({
@@ -76,6 +88,11 @@ export default function Login() {
         <br />
         <button type='submit'>Login</button>
       </form>
+      <br />
+      <div>
+        <p>Status: </p>
+        {loggedIn.bool ? <p>{loggedIn.data.status.message}</p> : <p></p>}
+      </div>
     </div>
   );
 }
