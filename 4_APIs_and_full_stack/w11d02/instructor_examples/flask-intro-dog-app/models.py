@@ -14,7 +14,7 @@ class User(UserMixin, Model):
 
 class Dog(Model):
   name = CharField()
-  owner = CharField()
+  owner = ForeignKeyField(User, backref='dogs')
   breed = CharField()
   created_at = DateTimeField(default=datetime.datetime.now)
 

@@ -13,7 +13,7 @@ def get_all_dogs():
     # if not current_user.email.endswith('.gov'):
     #     return jsonify(data={}, status={'code': 500, 'message': 'Error getting resources'})
     try:
-        dogs = [model_to_dict(dog) for dog in models.Dog.select()]
+        dogs = [model_to_dict(dog) for dog in current_user.dogs]
         # print(dogs)
         return jsonify(data=dogs, status={'code': 200, 'message': 'Success'})
     except:
@@ -24,9 +24,9 @@ def get_all_dogs():
 def create_dogs():
     body = request.get_json()
     print(body)
-    new_dog = models.Dog.create(**body)
+    # new_dog = models.Dog.create(**body)
     # same exact thing as:
-    # new_dog = models.Dog.create(name=body['name'], owner=body['owner'], breed=body['breed'])
+    new_dog = models.Dog.create(name=body['name'], owner=current_user.id, breed=body['breed'])
     dog_data = model_to_dict(new_dog)
     return jsonify(data=dog_data, status={'code': 200, 'message': 'Success'})
 
