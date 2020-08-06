@@ -103,7 +103,7 @@ ALSO, don't forget: a **technical demonstration** of your app which:
 
 <hr>
 
-## Project due date is Auguest 19th
+## Project due date is August 19th
 
 August 19th is also graduation day! You'll present your final projects (portfolio inluded). Attendance is of course mandatory!
 
