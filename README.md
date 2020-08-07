@@ -32,14 +32,14 @@
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
 | w12d01 | Searching Algorithms | Final Project | Final Project | Final Project |
-| w12d02 | Intro to Data Structures | Final Project | Final Project | Final Project |
-| w12d03 | Outcomes (no exercise) | Linked Lists | Final Project | Final Project |
-| w12d04 | Stacks and Queues | Final Project | Final Project | Final Project |
-| w12d05 | Hash Tables | Final Project | Final Project | Final Project |
+| w12d02 | Linked Lists | Final Project | Final Project | Final Project |
+| w12d03 | Stacks and Queues | Final Project | Final Project | Final Project |
+| w12d04 | Hash Tables | Final Project | Final Project | Final Project |
+| w12d05 | Binary Trees | Final Project | Final Project | Final Project |
 
 ### Week 12 (contd)
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w13d01 | Binary Trees | Final Project | Final Project | Final Project |
-| w13d02 | Graphs | Final Project | Final Project | Final Project |
+| w13d01 | Graphs | Final Project | Final Project | Final Project |
+| w13d02 | Final Project | Final Project | Final Project | Final Project |
 | w13d03 | Final Project | Final Project Presentations | Final Project Presentations | Fin |
