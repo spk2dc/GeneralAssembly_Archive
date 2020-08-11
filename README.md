@@ -22,7 +22,7 @@
 ### Week 12
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w12d01 | [Searching Algorithms](./4_APIs_and_full_stack/w12d01/morning_exercise/) | Final Project | Final Project | Final Project |
+| w12d01 | [Searching Algorithms](./4_APIs_and_full_stack/w12d01/morning_exercise/) | [Binary numbers (optional)](./4_APIs_and_full_stack/w12d01/instructor_notes/binary/) | Final Project | Final Project |
 | w12d02 | [Linked Lists](./4_APIs_and_full_stack/w12d02/morning_exercise/) | Final Project | Final Project | Final Project |
 | w12d03 | Stacks and Queues | Final Project | Final Project | Final Project |
 | w12d04 | Hash Tables | Final Project | Final Project | Final Project |
