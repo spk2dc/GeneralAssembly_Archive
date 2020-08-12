@@ -37,10 +37,6 @@ Once you ignore or remove all of the other characters, it just becomes:
 (){}
 ```
 
-#### Starter Code
-
-If you feel ready, go ahead and [get started!](/data-structures/stacks-queues/exercises/starter-code/01-brackets.js)
-
 #### Hints
 
 Need some help getting started? Click on the hints below for inspiration.
