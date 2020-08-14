@@ -26,7 +26,7 @@
 | w12d02 | [Linked Lists](./4_APIs_and_full_stack/w12d02/morning_exercise/) | Final Project | Final Project | Final Project |
 | w12d03 | [Stacks and Queues](./4_APIs_and_full_stack/w12d03/morning_exercise/stacks-and-queues/README.md) | Final Project | Final Project | Final Project |
 | w12d04 | [Hash Tables](./4_APIs_and_full_stack/w12d04/morning_exercise/) | Final Project | Final Project | Final Project |
-| w12d05 | [Binary Trees](./4_APIs_and_full_stack/w12d04/morning_exercise/binary-trees-and-tries/README.md) | Final Project | Final Project | Final Project |
+| w12d05 | [Binary Trees](./4_APIs_and_full_stack/w12d05/morning_exercise/binary-trees-and-tries/README.md) | Final Project | Final Project | Final Project |
 
 ### Week 12 (contd)
 | Day | Morning Exercise | Lectures | Labs | Homework |
