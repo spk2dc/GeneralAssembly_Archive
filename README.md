@@ -31,6 +31,6 @@
 ### Week 12 (contd)
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w13d01 | Graphs | Final Project | Final Project | Final Project |
+| w13d01 | [Graphs](./4_APIs_and_full_stack/w13d01/morning_exercise/) | Final Project | Final Project | Final Project |
 | w13d02 | Final Project | Final Project | Final Project | Final Project |
 | w13d03 | Final Project | Final Project Presentations | Final Project Presentations | Fin |
