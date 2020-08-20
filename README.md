@@ -22,15 +22,15 @@
 ### Week 12
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w12d01 | [Searching Algorithms](./4_APIs_and_full_stack/w12d01/morning_exercise/) | Final Project | Final Project | Final Project |
-| w12d02 | Linked Lists | Final Project | Final Project | Final Project |
-| w12d03 | Stacks and Queues | Final Project | Final Project | Final Project |
-| w12d04 | Hash Tables | Final Project | Final Project | Final Project |
-| w12d05 | Binary Trees | Final Project | Final Project | Final Project |
+| w12d01 | [Searching Algorithms](./4_APIs_and_full_stack/w12d01/morning_exercise/) | [Binary numbers (optional)](./4_APIs_and_full_stack/w12d01/instructor_notes/binary/) | Final Project | Final Project |
+| w12d02 | [Linked Lists](./4_APIs_and_full_stack/w12d02/morning_exercise/) | [C Programming (optional)](./4_APIs_and_full_stack/w12d02/instructor_notes/c-programming.md) | Final Project | Final Project |
+| w12d03 | [Stacks and Queues](./4_APIs_and_full_stack/w12d03/morning_exercise/stacks-and-queues/README.md) | Final Project | Final Project | Final Project |
+| w12d04 | [Hash Tables](./4_APIs_and_full_stack/w12d04/morning_exercise/) | Final Project | Final Project | Final Project |
+| w12d05 | [Binary Trees](./4_APIs_and_full_stack/w12d05/morning_exercise/binary-trees-and-tries/README.md) | Final Project | Final Project | Final Project |
 
 ### Week 12 (contd)
 | Day | Morning Exercise | Lectures | Labs | Homework |
 |:---:|:-----------:|:-------:|:-----------:|:-----------:|
-| w13d01 | Graphs | Final Project | Final Project | Final Project |
+| w13d01 | [Graphs](./4_APIs_and_full_stack/w13d01/morning_exercise/) | Final Project | Final Project | Final Project |
 | w13d02 | Final Project | Final Project | Final Project | Final Project |
 | w13d03 | Final Project | Final Project Presentations | Final Project Presentations | Fin |
